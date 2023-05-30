@@ -22,13 +22,13 @@
 <meta property="og:site_name" content="Fingsinz&#39;s space">
 <meta property="og:description" content="有关计算机网络中的数据链路层">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
-<meta property="og:image" content="https://fingsinz.github.io/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg">
+<meta property="og:image" content="https://fingsinz.github.io/pic/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/1.jpg">
+<meta property="og:image" content="https://fingsinz.github.io/%5Cpic%5C%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%5C2.jpg">
 <meta property="article:published_time" content="2023-05-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-30T12:32:46.166Z">
+<meta property="article:modified_time" content="2023-05-30T13:38:06.562Z">
 <meta property="article:author" content="Fingsinz">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
+<meta name="twitter:image" content="https://fingsinz.github.io/pic/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/1.jpg">
   
   
     <link rel="icon" href="/css/images/favicon.png">
@@ -92,7 +92,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="clia9hw9x00032kdo8pa43ec4" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
+            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="cliabqrqc0003u4do13dz2aie" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -231,7 +231,7 @@
 <li>相除</li>
 </ol>
 <p>对移位后的信息码，用生成多项式进行模2除法，产生余数。</p>
-<p><img src="/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg"></p>
+<p><img src="/pic/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/1.jpg"></p>
 <p>得到对应CRC码：<code>101001001</code></p>
 <h6><span id="如何检错纠错">如何检错纠错</span></h6><ul>
 <li><p>如发送：<code>101001001</code>记为$C_9C_8C_7C_6C_5C_4C_3C_2C_1$。</p>
@@ -303,9 +303,12 @@
 <li>理论上可以得出CRC校验码的特点：</li>
 </ul>
 <ol>
-<li>可检测出所有奇数个错误；</li>
-<li>可检测出所有双比特的错误；</li>
-<li>可检测出所有小于等于校验位长度的连续错误。</li>
+<li><p>可检测出所有奇数个错误；</p>
+</li>
+<li><p>可检测出所有双比特的错误；</p>
+</li>
+<li><p>可检测出所有小于等于校验位长度的连续错误。</p>
+</li>
 </ol>
 <ul>
 <li><p>在数据后面添加上冗余码称为帧检验序列FCS。</p>
@@ -408,7 +411,7 @@
 <li><p>上述方法保证了透明传输：在所传送的数据比特流中可以传送任意组合的比特流，而不会引起对帧边界的错误判断。</p>
 </li>
 </ul>
-<h3><span id="ppp协议的工作状态">PPP协议的工作状态</span></h3><p><img src="/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg"></p>
+<h3><span id="ppp协议的工作状态">PPP协议的工作状态</span></h3><p><img src="/%5Cpic%5C%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%5C2.jpg"></p>
 <ul>
 <li>PPP协议有5个工作状态：</li>
 </ul>
@@ -535,7 +538,9 @@
 <ul>
 <li>最短帧长计算</li>
 </ul>
-<p>$$<br>最短帧长 &#x3D; 争用期长度 × 数据传输速率<br>$$<br>$$<br>争用期长度是指端到端传输时延 τ 的两倍。<br>$$<br>$$<br>最短帧长 &#x3D; 2τ × 数据传输速率<br>$$</p>
+<p>$$<br>最短帧长 &#x3D; 争用期长度 × 数据传输速率<br>$$</p>
+<p>$$<br>争用期长度是指端到端传输时延 τ 的两倍。<br>$$</p>
+<p>$$<br>最短帧长 &#x3D; 2τ × 数据传输速率<br>$$</p>
 <ul>
 <li>二进制指数类型退避算法</li>
 </ul>
@@ -836,8 +841,9 @@
 <li><p>IEEE802.1D标准制定了一个生成树协议STP，用于消除兜圈子死循环现象。</p>
 </li>
 <li><p>生成树协议（Spanning Tree Protocol，STP）是一种用于以太网交换机网络中避免环路的协议。STP通过建立一棵生成树，保证网络中只有一条主干路径，从而避免数据包在网络中不断循环，造成网络拥塞和死锁。</p>
-</li>
-<li><p>生成树算法（Spanning Tree Algorithm）是用于实现生成树协议的具体算法，最常用的是经典的 IEEE 802.1D 标准，该标准定义了以下步骤：</p>
+<ul>
+<li>生成树算法（Spanning Tree Algorithm）是用于实现生成树协议的具体算法，最常用的是经典的 IEEE 802.1D 标准，该标准定义了以下步骤：</li>
+</ul>
 </li>
 </ul>
 <ol>
@@ -1157,8 +1163,8 @@
 
 <div id="bg"></div>
 
-<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
-<a title="返回顶部"><img src="/css/images/totop.png"></a>
+<div id="totop" style="position:fixed;bottom:50px;right:50px;cursor: pointer;">
+<a title="返回顶部"><img src="/css/images/totop.png" height="100" width="100" /></a>
 </div>
 <script src="/js/totop.js"></script>
 
