@@ -4,19 +4,7 @@
   <meta charset="utf-8">
   
   
-  <meta name="description" content="数据链路层使用的信道：点对点信道；广播信道。
-
-点对点信道：使用一对一的点对点通信方式。
-
-广播信道：使用一对多的广播通信方式。
-
-
-使用点对点信道的数据链路层数据链路和帧
-链路（link）是一条无源的点到点的物理线路段，中间没有任何其他的交换结点。
-
-一条链路只是一条通路的一个组成部分。
-
-数据链" />
+  <meta name="description" content="有关计算机网络中的数据链路层" />
   
 
   
@@ -27,17 +15,17 @@
   
   <title>数据链路层 | Fingsinz&#39;s space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据链路层使用的信道：点对点信道；广播信道。  点对点信道：使用一对一的点对点通信方式。  广播信道：使用一对多的广播通信方式。   使用点对点信道的数据链路层数据链路和帧 链路（link）是一条无源的点到点的物理线路段，中间没有任何其他的交换结点。  一条链路只是一条通路的一个组成部分。  数据链路（data link）除了物理线路外，还必须有通信协议来控制这些数据的传输。  若把实现这些协议">
+  <meta name="description" content="有关计算机网络中的数据链路层">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据链路层">
 <meta property="og:url" content="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/index.html">
 <meta property="og:site_name" content="Fingsinz&#39;s space">
-<meta property="og:description" content="数据链路层使用的信道：点对点信道；广播信道。  点对点信道：使用一对一的点对点通信方式。  广播信道：使用一对多的广播通信方式。   使用点对点信道的数据链路层数据链路和帧 链路（link）是一条无源的点到点的物理线路段，中间没有任何其他的交换结点。  一条链路只是一条通路的一个组成部分。  数据链路（data link）除了物理线路外，还必须有通信协议来控制这些数据的传输。  若把实现这些协议">
+<meta property="og:description" content="有关计算机网络中的数据链路层">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
 <meta property="og:image" content="https://fingsinz.github.io/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg">
 <meta property="article:published_time" content="2023-05-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-29T15:06:06.712Z">
+<meta property="article:modified_time" content="2023-05-30T12:08:47.550Z">
 <meta property="article:author" content="Fingsinz">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
@@ -104,13 +92,18 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="cli8zk3o4000924dode3t5xoq" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
+            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="clia8qc6i0003t4dob2kuafxb" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <ul>
+<li>有关计算机网络中的数据链路层</li>
+</ul>
+<span id="more"></span>
+
+<ul>
 <li><p>数据链路层使用的信道：点对点信道；广播信道。</p>
 </li>
 <li><p>点对点信道：使用一对一的点对点通信方式。</p>
@@ -1068,7 +1061,9 @@
 <h3 id="使用以太网进行宽带接入"><a href="#使用以太网进行宽带接入" class="headerlink" title="使用以太网进行宽带接入"></a>使用以太网进行宽带接入</h3><ul>
 <li>以太网是一种计算机局域网技术，它可以通过使用特定的物理介质（如双绞线或光纤）将计算机设备连接到互联网服务提供商（ISP）的网络中。在宽带接入方案中，以太网通常用于将用户家庭或办公室内的路由器或调制解调器与ISP提供的宽带调制解调器相连接。这种连接方式可以提供高速、可靠的互联网连接，并且可以支持多个用户同时访问互联网。在以太网上实现宽带接入需要使用特定的协议和技术，例如动态主机配置协议（DHCP）、传输控制协议&#x2F;互联网协议（TCP&#x2F;IP）和数据包交换技术等。</li>
 </ul>
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+      
       
     </div><!-- .entry-content -->
 
@@ -1090,16 +1085,6 @@
 
 
     
-<nav class="nav-single">
-    <h3 class="assistive-text">文章导航</h3>
-    
-        <span class="nav-previous"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/" rel="prev"><span class="meta-nav">←</span> 应用层</a></span>
-    
-    
-        <span class="nav-next"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/" rel="next">物理层 <span class="meta-nav">→</span></a></span>
-    
-</nav><!-- .nav-single -->
-
 
 
 
@@ -1120,7 +1105,7 @@
   <aside class="widget">
     <h3 class="widget-title">Categories</h3>
     <div class="widget-content">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><span class="category-list-count">5</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><span class="category-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -1132,23 +1117,7 @@
       <ul>
         
           <li>
-            <a href="/articles/1/">记第一次成功创建博客</a>
-          </li>
-        
-          <li>
-            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/">应用层</a>
-          </li>
-        
-          <li>
             <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/">数据链路层</a>
-          </li>
-        
-          <li>
-            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/">物理层</a>
-          </li>
-        
-          <li>
-            <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%BD%91%E7%BB%9C%E5%B1%82/">网络层</a>
           </li>
         
       </ul>
@@ -1157,22 +1126,8 @@
 
   
     
-  <aside class="widget">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget-content">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </aside>
-
   
     
-  <aside class="widget">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget-content tagcloud">
-      <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a>
-    </div>
-  </aside>
-
   
 </div>
       </div>
@@ -1202,6 +1157,19 @@
 
 <div id="bg"></div>
 
+<div id="totop" style="size:20;position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="返回顶部">回到顶部</a>
+</div>
+<script src="/js/totop.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({ 
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+}); 
+</script>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
   </div>
 </body>
 </html>
