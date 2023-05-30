@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
 <meta property="og:image" content="https://fingsinz.github.io/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg">
 <meta property="article:published_time" content="2023-05-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-30T12:08:47.550Z">
+<meta property="article:modified_time" content="2023-05-30T12:32:46.166Z">
 <meta property="article:author" content="Fingsinz">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fingsinz.github.io/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg">
@@ -92,7 +92,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="clia8qc6i0003t4dob2kuafxb" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
+            <a href="javascript:void(0);" data-url="https://fingsinz.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="clia9hw9x00032kdo8pa43ec4" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -111,7 +111,7 @@
 <li><p>广播信道：使用一对多的广播通信方式。</p>
 </li>
 </ul>
-<h2 id="使用点对点信道的数据链路层"><a href="#使用点对点信道的数据链路层" class="headerlink" title="使用点对点信道的数据链路层"></a>使用点对点信道的数据链路层</h2><h3 id="数据链路和帧"><a href="#数据链路和帧" class="headerlink" title="数据链路和帧"></a>数据链路和帧</h3><ul>
+<h2><span id="使用点对点信道的数据链路层">使用点对点信道的数据链路层</span></h2><h3><span id="数据链路和帧">数据链路和帧</span></h3><ul>
 <li>链路（link）是一条无源的点到点的物理线路段，中间没有任何其他的交换结点。</li>
 </ul>
 <p>一条链路只是一条通路的一个组成部分。</p>
@@ -137,7 +137,7 @@
 <li><p>若结点B的数据链路层收到的帧无差错，则从收到的帧中提取出IP数据报交给上面的网络层；否则丢弃这个帧。</p>
 </li>
 </ol>
-<h3 id="三个基本问题"><a href="#三个基本问题" class="headerlink" title="三个基本问题"></a>三个基本问题</h3><h4 id="封装成帧"><a href="#封装成帧" class="headerlink" title="封装成帧"></a>封装成帧</h4><ul>
+<h3><span id="三个基本问题">三个基本问题</span></h3><h4><span id="封装成帧">封装成帧</span></h4><ul>
 <li><p>封装成帧就是在一段数据的前后分别添加首部和尾部，这样构成一个帧。</p>
 </li>
 <li><p>首部和尾部具有许多控制信息，一个重要作用就是进行帧定界。</p>
@@ -164,7 +164,7 @@
 </ul>
 <p>控制字符<code>SOH</code>（Start Of Header），表示帧的首部开始。控制字符<code>EOT</code>（End of Transmission），表示帧的结束。</p>
 <p>具有明确的帧定界符才是完整的帧。</p>
-<h4 id="透明传输"><a href="#透明传输" class="headerlink" title="透明传输"></a>透明传输</h4><ul>
+<h4><span id="透明传输">透明传输</span></h4><ul>
 <li>透明传输：不管所传数据是什么样的比特组合，都能在链路上传输。</li>
 </ul>
 <p><strong>“透明”表示：某一个实际存在的事物看起来却好像不存在一样。</strong></p>
@@ -172,7 +172,7 @@
 <ul>
 <li>解决透明传输：字节填充或字符填充。<br>发送端的数据链路层在数据中出现控制字符“SOH”或“EOT”的前面插入一个转义字符“ESC”。而在接收端的数据链路层在把数据送往网络层之前删除这个插入的转义字符。如果转义字符也出现在数据中，那么仍在转义字符的前面插入一个转义字符。</li>
 </ul>
-<h4 id="差错控制"><a href="#差错控制" class="headerlink" title="差错控制"></a>差错控制</h4><ul>
+<h4><span id="差错控制">差错控制</span></h4><ul>
 <li><p>产生比特差错：1和0的变换。</p>
 </li>
 <li><p>误码率：传输错误的比特占所传输比特总数的比率。</p>
@@ -182,7 +182,7 @@
 <ul>
 <li>循环冗余检验CRC，能够实现无比特差错传输。</li>
 </ul>
-<h5 id="CRC循环冗余校验（Cyclic-Redundancy-Check）"><a href="#CRC循环冗余校验（Cyclic-Redundancy-Check）" class="headerlink" title="CRC循环冗余校验（Cyclic Redundancy Check）"></a>CRC循环冗余校验（Cyclic Redundancy Check）</h5><h6 id="CRC码的基本思想"><a href="#CRC码的基本思想" class="headerlink" title="CRC码的基本思想"></a>CRC码的基本思想</h6><ul>
+<h5><span id="crc循环冗余校验cyclic-redundancy-check">CRC循环冗余校验（Cyclic Redundancy Check）</span></h5><h6><span id="crc码的基本思想">CRC码的基本思想</span></h6><ul>
 <li><p>数据发送接受方约定一个“除数”（二进制）。</p>
 </li>
 <li><p>K个信息位和R个校验位作为“被除数”，添加校验位后需保证除法的余数为0。</p>
@@ -203,7 +203,7 @@
 <ul>
 <li>收到数据后，进行除法检查余数是否为0。</li>
 </ul>
-<h6 id="如何构造"><a href="#如何构造" class="headerlink" title="如何构造"></a>如何构造</h6><ul>
+<h6><span id="如何构造">如何构造</span></h6><ul>
 <li>假设生成多项式为$G(x)&#x3D;x^3+x^2+1$，信息码为101001，求对应CRC码。</li>
 </ul>
 <table>
@@ -233,7 +233,7 @@
 <p>对移位后的信息码，用生成多项式进行模2除法，产生余数。</p>
 <p><img src="/.io//CRC%E6%B1%82%E6%A0%A1%E9%AA%8C%E4%BD%8D.jpg"></p>
 <p>得到对应CRC码：<code>101001001</code></p>
-<h6 id="如何检错纠错"><a href="#如何检错纠错" class="headerlink" title="如何检错纠错"></a>如何检错纠错</h6><ul>
+<h6><span id="如何检错纠错">如何检错纠错</span></h6><ul>
 <li><p>如发送：<code>101001001</code>记为$C_9C_8C_7C_6C_5C_4C_3C_2C_1$。</p>
 </li>
 <li><p>接收方：<code>101001001</code>用<code>1101</code>进行模2除，余数为<code>000</code>代表没有出错。</p>
@@ -317,7 +317,7 @@
 </ul>
 <p>凡是接收端数据链路层接受的帧，都能以非常接近1的概率认为这些帧在传输过程中没有产生差错。</p>
 <p>无比特差错和无传输差错是不同的概念。</p>
-<h2 id="点对点协议PPP（Point-to-Point-Protocol）"><a href="#点对点协议PPP（Point-to-Point-Protocol）" class="headerlink" title="点对点协议PPP（Point-to-Point Protocol）"></a>点对点协议PPP（Point-to-Point Protocol）</h2><h3 id="PPP协议的特点"><a href="#PPP协议的特点" class="headerlink" title="PPP协议的特点"></a>PPP协议的特点</h3><ul>
+<h2><span id="点对点协议ppppoint-to-point-protocol">点对点协议PPP（Point-to-Point Protocol）</span></h2><h3><span id="ppp协议的特点">PPP协议的特点</span></h3><ul>
 <li><p>用户计算机和ISP进行通信时所使用的数据链路层协议就是PPP协议。</p>
 </li>
 <li><p>PPP协议应该满足的需求</p>
@@ -371,7 +371,7 @@
 <li><p>网络控制协议NCP（Network Control Protocol）。</p>
 </li>
 </ol>
-<h3 id="PPP协议的帧格式"><a href="#PPP协议的帧格式" class="headerlink" title="PPP协议的帧格式"></a>PPP协议的帧格式</h3><h4 id="帧各字段的意义"><a href="#帧各字段的意义" class="headerlink" title="帧各字段的意义"></a>帧各字段的意义</h4><ul>
+<h3><span id="ppp协议的帧格式">PPP协议的帧格式</span></h3><h4><span id="帧各字段的意义">帧各字段的意义</span></h4><ul>
 <li><p>PPP帧首部和尾部分别为4个字段和2个字段。</p>
 </li>
 <li><p>首部</p>
@@ -387,7 +387,7 @@
 <li><p>尾部第一个字段是使用CRC的帧检验序列FCS，第二个字段是标志字段F。</p>
 </li>
 </ul>
-<h4 id="字节填充"><a href="#字节填充" class="headerlink" title="字节填充"></a>字节填充</h4><ul>
+<h4><span id="字节填充">字节填充</span></h4><ul>
 <li>当信息字段中出现和标志字段一样的比特<code>0x7E</code>组合时，就必须采取一些措施使这种形式上和标志字段一样的比特组合不出现在信息字段中。当</li>
 </ul>
 <p>PPP使用异步传输时，它把转义字符定义为<code>0x7D</code>即<code>01111101</code>，并使用字节填充。</p>
@@ -402,13 +402,13 @@
 <li><p>若信息字段中出现了ASCII码的控制字符（数值小于<code>0x20</code>的字符），则在该字符前加入一个<code>0x7D</code>字节，同时将该字符的编码加以改变。如出现了<code>0x03</code>（在控制字符中是“传输结束”ETX）就要把它转变为2字节序列<code>0x7D,0x23</code>。<br>发送端进行了修改，但接收端在收到数据在进行于发送端字节填充相反的变换。</p>
 </li>
 </ol>
-<h4 id="零比特填充"><a href="#零比特填充" class="headerlink" title="零比特填充"></a>零比特填充</h4><ul>
+<h4><span id="零比特填充">零比特填充</span></h4><ul>
 <li><p>零比特填充的具体做法：在发送端，先扫描整个信息字段，只要发现有5个连续1，则立即填入一个0（防止被认为是标志字段F）。接收端在收到一个帧时，先找到标志字段F以确认一个帧的边界，接着再用硬件对其中的比特流进行扫描，当发现5个连续的1时，就把这5个连续1后的一个0删除，还原成原来的信息比特流。</p>
 </li>
 <li><p>上述方法保证了透明传输：在所传送的数据比特流中可以传送任意组合的比特流，而不会引起对帧边界的错误判断。</p>
 </li>
 </ul>
-<h3 id="PPP协议的工作状态"><a href="#PPP协议的工作状态" class="headerlink" title="PPP协议的工作状态"></a>PPP协议的工作状态</h3><p><img src="/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg"></p>
+<h3><span id="ppp协议的工作状态">PPP协议的工作状态</span></h3><p><img src="/.io//PPP%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81.jpg"></p>
 <ul>
 <li>PPP协议有5个工作状态：</li>
 </ul>
@@ -454,7 +454,7 @@
 <li><p>数据传输结束后，可以由链路的一端发出终止请求LCP分组（Terminate-Request）请求终止链路连接，在收到对方发来的终止确认 LCP 分组（Terminate-Ack）后，转到“<strong>链路终止</strong>”状态。如果链路出现故障，也会从“<strong>链路打开</strong>”状态转到“<strong>链路终止</strong>”状态。当调制解调器的载波停止后，则回到“<strong>链路静止</strong>”的状态。</p>
 </li>
 </ul>
-<h2 id="使用广播通信的数据链路层"><a href="#使用广播通信的数据链路层" class="headerlink" title="使用广播通信的数据链路层"></a>使用广播通信的数据链路层</h2><h3 id="局域网的数据链路层"><a href="#局域网的数据链路层" class="headerlink" title="局域网的数据链路层"></a>局域网的数据链路层</h3><ul>
+<h2><span id="使用广播通信的数据链路层">使用广播通信的数据链路层</span></h2><h3><span id="局域网的数据链路层">局域网的数据链路层</span></h3><ul>
 <li><p>特点：网络为一个单位所拥有；地理范围和站点数目有限。</p>
 </li>
 <li><p>局域网具有如下主要优点：</p>
@@ -476,13 +476,13 @@
 <li>动态媒体接入又分为随机接入和受控接入。</li>
 </ul>
 <p>随机接入的特点是所有用户可随机地发送信息，但如果恰巧多用户同时发送信息时，出现信息碰撞冲突，所以要有解决碰撞的网络协议。受控接入的特点是用户不能随机地发送信息而必须服从一定的控制，这类典型代表有分散控制的令牌环局域网和集中控制的多点线路探询（又称轮询）。</p>
-<h4 id="以太网的两个标准"><a href="#以太网的两个标准" class="headerlink" title="以太网的两个标准"></a>以太网的两个标准</h4><ul>
+<h4><span id="以太网的两个标准">以太网的两个标准</span></h4><ul>
 <li><p>以太网的两个标准：DIX Ethernet V2和IEEE 802.3。</p>
 </li>
 <li><p>IEEE802委员会把局域网的数据链路层拆成两个子层：逻辑链路控制LLC（Logical Link Control）和媒体接入控制MAC（Medium Access Control）。与接入到传输媒体有关的内容都放在MAC子层，而LLC子层则与传输媒体无关，不管采用何种传输媒体和MAC子层的局域网对LLC子层来说都是透明的。</p>
 </li>
 </ul>
-<h4 id="适配器的作用"><a href="#适配器的作用" class="headerlink" title="适配器的作用"></a>适配器的作用</h4><ul>
+<h4><span id="适配器的作用">适配器的作用</span></h4><ul>
 <li><p>计算机与外界局域网的连接时通过通信适配器（adapter）进行的。</p>
 </li>
 <li><p>适配器本来是一块网络接口板，又称为通信适配器或网络接口卡NIC，或“网卡”。</p>
@@ -490,7 +490,7 @@
 <li><p>重要功能：串行&#x2F;并行转换；数据缓存；安装设备驱动程序；实现以太网协议。</p>
 </li>
 </ul>
-<h3 id="CSMA-x2F-CD协议"><a href="#CSMA-x2F-CD协议" class="headerlink" title="CSMA&#x2F;CD协议"></a>CSMA&#x2F;CD协议</h3><ul>
+<h3><span id="csmax2fcd协议">CSMA&#x2F;CD协议</span></h3><ul>
 <li>以太网采用广播方式发送。</li>
 </ul>
 <p>总线上的每一个工作的计算机都能检测到发送的数据信号。但由于数据帧首部写入地址匹配问题，只有某个计算机才能接收。</p>
@@ -559,7 +559,7 @@
 </ol>
 <p>发送成功：在争用期内一直未检测到碰撞。这个帧肯定能够发送成功。发送完毕后，其他什么也不做，回到步骤1。</p>
 <p>发送失败：在争用期内检测到碰撞。这是立即停止发送数据，并按规定发送人为干扰信号。适配器接着就执行指数退避算法。等待r倍512比特时间后，返回到步骤2，继续检测信道。但若重传达16次仍不成功，则停止重传而向上报错。</p>
-<h3 id="使用集线器的星形拓扑"><a href="#使用集线器的星形拓扑" class="headerlink" title="使用集线器的星形拓扑"></a>使用集线器的星形拓扑</h3><ul>
+<h3><span id="使用集线器的星形拓扑">使用集线器的星形拓扑</span></h3><ul>
 <li>物理上是星型，逻辑上是总线型。</li>
 </ul>
 <p>为了降低成本，最初由粗的同轴电缆变成细的同轴电缆最后变成无屏蔽双绞线。每个站需要用两对双绞线，分别用于发送和接收；</p>
@@ -588,7 +588,7 @@
 <li><p>可靠性较低：由于集线器无法检测网络中的故障点，不进行碰撞检测，一旦出现故障，整个网络将会受到影响。</p>
 </li>
 </ol>
-<h3 id="以太网的信道利用率"><a href="#以太网的信道利用率" class="headerlink" title="以太网的信道利用率"></a>以太网的信道利用率</h3><ul>
+<h3><span id="以太网的信道利用率">以太网的信道利用率</span></h3><ul>
 <li>以太网的信道利用率是指在一定时间内，实际传输数据的时间与总时间的比值。</li>
 </ul>
 <p>由于在以太网中，传输数据需要占用一定的时间，而且在传输数据时可能会出现冲突、重传等情况，因此实际传输数据的时间会比总时间要短，信道利用率也就相应地降低。</p>
@@ -619,18 +619,18 @@
 </tr>
 </tbody></table>
 <p>前面争用期时间为发生碰撞的情况，后面从发送成功到一个$τ$时间为占用信道时间。</p>
-<h4 id="以太网参数α"><a href="#以太网参数α" class="headerlink" title="以太网参数α"></a>以太网参数α</h4><ul>
+<h4><span id="以太网参数α">以太网参数α</span></h4><ul>
 <li><p>定义参数$α$，以太网单程端到端时延$τ$与帧发送时间$T_0$之比，$α&#x3D;\frac t {T_0}$。当$α\rightarrow 0$，表示一发生碰撞就立即可以检测出来，并立即停止发送，因而信道利用率很高。$α$越大，表明争用期所占的比例增大，每发生一次碰撞浪费许多信道资源，使得信道利用率明显降低。</p>
 </li>
 <li><p>从式子可得当数据率一定时，以太网的连线的长度受到限制，同时以太网的帧长不能太短。</p>
 </li>
 </ul>
-<h4 id="信道利用率的最大值-S-max"><a href="#信道利用率的最大值-S-max" class="headerlink" title="信道利用率的最大值$S_{max}$"></a>信道利用率的最大值$S_{max}$</h4><ul>
+<h4><span id="信道利用率的最大值s_max">信道利用率的最大值$S_{max}$</span></h4><ul>
 <li>使用非常理想化的考虑，计算极限信道利用率：</li>
 </ul>
 <p>$$<br>S_{max}&#x3D;\frac {T_0}{T_0+τ}&#x3D;\frac 1 {1+a}<br>$$</p>
 <p>只有参数$α$远小于1才能得到尽可能高的极限信道利用率。若参数$α$远大于1，则极限信道利用率就远小于1，而此时实际的信道利用率就更小。当以太网的利用率达到30%时就已经处于重载的情况。</p>
-<h3 id="以太网的MAC层"><a href="#以太网的MAC层" class="headerlink" title="以太网的MAC层"></a>以太网的MAC层</h3><h4 id="MAC层的硬件地址"><a href="#MAC层的硬件地址" class="headerlink" title="MAC层的硬件地址"></a>MAC层的硬件地址</h4><ul>
+<h3><span id="以太网的mac层">以太网的MAC层</span></h3><h4><span id="mac层的硬件地址">MAC层的硬件地址</span></h4><ul>
 <li>MAC地址（Media Access Control Address），又称硬件地址或物理地址，是用于唯一标识网络设备的地址。在计算机网络中，MAC地址是以太网协议中的一个重要参数，用于识别数据包发送者和接收者。</li>
 </ul>
 <p>MAC地址，实际上就是适配器地址或适配器标识符EUI-48。</p>
@@ -645,7 +645,7 @@
 <li>MAC地址是<strong>唯一</strong>的，每个网络设备都会被分配一个唯一的MAC地址。MAC地址通常被写在设备的网卡上，由网卡芯片固化在硬件中。在以太网中，MAC地址被用于识别数据包发送者和接收者。</li>
 </ul>
 <p>当一个数据包从源设备发送到目的设备时，数据包中会包含源MAC地址和目的MAC地址。网络设备通过比对数据包中的目的MAC地址和自己的MAC地址，来判断是否接收该数据包。如果目的MAC地址与设备的MAC地址相同，设备就会接收该数据包并进行处理，否则就会忽略该数据包。<br>总之，MAC地址是网络设备的一个重要标识，它是由网络设备的物理硬件决定的，一般情况下不会改变。它在网络通信中起到了重要的作用。</p>
-<h5 id="适配器检查MAC地址"><a href="#适配器检查MAC地址" class="headerlink" title="适配器检查MAC地址"></a>适配器检查MAC地址</h5><ul>
+<h5><span id="适配器检查mac地址">适配器检查MAC地址</span></h5><ul>
 <li><p>适配器（Network Adapter）是计算机中用于连接计算机与网络之间的设备，也称为网卡（Network Interface Card）。在计算机网络中，适配器通常用于接收和发送网络数据包。</p>
 </li>
 <li><p>适配器通常具有一个硬件地址，也称为MAC地址。检查MAC地址是指在数据包到达适配器时，适配器会首先检查数据包中的目的MAC地址是否与自己的MAC地址相同。</p>
@@ -661,10 +661,10 @@
 <li><p>只有目的地址才能使用广播地址和多播地址。</p>
 </li>
 </ul>
-<h4 id="MAC帧的格式"><a href="#MAC帧的格式" class="headerlink" title="MAC帧的格式"></a>MAC帧的格式</h4><ul>
+<h4><span id="mac帧的格式">MAC帧的格式</span></h4><ul>
 <li>常用的以太网MAC帧格式有两种标准：DIX Ethernet V2标准（以太网V2标准）和IEEE的802.3标准。</li>
 </ul>
-<h5 id="以太网V2标准的MAC帧格式"><a href="#以太网V2标准的MAC帧格式" class="headerlink" title="以太网V2标准的MAC帧格式"></a>以太网V2标准的MAC帧格式</h5><p>以太网的帧最短是64字节，而现在目的地址，原地址，类型和FCS占了18字节，所以IP数据报有效数据最小是46字节。</p>
+<h5><span id="以太网v2标准的mac帧格式">以太网V2标准的MAC帧格式</span></h5><p>以太网的帧最短是64字节，而现在目的地址，原地址，类型和FCS占了18字节，所以IP数据报有效数据最小是46字节。</p>
 <table>
 <thead>
 <tr>
@@ -704,7 +704,7 @@
 <li><p>帧校验序列（Frame Check Sequence，FCS）：4个字节的帧校验序列，用于检测数据帧是否出错。FCS是通过CRC算法生成的，它包含了整个数据帧的数据内容。当传输媒体的误码率为$1×10^{-8}$时，MAC子层可使未检测到的差错小于$1×10^{-14}$。</p>
 </li>
 </ol>
-<h5 id="IEEE802-3MAC-帧格式"><a href="#IEEE802-3MAC-帧格式" class="headerlink" title="IEEE802.3MAC 帧格式"></a>IEEE802.3MAC 帧格式</h5><ol>
+<h5><span id="ieee8023mac-帧格式">IEEE802.3MAC 帧格式</span></h5><ol>
 <li><p>前导码（Preamble）：7个字节的前导码，用于标识一个数据帧的开始，具体内容为1010……1010。</p>
 </li>
 <li><p>帧起始定界符（Start Frame Delimiter，SFD）：1个字节的帧起始定界符，用于标识前导码的结束，内容为10101011。</p>
@@ -734,7 +734,7 @@
 <li>当“长度&#x2F;类型”字段值小于0x0600时，数据字段必须装入上面的逻辑链路控制LLC子层的LLC帧。</li>
 </ol>
 <p>现在市场上流行的都是以太网V2的MAC帧，但大家也常常称为IEEE 802.3标准的MAC帧。</p>
-<h5 id="无效MAC帧"><a href="#无效MAC帧" class="headerlink" title="无效MAC帧"></a>无效MAC帧</h5><ul>
+<h5><span id="无效mac帧">无效MAC帧</span></h5><ul>
 <li><p>数据字段的长度与长度字段的值不一致；</p>
 </li>
 <li><p>帧的长度不是整数个字节；</p>
@@ -748,12 +748,12 @@
 <li><p>对于检查出的无效MAC 帧就简单地丢弃。以太网不负责重传丢弃的帧。</p>
 </li>
 </ul>
-<h5 id="帧的最小间隔"><a href="#帧的最小间隔" class="headerlink" title="帧的最小间隔"></a>帧的最小间隔</h5><ul>
+<h5><span id="帧的最小间隔">帧的最小间隔</span></h5><ul>
 <li>帧间最小间隔为9.6 μs，相当于96 bit的发送时间。</li>
 </ul>
 <p>一个站在检测到总线开始空闲后，还要等待9.6μs才能再次发送数据。</p>
 <p>这样做是为了使刚刚收到数据帧的站的接收缓存来得及清理，做好接收下一帧的准备。</p>
-<h2 id="扩展的以太网"><a href="#扩展的以太网" class="headerlink" title="扩展的以太网"></a>扩展的以太网</h2><h3 id="在物理层扩展以太网"><a href="#在物理层扩展以太网" class="headerlink" title="在物理层扩展以太网"></a>在物理层扩展以太网</h3><ul>
+<h2><span id="扩展的以太网">扩展的以太网</span></h2><h3><span id="在物理层扩展以太网">在物理层扩展以太网</span></h3><ul>
 <li><p>使用光纤扩展</p>
 </li>
 <li><p>使用集线器扩展</p>
@@ -762,10 +762,10 @@
 <p>集线器集联：使网络中计算机增加，变成一个大的冲突域，冲突域数量变少了，但是数量增加了，会造成效率降低。（越多效率越低，不适合使用超过30个集线器）</p>
 <p>优点：使原来属于不同碰撞域的以太网上的计算机能够进行跨碰撞域的通信。扩大了以太网覆盖的地理范围。</p>
 <p>缺点：碰撞域增大了，但总的吞吐量并未提高。如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。</p>
-<h3 id="在数据链路层扩展以太网-更常用的方法"><a href="#在数据链路层扩展以太网-更常用的方法" class="headerlink" title="在数据链路层扩展以太网(更常用的方法)"></a>在数据链路层扩展以太网(更常用的方法)</h3><ul>
+<h3><span id="在数据链路层扩展以太网更常用的方法">在数据链路层扩展以太网(更常用的方法)</span></h3><ul>
 <li>早期使用网桥，现在使用以太网交换机。</li>
 </ul>
-<h4 id="使用网桥"><a href="#使用网桥" class="headerlink" title="使用网桥"></a>使用网桥</h4><ul>
+<h4><span id="使用网桥">使用网桥</span></h4><ul>
 <li><p>在数据链路层扩展局域网是使用网桥。使用网桥可以拓展以太网的覆盖范围和提高网络性能。网桥是一种数据链路层设备，它可以连接多个以太网段，将它们组成一个逻辑上的单一网络。网桥通过学习每个网络中的MAC地址，将数据包从一个网络转发到另一个网络，从而实现不同网络之间的通信。</p>
 </li>
 <li><p>网桥工作在数据链路层，他根据MAC帧的目的地址对收到的帧进行转发。网桥具有过滤帧的功能。当网桥收到一个帧时，并不是向所有的接口转发此帧，而是先检查此帧的目的MAC地址，然后再确定将该帧转发到对应的接口，或把它丢弃。</p>
@@ -795,7 +795,7 @@
 <li>坏处</li>
 </ul>
 <p>存储转发增加了时延；在MAC地址子层并没有流量控制功能；具有不同MAC子层的网段桥接在一起时时延更大；网桥值适合于用户数不太多和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞。这就是所谓的广播风暴。</p>
-<h4 id="使用以太网交换机"><a href="#使用以太网交换机" class="headerlink" title="使用以太网交换机"></a>使用以太网交换机</h4><ul>
+<h4><span id="使用以太网交换机">使用以太网交换机</span></h4><ul>
 <li><p>以太网交换机实质上就是一个多接口的网桥，通常都有十几个或更多的接口。</p>
 </li>
 <li><p>每个接口都直接与一个单台主机或另一个以太网交换机相连，并且一般都工作在全双工方式。</p>
@@ -817,7 +817,7 @@
 <li><p>透明性：以太网交换机对网络上的设备和协议是透明的，不会影响设备之间的通信和网络协议的运行。同时，交换机还支持多种网络协议，如TCP&#x2F;IP、UDP、ICMP等，提供更加灵活的网络应用方式。</p>
 </li>
 </ol>
-<h5 id="以太网交换机的自学习功能"><a href="#以太网交换机的自学习功能" class="headerlink" title="以太网交换机的自学习功能"></a>以太网交换机的自学习功能</h5><ul>
+<h5><span id="以太网交换机的自学习功能">以太网交换机的自学习功能</span></h5><ul>
 <li>以太网交换机的自学习功能的具体操作流程</li>
 </ul>
 <ol>
@@ -832,7 +832,7 @@
 <li><p>当交换机接收到新的数据帧时，它会再次更新转发表，删除多余或错误的信息，并学习记录新的MAC地址和端口信息。</p>
 </li>
 </ol>
-<h5 id="交换机使用生成树协议"><a href="#交换机使用生成树协议" class="headerlink" title="交换机使用生成树协议"></a>交换机使用生成树协议</h5><ul>
+<h5><span id="交换机使用生成树协议">交换机使用生成树协议</span></h5><ul>
 <li><p>IEEE802.1D标准制定了一个生成树协议STP，用于消除兜圈子死循环现象。</p>
 </li>
 <li><p>生成树协议（Spanning Tree Protocol，STP）是一种用于以太网交换机网络中避免环路的协议。STP通过建立一棵生成树，保证网络中只有一条主干路径，从而避免数据包在网络中不断循环，造成网络拥塞和死锁。</p>
@@ -852,13 +852,13 @@
 <li><p>阻塞端口：在生成树中，如果存在环路，则需要选择一些端口进行阻塞，从而避免数据包在网络中不断循环。阻塞端口是指连接到环路上的端口，选举原则是选择路径开销最大的端口进行阻塞。</p>
 </li>
 </ol>
-<h5 id="从总线以太网到星形以太网"><a href="#从总线以太网到星形以太网" class="headerlink" title="从总线以太网到星形以太网"></a>从总线以太网到星形以太网</h5><ul>
+<h5><span id="从总线以太网到星形以太网">从总线以太网到星形以太网</span></h5><ul>
 <li><p>从总线以太网到星形以太网是以太网架构的演进历程，总线以太网是最早的以太网架构，所有设备共享同一条传输介质。而星形以太网采用了集线器&#x2F;交换机来分割网络，将每个设备连接到一个中心节点，从而提高了网络的可靠性和性能。</p>
 </li>
 <li><p>总线以太网使用CSMA&#x2F;CD协议，以半双工方式工作，存在碰撞问题。而以太网交换机实现的星形以太网以全双工方式工作，不存在碰撞问题，但由于帧结构未改变，仍采用以太网的帧结构，所以还叫做以太网。</p>
 </li>
 </ul>
-<h3 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h3><ul>
+<h3><span id="虚拟局域网">虚拟局域网</span></h3><ul>
 <li><p>虚拟局域网（Virtual Local Area Network，VLAN）是一种将物理网络划分为多个逻辑网络的技术。VLAN可以通过软件配置来实现，无需更改物理网络拓扑结构，从而方便网络管理和配置。</p>
 </li>
 <li><p>VLAN可以将一组网络设备划分为一个独立的逻辑网络，不同的VLAN之间可以相互隔离，从而提高网络安全性和灵活性。例如，可以将某个部门的计算机划分到一个VLAN中，使得该部门的计算机只能与该VLAN中的其他设备进行通信，而无法与其他VLAN中的设备通信。</p>
@@ -888,7 +888,7 @@
 <ul>
 <li>虚拟局域网其实只是局域网给用户提供的一种服务，而并不是一种新型局域网。</li>
 </ul>
-<h4 id="虚拟局域网使用的以太网帧格式"><a href="#虚拟局域网使用的以太网帧格式" class="headerlink" title="虚拟局域网使用的以太网帧格式"></a>虚拟局域网使用的以太网帧格式</h4><ul>
+<h4><span id="虚拟局域网使用的以太网帧格式">虚拟局域网使用的以太网帧格式</span></h4><ul>
 <li>虚拟局域网（VLAN）使用的以太网帧格式与普通的以太网帧格式基本一致，但在帧头和帧尾中加入了VLAN标记。下面是VLAN使用的以太网帧格式：</li>
 </ul>
 <ol>
@@ -911,10 +911,10 @@
 <li><p>帧尾（1个字节）：表示帧的结束。</p>
 </li>
 </ol>
-<h2 id="高速以太网"><a href="#高速以太网" class="headerlink" title="高速以太网"></a>高速以太网</h2><ul>
+<h2><span id="高速以太网">高速以太网</span></h2><ul>
 <li>高速以太网（High-Speed Ethernet)是一种以太网技术，用于实现高速数据传输。</li>
 </ul>
-<h3 id="100BASE-T以太网"><a href="#100BASE-T以太网" class="headerlink" title="100BASE-T以太网"></a>100BASE-T以太网</h3><ul>
+<h3><span id="100base-t以太网">100BASE-T以太网</span></h3><ul>
 <li><p>100BASE-T是一种以太网技术，也被称为快速以太网。它可以在100Mbps的传输速度下运行，并且使用双绞线作为物理媒介来传输数据。</p>
 </li>
 <li><p>100BASE-T以太网使用了交织的4B&#x2F;5B编码方案来将字节转换为信号。这种编码方案可以保证数据传输的稳定性和可靠性。它还使用了基带传输技术，即直接将数字信号发送到传输媒介上，避免了模拟信号的转换，从而提高了传输效率。</p>
@@ -959,7 +959,7 @@
 <p>MAC帧格式不变，仍是802.3 标准。</p>
 <p>最短帧长度不变，但是一个网段的最大电缆长度减少到100m。</p>
 <p>帧间间隔从9.6微秒缩小到0.96微秒。</p>
-<h3 id="吉比特以太网"><a href="#吉比特以太网" class="headerlink" title="吉比特以太网"></a>吉比特以太网</h3><ul>
+<h3><span id="吉比特以太网">吉比特以太网</span></h3><ul>
 <li><p>允许在1 Gb&#x2F;s下全双工或半双工工作方式。</p>
 </li>
 <li><p>使用802.3标准的帧格式。</p>
@@ -1007,7 +1007,7 @@
 <td align="center">使用4对UTP5类线</td>
 </tr>
 </tbody></table>
-<h3 id="10吉比特以太网和更快的以太网"><a href="#10吉比特以太网和更快的以太网" class="headerlink" title="10吉比特以太网和更快的以太网"></a>10吉比特以太网和更快的以太网</h3><ul>
+<h3><span id="10吉比特以太网和更快的以太网">10吉比特以太网和更快的以太网</span></h3><ul>
 <li><p>MAC帧格式不变，仍是802.3 标准。</p>
 </li>
 <li><p>使用光纤而不是铜线。</p>
@@ -1058,7 +1058,7 @@
 <ul>
 <li>以太网时可扩展的（速率从100Mbit&#x2F;s到100Gbit&#x2F;s）、灵活的（多媒体、全&#x2F;半双工、共享&#x2F;交换）、易于安装、稳健性好。</li>
 </ul>
-<h3 id="使用以太网进行宽带接入"><a href="#使用以太网进行宽带接入" class="headerlink" title="使用以太网进行宽带接入"></a>使用以太网进行宽带接入</h3><ul>
+<h3><span id="使用以太网进行宽带接入">使用以太网进行宽带接入</span></h3><ul>
 <li>以太网是一种计算机局域网技术，它可以通过使用特定的物理介质（如双绞线或光纤）将计算机设备连接到互联网服务提供商（ISP）的网络中。在宽带接入方案中，以太网通常用于将用户家庭或办公室内的路由器或调制解调器与ISP提供的宽带调制解调器相连接。这种连接方式可以提供高速、可靠的互联网连接，并且可以支持多个用户同时访问互联网。在以太网上实现宽带接入需要使用特定的协议和技术，例如动态主机配置协议（DHCP）、传输控制协议&#x2F;互联网协议（TCP&#x2F;IP）和数据包交换技术等。</li>
 </ul>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
@@ -1157,8 +1157,8 @@
 
 <div id="bg"></div>
 
-<div id="totop" style="size:20;position:fixed;bottom:150px;right:50px;cursor: pointer;">
-<a title="返回顶部">回到顶部</a>
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="返回顶部"><img src="/css/images/totop.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
