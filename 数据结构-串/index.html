@@ -22,15 +22,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fingsinz.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="数据结构：串">
+<meta property="og:type" content="article">
 <meta property="og:title" content="数据结构-串">
 <meta property="og:url" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Fingsinz&#39;s space">
+<meta property="og:description" content="数据结构：串">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/KMP%E6%94%B9%E8%BF%9B%E5%90%AF%E5%8F%91.jpg">
 <meta property="article:published_time" content="2023-06-09T13:58:17.000Z">
-<meta property="article:modified_time" content="2023-06-09T13:58:18.031Z">
+<meta property="article:modified_time" content="2023-06-09T14:12:52.241Z">
 <meta property="article:author" content="Fingsinz">
+<meta property="article:tag" content="串">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/KMP%E6%94%B9%E8%BF%9B%E5%90%AF%E5%8F%91.jpg">
 
 
 <link rel="canonical" href="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/">
@@ -127,7 +132,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -140,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">串的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">串的存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">顺序串——以顺序表实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.3.</span> <span class="nav-text">链串——以链表实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.4.</span> <span class="nav-text">顺序串——以顺序表实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">串的模式匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.1.</span> <span class="nav-text">Brute-Force算法（暴力）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.2.</span> <span class="nav-text">KMP算法</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,7 +169,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -225,7 +231,16 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-06-09 21:58:17 / 修改时间：21:58:18" itemprop="dateCreated datePublished" datetime="2023-06-09T21:58:17+08:00">2023-06-09</time>
+      <time title="创建时间：2023-06-09 21:58:17 / 修改时间：22:12:52" itemprop="dateCreated datePublished" datetime="2023-06-09T21:58:17+08:00">2023-06-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
     </span>
 
   
@@ -235,14 +250,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>4.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>9 分钟</span>
     </span>
 </div>
 
@@ -252,7 +267,162 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    <div class="post-body" itemprop="articleBody"><p>数据结构：串</p>
+<span id="more"></span>
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E4%B8%B2">串</a><ul>
+<li><a href="#%E4%B8%B2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">串的基本概念</a></li>
+<li><a href="#%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">串的存储结构</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97">基本运算</a></li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E4%B8%B2%E4%BB%A5%E9%A1%BA%E5%BA%8F%E8%A1%A8%E5%AE%9E%E7%8E%B0">顺序串——以顺序表实现</a><ul>
+<li><a href="#%E8%B5%8B%E5%80%BC%E7%94%9F%E6%88%90%E4%B8%B2">赋值生成串</a></li>
+<li><a href="#%E9%94%80%E6%AF%81%E4%B8%B2">销毁串</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%B2">连接串</a></li>
+<li><a href="#%E6%AF%94%E8%BE%83%E4%B8%B2">比较串</a></li>
+</ul>
+</li>
+<li><a href="#%E9%93%BE%E4%B8%B2%E4%BB%A5%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0">链串——以链表实现</a></li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E4%B8%B2%E4%BB%A5%E9%A1%BA%E5%BA%8F%E8%A1%A8%E5%AE%9E%E7%8E%B0-1">顺序串——以顺序表实现</a><ul>
+<li><a href="#%E8%B5%8B%E5%80%BC%E7%94%9F%E6%88%90%E4%B8%B2-1">赋值生成串</a></li>
+<li><a href="#%E9%94%80%E6%AF%81%E4%B8%B2-1">销毁串</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%B2-1">连接串</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%B2%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">串的模式匹配</a><ul>
+<li><a href="#brute-force%E7%AE%97%E6%B3%95%E6%9A%B4%E5%8A%9B">Brute-Force算法（暴力）</a></li>
+<li><a href="#kmp%E7%AE%97%E6%B3%95">KMP算法</a><ul>
+<li><a href="#%E6%94%B9%E8%BF%9Bkmp">改进KMP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="串">串</span></h1><h2><span id="串的基本概念">串的基本概念</span></h2><ul>
+<li>串（或字符串）是由零个或多个字符组成的有限序列。</li>
+<li>串中所含字符的个数称为该串的长度（或串长）。</li>
+<li>含零个字符的串称为空串。</li>
+<li>串相等：长度相等、内容相同。</li>
+<li>子串：一个串中任意连续字符组成的子序列（含空串）。<br>真子串：指不包含自身的所有子串。</li>
+</ul>
+<h2><span id="串的存储结构">串的存储结构</span></h2><h3><span id="基本运算">基本运算</span></h3><ul>
+<li>赋值运算、销毁、复制、比较串、求串长、连接串、求子串、插入字串、删除子串、替换子串、输出串</li>
+</ul>
+<h3><span id="顺序串以顺序表实现">顺序串——以顺序表实现</span></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> data[MaxSize];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;  SqString;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>顺序串中实现串的基本运算与顺序表的基本运算类似。顺序串参数采用直接传递顺序串的方法。</li>
+</ul>
+<h4><span id="赋值生成串">赋值生成串</span></h4><ul>
+<li><code>StrAssign(&amp;s, cstr)</code>：将字符串常量cstr赋给串s，即生成其值等于cstr的串s。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">StrAssign</span><span class="params">(SqString &amp;s, <span class="type">char</span> cstr[])</span><span class="comment">//s为引用型参数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; cstr[i] != <span class="string">&#x27;\0&#x27;</span>; i ++ )</span><br><span class="line">        s.data[i]=cstr[i];</span><br><span class="line">    s.length=i;<span class="comment">//设置串s的长度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="销毁串">销毁串</span></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DestroyStr</span><span class="params">(SqString &amp;s)</span></span></span><br><span class="line"><span class="function"></span>&#123;  &#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="连接串">连接串</span></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">SqString <span class="title">Concat</span><span class="params">(SqString s,SqString t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    SqString str; <span class="comment">//定义结果串</span></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    str.length=s.length+t.length;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; s.length; i ++ )  <span class="comment">//将s.data[0..s.length-1]复制到str</span></span><br><span class="line">        str.data[i] = s.data[i];</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; t.length; i ++ )  <span class="comment">//将t.data[0..t.length-1]复制到str</span></span><br><span class="line">        str.data[s.length+i] = t.data[i];</span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4><span id="比较串">比较串</span></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Strcmp</span><span class="params">(SqString s, SqString t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i, comlen;</span><br><span class="line">    <span class="keyword">if</span> (s.length &lt; t.length)</span><br><span class="line">        comlen = s.length;<span class="comment">//求s和t的共同长度</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        comlen = t.length;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; comlen; i ++ )<span class="comment">//在共同长度内逐个字符比较</span></span><br><span class="line">        <span class="keyword">if</span> (s.data[i] &gt; t.data[i])</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s.data[i] &lt; t.data[i])</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (s.length == t.length)<span class="comment">//s==t</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (s.length &gt; t.length)<span class="comment">//s&gt;t</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//s&lt;t</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="链串以链表实现">链串——以链表实现</span></h3><ul>
+<li>链串的组织形式与一般的链表类似。</li>
+<li>链串中的一个结点可以存储多个字符。通常将链串中每个结点所存储的字符个数称为结点大小。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">snode</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> data; <span class="comment">//结点大小为1</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">snode</span> *next;</span><br><span class="line">&#125; LinkStrNode;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>链串中实现串的基本运算与单链表的基本运算类似。</li>
+</ul>
+<h3><span id="顺序串以顺序表实现">顺序串——以顺序表实现</span></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> data[MaxSize];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;  SqString;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>顺序串中实现串的基本运算与顺序表的基本运算类似。顺序串参数采用直接传递顺序串的方法。</li>
+</ul>
+<h4><span id="赋值生成串">赋值生成串</span></h4><ul>
+<li><code>StrAssign(&amp;s, cstr)</code>：将字符串常量cstr赋给串s，即生成其值等于cstr的串s。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">StrAssign</span><span class="params">(LinkStrNode *&amp;s,<span class="type">char</span> cstr[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    LinkStrNode *r,*p;</span><br><span class="line">    s = (LinkStrNode *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(LinkStrNode));</span><br><span class="line">    r = s;<span class="comment">//r始终指向尾结点</span></span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; cstr[i] != <span class="string">&#x27;\0&#x27;</span>; i ++)</span><br><span class="line">   &#123;</span><br><span class="line">        p = (LinkStrNode *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(LinkStrNode));</span><br><span class="line">        p-&gt;data = cstr[i];</span><br><span class="line">        r-&gt;next = p; r = p;</span><br><span class="line">   &#125;</span><br><span class="line">   r-&gt;next = <span class="literal">NULL</span>;<span class="comment">//尾结点next域置为空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4><span id="销毁串">销毁串</span></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">DestroyStr</span><span class="params">(LinkStrNode *&amp;s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStrNode *pre = s,*p = s-&gt;next;<span class="comment">//pre指向结点p的前驱结点</span></span><br><span class="line">    <span class="keyword">while</span> (p!=<span class="literal">NULL</span>)<span class="comment">//扫描链串s</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">free</span>(pre);<span class="comment">//释放pre结点</span></span><br><span class="line">        pre = p;<span class="comment">//pre、p同步后移一个结点</span></span><br><span class="line">        p = pre-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(pre);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4><span id="连接串">连接串</span></h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LinkStrNode *<span class="title">Concat</span><span class="params">(LinkStrNode *s,LinkStrNode *t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStrNode *str,*p = s-&gt;next,*q,*r;</span><br><span class="line">    str = (LinkStrNode *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(LinkStrNode));</span><br><span class="line">    r = str;<span class="comment">//r指向结果串的尾结点</span></span><br><span class="line">    <span class="keyword">while</span> (p!=<span class="literal">NULL</span>)<span class="comment">//用p扫描s的所有数据结点</span></span><br><span class="line">    &#123;</span><br><span class="line">        q = (LinkStrNode *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(LinkStrNode));</span><br><span class="line">        q-&gt;data = p-&gt;data;<span class="comment">//将p结点复制到q结点中</span></span><br><span class="line">        r-&gt;next = q; r = q;<span class="comment">//将q结点链接到str的末尾</span></span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    p = t-&gt;next;</span><br><span class="line">    <span class="keyword">while</span> (p!=<span class="literal">NULL</span>)<span class="comment">//用p扫描t的所有数据结点</span></span><br><span class="line">    &#123;</span><br><span class="line">        q = (LinkStrNode *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(LinkStrNode));</span><br><span class="line">        q-&gt;data = p-&gt;data;<span class="comment">//将p结点复制到q结点中</span></span><br><span class="line">        r-&gt;next = q; r = q;<span class="comment">//将q结点链接到str的末尾</span></span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">   r-&gt;next = <span class="literal">NULL</span>;<span class="comment">//尾结点的next域置为空</span></span><br><span class="line">   <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="串的模式匹配">串的模式匹配</span></h2><h3><span id="brute-force算法暴力">Brute-Force算法（暴力）</span></h3><ul>
+<li>思路：i,j分别扫描字符串s和t；i从0到s.length-t.length循环；对于每个s[i]，k&#x3D;i,j&#x3D;0开始比较；如果t扫描完毕，则返回i；若s全部比较完毕都没有返回，则返回-1</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">index</span><span class="params">(SqString s, SqString t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i, j, k;</span><br><span class="line">    <span class="keyword">for</span>( i = <span class="number">0</span>; i &lt;= s.length-t.length; ++ i )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>( k = i, j = <span class="number">0</span>; k &lt; s.length &amp;&amp; j &lt; t.length &amp;&amp; s.data[k] == s.data[j]; ++k, ++j );</span><br><span class="line">        <span class="keyword">if</span>( j ==t.length ) <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="kmp算法">KMP算法</span></h3><ul>
+<li><p>改进BF算法，主要是消除了主串指针的回溯。</p>
+</li>
+<li><p>O(n)&#x3D;O(n+m)，空间换时间。</p>
+</li>
+<li><p><code>next[j]</code>是指$t_j$字符前最多有多少个字符与t开头的字符相同。$t_j$字符前面的子串最多从$t_1$开始的，不含$t_0$。</p>
+</li>
+<li><p><code>next[0]</code>设置为-1</p>
+</li>
+</ul>
+<p>如，对于<code>t=&quot;ababc&quot;</code>，next数组<code>next[]=&#123;-1,0,0,1,2&#125;</code>。对于<code>t=&quot;aaab&quot;</code>，next数组<code>next[]=&#123;-1,0,1,2&#125;</code>。</p>
+<p>$$<br>next[j]&#x3D;MAX{k|0&lt;k&lt;j，且“t_0t_1…t_{k-1}”&#x3D;“t_{j-k}t_{j-k-1}…t_{j-1}”},集合非空<br>$$<br>$$<br>next[j]&#x3D;-1,当j&#x3D;0<br>$$<br>$$<br>next[j]&#x3D;0,其他情况<br>$$</p>
+<ul>
+<li>KMP过程</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 由模式串t求next值</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">GetNext</span><span class="params">(SqString t, <span class="type">int</span> next[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> j, k;</span><br><span class="line">    j = <span class="number">0</span>; k = <span class="number">-1</span>;</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>( j &lt; t.length - <span class="number">1</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( k == <span class="number">-1</span> || t.data[j] == t.data[k] )</span><br><span class="line">        &#123;</span><br><span class="line">             ++ j, ++ k;</span><br><span class="line">             next[j] = k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            k = next[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//KMP过程</span></span><br><span class="line"><span class="comment">//i = 0; j = 0;</span></span><br><span class="line"><span class="comment">//while( s和t都没有扫描完 )</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//    if (j = -1 或者 它们所指字符相同)</span></span><br><span class="line"><span class="comment">//        ++ i, ++ j;</span></span><br><span class="line"><span class="comment">//    else</span></span><br><span class="line"><span class="comment">//        i不变，j后退，j = next[j];</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="comment">//if( j &gt; t.length )</span></span><br><span class="line"><span class="comment">//    return (i-t.length);</span></span><br><span class="line"><span class="comment">//else</span></span><br><span class="line"><span class="comment">//    return -1;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">KMPIndex</span><span class="params">(SqString s, SqString t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> next[MaxSize], i=<span class="number">0</span>, j=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">GetNext</span>(t, next);</span><br><span class="line">    <span class="keyword">while</span> (i&lt;s.length &amp;&amp; j&lt;t.length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (j==<span class="number">-1</span> || s.data[i]==t.data[j])</span><br><span class="line">        &#123;</span><br><span class="line">            i++; j++;<span class="comment">//i、j各增1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> j=next[j]; <span class="comment">//i不变，j后退</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ( j &gt;= t.length )</span><br><span class="line">        <span class="keyword">return</span>( i - t.length );<span class="comment">//返回匹配模式串的首字符</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//返回不匹配标志</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用KMP计算t在s中出现的次数</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">StrCount2</span><span class="params">(SqString s,SqString t)</span></span></span><br><span class="line"><span class="function"><span class="comment">//利用KMP算法求t在s中出现的次数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>, count = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> next[MaxSize];</span><br><span class="line">    <span class="built_in">GetNext</span>(t, next);</span><br><span class="line">    <span class="keyword">while</span> (i &lt; s.length &amp;&amp; j &lt; t.length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (j==<span class="number">-1</span> || s.data[i]==t.data[j])</span><br><span class="line">        &#123;</span><br><span class="line">            i++; j++;<span class="comment">//i，j各增1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            j = next[j]; <span class="comment">//i不变，j后退</span></span><br><span class="line">        <span class="keyword">if</span> (j &gt;= t.length)<span class="comment">//成功匹配1次</span></span><br><span class="line">        &#123;</span><br><span class="line">            count++; j=<span class="number">0</span>;<span class="comment">//j设置为0，继续匹配</span></span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="改进kmp">改进KMP</span></h4><p>在KMP中，有的匹配仍是不必要的，因而可以再优化。<br><img src="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/KMP%E6%94%B9%E8%BF%9B%E5%90%AF%E5%8F%91.jpg"></p>
+<ul>
+<li>将next改为nextval<br><code>nextval[0]=-1</code></li>
+</ul>
+<p>当<code>t[j]==t[next[j]]</code>时：<code>nextval[j]=nextval[next[j]]</code>；否则： <code>nextval[j]=next[j]</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">j</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">t[j]</td>
+<td align="center">a</td>
+<td align="center">a</td>
+<td align="center">a</td>
+<td align="center">a</td>
+<td align="center">b</td>
+</tr>
+<tr>
+<td align="center">next[j]</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">nextval[j]</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -260,6 +430,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 串</a>
+          </div>
 
         
 
@@ -305,14 +478,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">106k</span>
+    <span title="站点总字数">136k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:12</span>
+    <span title="站点阅读时长">4:07</span>
   </span>
 </div>
 

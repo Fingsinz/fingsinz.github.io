@@ -22,15 +22,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fingsinz.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="数据结构：递归">
+<meta property="og:type" content="article">
 <meta property="og:title" content="数据结构-递归">
 <meta property="og:url" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%80%92%E5%BD%92/index.html">
 <meta property="og:site_name" content="Fingsinz&#39;s space">
+<meta property="og:description" content="数据结构：递归">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%80%92%E5%BD%92/%E9%80%92%E5%BD%92-%E8%BF%B7%E5%AE%AB%E8%B7%AF%E5%BE%84.jpg">
 <meta property="article:published_time" content="2023-06-09T13:58:29.000Z">
-<meta property="article:modified_time" content="2023-06-09T13:58:29.950Z">
+<meta property="article:modified_time" content="2023-06-09T14:18:21.705Z">
 <meta property="article:author" content="Fingsinz">
+<meta property="article:tag" content="递归">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%80%92%E5%BD%92/%E9%80%92%E5%BD%92-%E8%BF%B7%E5%AE%AB%E8%B7%AF%E5%BE%84.jpg">
 
 
 <link rel="canonical" href="https://fingsinz.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%80%92%E5%BD%92/">
@@ -127,7 +132,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -140,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">递归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">什么是递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用递归的情形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.2.</span> <span class="nav-text">递归模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">栈和递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数调用栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">递归函数的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.3.</span> <span class="nav-text">递归算法的时空分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.4.</span> <span class="nav-text">递归到非递归的转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">递归算法的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.2.</span> <span class="nav-text">递归函数设计中几个问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.3.</span> <span class="nav-text">算法设计</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,7 +169,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -223,8 +229,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-06-09 21:58:29" itemprop="dateCreated datePublished" datetime="2023-06-09T21:58:29+08:00">2023-06-09</time>
+      <time title="创建时间：2023-06-09 21:58:29 / 修改时间：22:18:21" itemprop="dateCreated datePublished" datetime="2023-06-09T21:58:29+08:00">2023-06-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
     </span>
 
   
@@ -234,14 +250,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>3.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -251,7 +267,135 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    <div class="post-body" itemprop="articleBody"><p>数据结构：递归</p>
+<span id="more"></span>
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E9%80%92%E5%BD%92">递归</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%92%E5%BD%92">什么是递归</a><ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E9%80%92%E5%BD%92%E7%9A%84%E6%83%85%E5%BD%A2">使用递归的情形</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E6%A8%A1%E5%9E%8B">递归模型</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A0%88%E5%92%8C%E9%80%92%E5%BD%92">栈和递归</a><ul>
+<li><a href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%A0%88">函数调用栈</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0">递归函数的实现</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E7%A9%BA%E5%88%86%E6%9E%90">递归算法的时空分析</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E5%88%B0%E9%9D%9E%E9%80%92%E5%BD%92%E7%9A%84%E8%BD%AC%E6%8D%A2">递归到非递归的转换</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1">递归算法的设计</a><ul>
+<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1%E4%B8%AD%E5%87%A0%E4%B8%AA%E9%97%AE%E9%A2%98">递归函数设计中几个问题</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1">算法设计</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="递归">递归</span></h1><h2><span id="什么是递归">什么是递归</span></h2><ul>
+<li><p>在定义一个过程或函数时，出现直接或者间接调用自己的成分。</p>
+</li>
+<li><p>直接调用自己称为直接递归。</p>
+</li>
+<li><p>间接调用自己称为间接递归。</p>
+</li>
+</ul>
+<h3><span id="使用递归的情形">使用递归的情形</span></h3><ol>
+<li>定义是递归的。</li>
+</ol>
+<p>如：阶乘、斐波那契数列……</p>
+<ol start="2">
+<li>数据结构是递归的。</li>
+</ol>
+<p>如：链表的结构体指针……</p>
+<ol start="3">
+<li>问题的求解方法是递归的。</li>
+</ol>
+<p>如：Hanoi问题……</p>
+<h3><span id="递归模型">递归模型</span></h3><ul>
+<li><p>递归模型是递归算法的抽象，它反映一个递归问题的递归结构。</p>
+</li>
+<li><p>一个递归模型由递归出口和递归体组成。</p>
+</li>
+<li><p>把一个不能或不好直接求解的大问题转化成一个个较小的问题。</p>
+</li>
+<li><p>递归分解不是随意的分解，递归分解要保证“大问题”与“小问题”相似，即求解过程与环境都相似。</p>
+</li>
+</ul>
+<h2><span id="栈和递归">栈和递归</span></h2><h3><span id="函数调用栈">函数调用栈</span></h3><ul>
+<li><p>函数执行是通过系统栈实现的。系统栈分为若干个栈帧。</p>
+</li>
+<li><p>一次函数调用相关的数据保存在栈帧中，体现先进后出的特点。</p>
+</li>
+</ul>
+<h3><span id="递归函数的实现">递归函数的实现</span></h3><ul>
+<li><p>递归是函数调用的一种特殊情况，即它是调用自身代码。</p>
+</li>
+<li><p>可以把每一次递归调用理解成调用自身代码的一个复制件由于每次调用时，它的参数和局部变量可能不相同，因而保证了各个复制件执行时的独立性。</p>
+</li>
+</ul>
+<h3><span id="递归算法的时空分析">递归算法的时空分析</span></h3><ul>
+<li>递归算法分析也称为变长时空分析。非递归算法分析也称为定长时空分析。</li>
+</ul>
+<ol>
+<li>递归算法的时间复杂度分析</li>
+</ol>
+<p>例：Hanoi问题中，递归体分为2个小问题语句和一句普通语句，</p>
+<p>$T(n)&#x3D;2T(n-1)+1&#x3D;2(2T(n-2)+1)+1&#x3D;2^3T(n-3)+2^2+2+1&#x3D;……$<br>$&#x3D;2^{n-1}T(1)+2^{n-2}+…+2^2+2+1&#x3D;2^n-1$</p>
+<ol start="2">
+<li>递归算法的空间复杂度分析</li>
+</ol>
+<h3><span id="递归到非递归的转换">递归到非递归的转换</span></h3><ol>
+<li>直接转换法：用迭代方式或循环语言替代多次重复的递归调用。</li>
+</ol>
+<p>直接转换法通常用来消除尾递归和单向递归。</p>
+<p>如果一个递归函数中递归调用语句是最后一条执行语句且把当前运算结果放在参数里传给下层函数，这种递归称为尾递归。</p>
+<ol start="2">
+<li>间接转换法：其他相对复杂的递归算法不能直接求值，执行中需要回溯。</li>
+</ol>
+<p>可以在理解递归调用实现过程的基础上，用栈来模拟递归执行过程即使用栈保存中间结果，从而将其转换为等效的非递归算法，称为间接转换法。</p>
+<h2><span id="递归算法的设计">递归算法的设计</span></h2><h3><span id="步骤">步骤</span></h3><ol>
+<li><p>对原问题进行分析，假设出合理的小问题。</p>
+</li>
+<li><p>假设原问题是可解的，在此基础上确定小问题的解，即给出大问题和小问题之间的关系，得到递归体。</p>
+</li>
+<li><p>确定一个特定情况的解，得到递归出口。</p>
+</li>
+</ol>
+<h3><span id="递归函数设计中几个问题">递归函数设计中几个问题</span></h3><ol>
+<li><p>递归函数中的引用形参可以用全局变量代替；</p>
+</li>
+<li><p>递归函数中的非引用形参作为状态变量，可以自动回溯；</p>
+</li>
+<li><p>递归调用后面的语句表示该子问题执行完毕后要完成的功能；</p>
+</li>
+</ol>
+<h3><span id="算法设计">算法设计</span></h3><ul>
+<li>求实数数组A[0…n-1]中的最小值</li>
+</ul>
+<p>$$<br>f(A,i)&#x3D;A[0], 当i&#x3D;0<br>$$<br>$$<br>f(A,i)&#x3D;MIN(f(A,i-1),A[i]), 其他情况<br>$$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">Min</span><span class="params">(<span class="type">double</span> A[], <span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> min;</span><br><span class="line">    <span class="keyword">if</span> (i==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> A[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        min=<span class="built_in">Min</span>(A, i<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">if</span> (min&gt;A[i])</span><br><span class="line">            <span class="keyword">return</span> A[i];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> min;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>求含n（n&gt;1）个元素的顺序表L中的最大元素</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElemType <span class="title">Max</span><span class="params">(SqList L,<span class="type">int</span> i,<span class="type">int</span> j)</span><span class="comment">//求顺序表L中最大元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> mid;</span><br><span class="line">    ElemType max,max1,max2;</span><br><span class="line">    <span class="keyword">if</span> (i==j) <span class="comment">//顺序表中只有一个元素，即递归出口</span></span><br><span class="line">        max=L.data[i];<span class="comment">//该元素就是最大元素</span></span><br><span class="line">    <span class="keyword">else</span><span class="comment">//顺序表中有多个元素</span></span><br><span class="line">    &#123;</span><br><span class="line">        mid=(i+j)/<span class="number">2</span>;<span class="comment">//求中间位置</span></span><br><span class="line">        max1=<span class="built_in">Max2</span>(L,i,mid);<span class="comment">//递归调用求左子表最大元素max1</span></span><br><span class="line">        max2=<span class="built_in">Max2</span>(L,mid+<span class="number">1</span>,j); <span class="comment">//递归调用求右子表最大元素max2</span></span><br><span class="line">        max=(max1&gt;max2)?max1:max2;<span class="comment">//求整个表的最大元素max</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>(max);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>求解迷宫问题</li>
+</ul>
+<p><code>mgpath(int xi，int yi，int xe，int ye，PathType path)</code>：求从<code>(xi，yi)</code>到<code>(xe，ye)</code>的迷宫路径，用path变量保存迷宫路径。</p>
+<p><code>mgpath(xi，yi，xe，ye，path)</code>若<code>(xi，yi)=(xe，ye)</code>：将<code>(xi，yi)</code>添加到path中；输出path中的迷宫路；</p>
+<p><code>mgpath(xi，yi，xe，ye，path)</code>若<code>(xi，yi)</code>不为出口且可走，对于<code>(xi，yi)</code>四周的每一个相邻方块<code>(i，j)</code>：将<code>(xi，yi)</code>添加到path中；置<code>mg[xi][yi]=-1</code>；<code>mgpath(i，j，xe，ye，path)</code>；path回退一步并置<code>mg[xi][yi]=0</code>；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;<span class="comment">//当前方块的行号</span></span><br><span class="line">    <span class="type">int</span> j;<span class="comment">//当前方块的列号</span></span><br><span class="line">&#125; Box;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></span><br><span class="line">&#123;</span><br><span class="line">    Box data[MaxSize];</span><br><span class="line">    <span class="type">int</span> length;<span class="comment">//路径长度</span></span><br><span class="line">&#125;  PathType;<span class="comment">//定义路径类型</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">mgpath</span><span class="params">(<span class="type">int</span> xi, <span class="type">int</span> yi, <span class="type">int</span> xe, <span class="type">int</span> ye, PathType path)</span></span></span><br><span class="line"><span class="function"><span class="comment">//求解路径为:(xi，yi)    (xe，ye)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> di, k, i, j;</span><br><span class="line">    <span class="keyword">if</span>  (xi==xe &amp;&amp; yi==ye)</span><br><span class="line">    &#123;</span><br><span class="line">        path.data[path.length].i = xi;</span><br><span class="line">        path.data[path.length].j = yi;</span><br><span class="line">        path.length++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;迷宫路径%d如下:\n&quot;</span>, ++count);</span><br><span class="line">        <span class="keyword">for</span> (k=<span class="number">0</span>;k&lt;path.length;k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\t(%d，%d)&quot;</span>, path.data[k].i, path.data[k].j);</span><br><span class="line">            <span class="keyword">if</span> ((k+<span class="number">1</span>)%<span class="number">5</span>==<span class="number">0</span>)<span class="comment">//每输出每5个方块后换一行</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span><span class="comment">//(xi，yi)不是出口</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (mg[xi][yi]==<span class="number">0</span>)<span class="comment">//(xi，yi)是一个可走方块</span></span><br><span class="line">        &#123;</span><br><span class="line">            di=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (di&lt;<span class="number">4</span>)     <span class="comment">//对于(xi，yi)四周的每一个相邻方位di</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">switch</span>(di)      <span class="comment">//找方位di对应的方块(i，j)</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">0</span>:i=xi<span class="number">-1</span>; j=yi;   <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">1</span>:i=xi;   j=yi+<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">2</span>:i=xi+<span class="number">1</span>; j=yi;   <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">3</span>:i=xi;   j=yi<span class="number">-1</span>; <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                path.data[path.length].i = xi;</span><br><span class="line">                path.data[path.length].j = yi;</span><br><span class="line">                path.length++;    <span class="comment">//路径长度增1</span></span><br><span class="line">                mg[xi][yi]=<span class="number">-1</span>;    <span class="comment">//避免来回重复找路径</span></span><br><span class="line">                <span class="built_in">mgpath</span>(i, j, xe, ye, path);</span><br><span class="line">                path.length--;<span class="comment">//回退一个方块</span></span><br><span class="line">                mg[xi][yi]=<span class="number">0</span>;<span class="comment">//恢复(xi，yi)为可走</span></span><br><span class="line">                di++;</span><br><span class="line">            &#125;   <span class="comment">//-while</span></span><br><span class="line">        &#125;    <span class="comment">//- if (mg[xi][yi]==0)</span></span><br><span class="line">    &#125;    <span class="comment">//-递归体</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PathType path;</span><br><span class="line">    path.length=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">mgpath</span>(<span class="number">1</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">4</span>, path);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%80%92%E5%BD%92/%E9%80%92%E5%BD%92-%E8%BF%B7%E5%AE%AB%E8%B7%AF%E5%BE%84.jpg"></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -259,6 +403,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%80%92%E5%BD%92/" rel="tag"><i class="fa fa-tag"></i> 递归</a>
+          </div>
 
         
 
@@ -301,14 +448,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">106k</span>
+    <span title="站点总字数">136k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:12</span>
+    <span title="站点阅读时长">4:07</span>
   </span>
 </div>
 
