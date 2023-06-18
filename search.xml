@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个小巧的Markdown编辑工具</title>
+    <url>/markdowntool/</url>
+    <content><![CDATA[<p>介绍一个小巧方便的编写Markdown语言工具。</p>
+<ol>
+<li><p>什么是Markdown</p>
+</li>
+<li><p>MarkText</p>
+</li>
+<li><p>进阶使用</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<hr>
+<h1><span id="什么是markdown">什么是Markdown</span></h1><ul>
+<li><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+</li>
+<li><p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+</li>
+<li><p>Markdown可用于编写记录笔记、博客、电子书等电子文档。</p>
+</li>
+</ul>
+<h1><span id="marktext">MarkText</span></h1><ul>
+<li>MarkText是一款开源的Markdown工具，可用于编辑输出Markdown文件。本人推荐的是英文语言软件，如何汉化自行研究。</li>
+</ul>
+<p>软件地址：建议安装到非系统盘（非C盘）</p>
+<p><a href="https://github.com/marktext/marktext/releases">MarkText下载 - 官网</a></p>
+<p><a href="https://www.aliyundrive.com/s/CoADkVDj1Sq">MarkText下载 - 个人网盘（Windows64位）</a></p>
+<ul>
+<li>MarkText具有多个明暗主题选择，软件菜单内容明确，主打轻便，是一款很不错的小工具。</li>
+</ul>
+<p><img src="/markdowntool/%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="软件界面（明亮主题）"></p>
+<p><img src="/markdowntool/%E4%B8%BB%E7%95%8C%E9%9D%A22.jpg" alt="软件界面（灰暗主题）"></p>
+<ul>
+<li>使用方法</li>
+</ul>
+<p>输入<code>@</code>选择插入的模块，包括段落、分割线、标题、表格、数学公式、引用块、列表等。如果本身对于Markdown语言有一定基础的话，也可直接建立该模块。</p>
+<p><img src="/markdowntool/%E4%BD%BF%E7%94%A81.jpg" alt="使用过程"></p>
+<p>在编写完内容后，可以直接保存为Markdown文件（<code>.md</code>后缀），也可以导出为PDF文件和HTML文件。</p>
+<p><img src="/markdowntool/%E4%BF%9D%E5%AD%98.jpg" alt="选择保存"></p>
+<h1><span id="进阶使用">进阶使用</span></h1><ul>
+<li>有时候对于PDF文件，会有显示目录大纲的需求，但是该软件直接导出并不能设置，此时需要借助另一个工具：wkhtmltopdf。</li>
+</ul>
+<p><img src="/markdowntool/%E7%9B%AE%E5%BD%95.jpg" alt="带目录的PDF文件"></p>
+<ul>
+<li><strong>wkhtmltopdf</strong></li>
+</ul>
+<p>一款<strong>将HTML文件转化为PDF文件</strong>的小工具，但是其并没有软件UI界面，对小白不友好，但是万能的网络能搜到使用方法，此处针对如何导出带目录的PDF进行介绍。</p>
+<ol>
+<li>下载软件</li>
+</ol>
+<p>下载地址：可能提示有风险，建议安装到非系统盘（非C盘）</p>
+<p><a href="https://wkhtmltopdf.org/downloads.html">wkhtmltopdf下载 - 官网</a></p>
+<p><a href="https://www.aliyundrive.com/s/V4SBUcntBAv">wkhtmltopdf下载 - 个人网盘（Windows64位）</a></p>
+<ol start="2">
+<li>安装并配置</li>
+</ol>
+<p>安装后，需要记住安装的具体位置，比如我是安装在D盘，位置就是<code>D:\wkhtmltopdf</code>，接着进行系统环境变量的配置。在电脑设置中搜索环境变量，打开编辑页面。</p>
+<p><img src="/markdowntool/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="配置环境变量"></p>
+<p>具体步骤：编辑→新建→输入安装的位置里面的bin文件夹即<code>D:\wkhtmltopdf\bin</code>→确定所有系统设置窗口。</p>
+<p>（添加错误的环境变量并不会对电脑造成严重伤害，但不要胡乱删除环境变量）</p>
+<p><img src="/markdowntool/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%90%8E.jpg" alt="配置环境变量后"></p>
+<p>再接着确认环境变量是否配置成功：按快捷键<code>win+r</code>，输入cmd，打开黑窗口，在窗口内输入<code>wkhtmltopdf -V</code>（查询wkhtmltopdf的版本），如果出现类似于版本号的数字，则说明添加环境变量成功。</p>
+<p><img src="/markdowntool/cmd.jpg" alt="配置成功"></p>
+<ol start="3">
+<li>软件使用</li>
+</ol>
+<p>在cmd黑窗口切换到想要HTML文件转换为PDF文件的位置，直接输入<code>F:</code>切换到不同的盘，输入<code>cd xx</code>可以进入不同文件夹。如果不知道自己是什么路径，可以先进入所在盘，再打开文件所在文件夹，在地址栏点击获得路径，然后复制粘贴到黑窗口进入。</p>
+<p><img src="/markdowntool/%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9.jpg" alt="进入工作文件夹"></p>
+<p>接着回到MarkText软件，将文件导出为HTML文件，保存在特定文件夹，该文件夹应该跟cmd黑窗口进入的文件夹一样。举例时，我将该文件保存为<code>test.html</code>文件在<code>F:\14.Books</code>文件夹。</p>
+<p><img src="/markdowntool/%E5%AF%BC%E5%87%BAHTML.jpg" alt="导出HTML"></p>
+<p>再回到黑窗口，使用命令<code>wkhtmltopdf 目的文件名字 新文件名字</code>转换，我这里应该是<code>wkhtmltopdf test.html test.pdf</code>。等待转换成功。</p>
+<p><img src="/markdowntool/%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8A%9F.jpg" alt="转换成功"></p>
+<p>此时回到文件夹，就可以看到转换完成的带目录的PDF文件。</p>
+<p><img src="/markdowntool/test.jpg" alt="转换成功的PDF文件"></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>Markdown工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两个用过的导航页</title>
     <url>/%E5%AF%BC%E8%88%AA%E9%A1%B5/</url>
     <content><![CDATA[<p>介绍两个我常用的导航页。导航页就是一个网站的目录，其包含了很多常用其他网站的快捷方式。</p>
@@ -64,10 +148,5 @@
       <categories>
         <category>日常</category>
       </categories>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/test/</url>
-    <content><![CDATA[<div class="pdf-container" data-target="test/Linux学习.pdf" data-height="500px"></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
   </entry>
 </search>
