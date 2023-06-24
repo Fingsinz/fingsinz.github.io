@@ -266,31 +266,74 @@ NexT.utils = {
     });
   },
 
-  registerSidebarTOC: function() {
+//  registerSidebarTOC: function() {
+//    this.sections = [...document.querySelectorAll('.post-toc:not(.placeholder-toc) li a.nav-link')].map(element => {
+    
+//	var link = element.querySelector('a.nav-link');
+//	var target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
+	
+//	 Check if target exists
+//	if (!target) {return null;}
+  
+//	 TOC item animation navigate.
+//	element.addEventListener('click', event => {
+//		event.preventDefault();
+    
+//		var offset = target.getBoundingClientRect().top + window.scrollY;
+//		window.anime({
+//			targets  : document.scrollingElement,
+//			duration : 500,
+//			easing   : 'linear',
+//			scrollTop: offset,
+//			complete : () => {
+//				history.pushState(null, document.title, element.href);
+//			}
+//		});
+//	});var target = document.getElementById(element.hash.substring(1));
+//	return target;
+//	});
+    
+//	 Filter out null targets
+//	this.sections = this.sections.filter(section => section !== null);
+    
+//	this.updateActiveNav();
+//},
+
+registerSidebarTOC: function() {
     this.sections = [...document.querySelectorAll('.post-toc:not(.placeholder-toc) li a.nav-link')].map(element => {
     
-      var link = element.querySelector('a.nav-link');
-      var target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
-      // TOC item animation navigate.
-      
-      element.addEventListener('click', event => {
-        event.preventDefault();
-        
-        var offset = target.getBoundingClientRect().top + window.scrollY;
-        window.anime({
-          targets  : document.scrollingElement,
-          duration : 500,
-          easing   : 'linear',
-          scrollTop: offset,
-          complete : () => {
-            history.pushState(null, document.title, element.href);
-          }
-        });
-      });
-      return target;
-    });
-    this.updateActiveNav();
-  },
+	// Removed the unnecessary 'link' variable
+	var target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
+	
+	// Check if target exists
+	if (!target) {return null;}
+  
+	// TOC item animation navigate.
+	element.addEventListener('click', event => {
+		event.preventDefault();
+    
+		var offset = target.getBoundingClientRect().top + window.scrollY;
+		window.anime({
+			targets  : document.scrollingElement,
+			duration : 500,
+			easing   : 'linear',
+			scrollTop: offset,
+			complete : () => {
+				history.pushState(null, document.title, element.href);
+			}
+		});
+	});
+	
+	// Removed the first definition of 'target'
+	target = document.getElementById(element.hash.substring(1));
+	return target;
+	});
+    
+	// Filter out null targets
+	this.sections = this.sections.filter(section => section !== null);
+    
+	this.updateActiveNav();
+},
 
   registerPostReward: function() {
     const button = document.querySelector('.reward-container button');
