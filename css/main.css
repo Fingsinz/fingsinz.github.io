@@ -1020,9 +1020,10 @@ pre code {
 }
 .brand {
   border-bottom: 0;
-  color: var(--brand-color);
+  color: #fff;
   display: inline-block;
   padding: 0;
+  color: #a7a8bd !important;
 }
 .brand:hover {
   color: var(--brand-hover-color);
@@ -1033,11 +1034,13 @@ pre code {
   font-weight: normal;
   line-height: 1.5;
   margin: 0;
+  color: #fff;
 }
 .site-subtitle {
   color: #ddd;
   font-size: 0.8125em;
   margin: 10px 10px 0;
+  color: #fff;
 }
 .use-motion .site-title,
 .use-motion .site-subtitle,
@@ -2401,7 +2404,7 @@ header.header {
   }
 }
 .site-brand-container {
-  background: var(--theme-color);
+  background: #5698c3;
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
@@ -2512,7 +2515,7 @@ header.header {
   }
 }
 .sidebar-inner {
-  background: var(--content-bg-color);
+  background: #fff;
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   box-sizing: border-box;
