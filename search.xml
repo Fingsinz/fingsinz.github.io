@@ -1,76 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>第一个博客</title>
-    <url>/%E6%97%A5%E5%B8%B8/1/</url>
-    <content><![CDATA[<p>博客建成：Hello World</p>
-<span id="more"></span>
-
-<ul>
-<li>前言</li>
-</ul>
-<p>之前常常看博客学习内容，想着自己也可以做一个博客，记录自己的学习内容。所以此博客随之诞生。取名Fingsinz’s space。</p>
-<ul>
-<li>用途</li>
-</ul>
-<p>我想着，这个博客分为几个栏目，可以记录我的学习笔记，可以分享我平常使用体验较好的软件网站，甚至可以分享我毫无营养的日常……看看侧栏，于是分成了主页、日常、比较、好物分享、归档、关于几个模块。我还增加了搜索功能，便于搜索关键词。</p>
-<ul>
-<li>更多</li>
-</ul>
-<p>我并不是主攻前端方向，学习到的知识也较为浅薄，所以该博客还有很大改进空间。</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>记录Keli_C51和Keli_MDK的安装</title>
+    <title>记录Keil_C51和Keil_MDK的安装</title>
     <url>/%E6%97%A5%E5%B8%B8/2/</url>
-    <content><![CDATA[<p>介绍Keli_C51和Keli_MDK的安装</p>
+    <content><![CDATA[<p>介绍Keil_C51和Keil_MDK的安装</p>
 <span id="more"></span>
 
 <hr>
 <!-- toc -->
 
 <ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AFkeli-c51%E5%92%8Ckeli-mdk">什么是Keli C51和Keli MDK</a></li>
-<li><a href="#keli-c51">Keli C51</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AFkeil-c51%E5%92%8Ckeil-mdk">什么是Keil C51和Keil MDK</a></li>
+<li><a href="#keil-c51">Keil C51</a><ul>
 <li><a href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F">下载安装程序</a></li>
 <li><a href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B">安装过程</a></li>
 <li><a href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6">启动软件</a></li>
 </ul>
 </li>
-<li><a href="#keli-mdk">Keli MDK</a><ul>
+<li><a href="#keil-mdk">Keil MDK</a><ul>
 <li><a href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F-1">下载安装程序</a></li>
 <li><a href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B-1">安装过程</a></li>
 <li><a href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-1">启动软件</a></li>
 </ul>
 </li>
-<li><a href="#keli-key-generator">Keli Key Generator</a></li>
+<li><a href="#keil-key-generator">Keil Key Generator</a></li>
 </ul>
 <!-- tocstop -->
 
-<h1><span id="什么是keli-c51和keli-mdk">什么是Keli C51和Keli MDK</span></h1><ul>
+<h1><span id="什么是keil-c51和keil-mdk">什么是Keil C51和Keil MDK</span></h1><ul>
 <li><p>Keil是一家公司名称，也是一款软件名称。Keil 有四大软件（IDE），包括 MDK、C51、C251、C166。</p>
 </li>
 <li><p>Keil C51和MDK是针对不同类型MCU的两款集成开发工具。</p>
 </li>
 </ul>
-<h1><span id="keli-c51">Keli C51</span></h1><h2><span id="下载安装程序">下载安装程序</span></h2><p><a href="https://www.keil.com/download/product/">Keli官网下载</a></p>
+<h1><span id="keil-c51">Keil C51</span></h1><h2><span id="下载安装程序">下载安装程序</span></h2><p><a href="https://www.keil.com/download/product/">Keil官网下载</a></p>
 <h2><span id="安装过程">安装过程</span></h2><p>像正常软件安装一样，按需要更改安装的磁盘，建立新的文件夹空间安装，个人信息随便填，等待安装完成。</p>
-<p>此次我安装路径设置为<code>G:\Keli_C51</code>中。</p>
-<h2><span id="启动软件">启动软件</span></h2><p>UV4可执行文件位于：<code>G:\Keli_C51\UV4</code></p>
-<h1><span id="keli-mdk">Keli MDK</span></h1><h2><span id="下载安装程序">下载安装程序</span></h2><p><a href="https://www.keil.com/download/product/">Keli官网下载</a></p>
+<p>此次我安装路径设置为<code>G:\Keil_C51</code>中。</p>
+<h2><span id="启动软件">启动软件</span></h2><p>UV4可执行文件位于：<code>G:\Keil_C51\UV4</code></p>
+<h1><span id="keil-mdk">Keil MDK</span></h1><h2><span id="下载安装程序">下载安装程序</span></h2><p><a href="https://www.keil.com/download/product/">Keil官网下载</a></p>
 <h2><span id="安装过程">安装过程</span></h2><p>像正常软件安装一样，按需要更改安装的磁盘，建立新的文件夹空间安装本体和Pack文件，个人信息随便填，等待安装完成。</p>
-<p>此次我将本体路径设置为<code>G:\Keli_MDK</code>中，Pack路径设置为<code>G:\Keli_MDK\</code>。</p>
-<h2><span id="启动软件">启动软件</span></h2><p>UV4可执行文件位于：<code>G:\Keli_MDK\UV4</code></p>
-<h1><span id="keli-key-generator">Keli Key Generator</span></h1><p><a href="https://blog.csdn.net/qq_22329595/article/details/108703002">参考此博客</a></p>
+<p>此次我将本体路径设置为<code>G:\Keil_MDK</code>中，Pack路径设置为<code>G:\Keil_MDK\</code>。</p>
+<h2><span id="启动软件">启动软件</span></h2><p>UV4可执行文件位于：<code>G:\Keil_MDK\UV4</code></p>
+<h1><span id="keil-key-generator">Keil Key Generator</span></h1><p><a href="https://blog.csdn.net/qq_22329595/article/details/108703002">参考此博客</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>日常</category>
       </categories>
       <tags>
-        <tag>Keli</tag>
+        <tag>Keil</tag>
       </tags>
   </entry>
   <entry>
@@ -122,263 +99,6 @@
       </categories>
       <tags>
         <tag>对象存储OSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建一个自己的简单博客</title>
-    <url>/%E6%97%A5%E5%B8%B8/4/</url>
-    <content><![CDATA[<p>简单几步，基于Hexo搭建一个属于自己的简单博客</p>
-<span id="more"></span>
-
-<hr>
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87">工具准备</a><ul>
-<li><a href="#1-nodejs">1. Nodejs</a></li>
-<li><a href="#2-git">2. Git</a></li>
-<li><a href="#3-%E9%AA%8C%E8%AF%81nodejs%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F">3. 验证Nodejs是否安装成功</a></li>
-<li><a href="#4-cnpm">4. cnpm</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%89%E8%A3%85hexo">安装Hexo</a></li>
-<li><a href="#%E5%BC%80%E5%A7%8B%E5%BB%BA%E9%80%A0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2">开始建造你的博客</a><ul>
-<li><a href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B0%BD%E9%87%8F%E4%B8%8D%E5%86%8D%E7%A7%BB%E5%8A%A8">1. 创建一个新的文件夹，尽量不再移动。</a></li>
-<li><a href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2">2. 初始化博客</a></li>
-<li><a href="#3-%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2">3. 查看博客</a></li>
-<li><a href="#4-%E7%BB%99%E5%8D%9A%E5%AE%A2%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98next">4. 给博客下载主题——Next</a></li>
-<li><a href="#5-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">5. 修改配置文件</a></li>
-</ul>
-</li>
-<li><a href="#%E7%BC%96%E5%86%99%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%A1%E5%8D%9A%E5%AE%A2">编写你的第一条博客</a></li>
-<li><a href="#%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%B0github">部署你的博客到Github</a><ul>
-<li><a href="#1-%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80git-bash%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E6%8E%A5%E7%9D%80%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E9%92%A5">1. 在博客根目录打开Git Bash，输入下面的命令，接着会出现你的密钥。</a></li>
-<li><a href="#2-%E5%9C%A8github%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%A4%B4%E5%83%8F-settings-ssh-and-gpg-keys-new-ssh-key%E6%8E%A5%E7%9D%80%E6%8A%8A%E5%AF%86%E9%92%A5%E5%A4%8D%E5%88%B6%E4%B8%8A%E5%8E%BB">2. 在Github页面点击头像-&gt;Settings-&gt;SSH and GPG keys-&gt;New SSH key，接着把密钥复制上去。</a></li>
-<li><a href="#3-%E5%86%8D%E5%9C%A8git-bash%E4%B8%AD%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4">3. 再在Git Bash中执行下面命令。</a></li>
-<li><a href="#4-%E7%82%B9%E5%87%BB%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E5%9C%A8%E5%B7%A6%E4%B8%8A%E8%A7%92%E7%9A%84clone-or-download%E4%B8%AD%E7%82%B9%E5%87%BBuse-ssh%E5%A4%8D%E5%88%B6git%E5%BC%80%E5%A4%B4%E7%9A%84%E5%9C%B0%E5%9D%80">4. 点击项目仓库，在左上角的Clone or download中点击Use SSH，复制git开头的地址。</a></li>
-<li><a href="#5-%E6%89%93%E5%BC%80%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%89%BE%E5%88%B0deploy%E4%B8%80%E8%A1%8C%E6%8C%89%E7%85%A7%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%8C%87%E7%A4%BA%E4%BF%AE%E6%94%B9">5. 打开博客配置文件，找到deploy一行，按照下面的指示修改。</a></li>
-<li><a href="#6-%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80git-bash%E5%88%86%E5%88%AB%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4">6. 在博客根目录打开Git Bash，分别执行下列命令。</a></li>
-<li><a href="#7-%E5%AE%89%E8%A3%85%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6">7. 安装上传插件。</a></li>
-<li><a href="#8-%E4%BD%BF%E7%94%A8%E4%B8%8B%E9%9D%A2%E6%8C%87%E4%BB%A4%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2">8. 使用下面指令上传博客。</a></li>
-<li><a href="#9-%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E9%80%89%E6%8B%A9%E4%B8%8A%E6%96%B9%E7%9A%84settings%E6%89%BE%E5%88%B0pages%E5%9C%A8source%E5%A4%84%E9%80%89%E6%8B%A9deploy-from-a-branch-%E4%B9%8B%E5%90%8E%E5%B0%B1%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80%E4%BE%BF%E6%98%AF%E5%8D%9A%E5%AE%A2%E5%9C%B0%E5%9D%80">9. 打开项目仓库，选择上方的Settings，找到Pages，在Source处选择Deploy from a branch。之后就会出现一个网站地址，便是博客地址。</a></li>
-</ul>
-</li>
-<li><a href="#%E6%B3%A8">注</a></li>
-</ul>
-<!-- tocstop -->
-
-<h1><span id="工具准备">工具准备</span></h1><h2><span id="1-nodejs">1. Nodejs</span></h2><p>Nodejs简单来说就是运行在服务端的JavaScript，博客交互需要用到Nodejs。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_NodejsDonwload.png" alt="Nodejs下载页面"></p>
-<p>选择合适的软件版本下载，<a href="https://nodejs.cn/download/">下载地址：https://nodejs.cn/download/</a></p>
-<p>下载完成后按正常流程安装，可安装在非系统盘，记得选择“Add to PATH”配置PATH环境变量。我的Nodejs安装在<code>E:\Nodejs</code>中。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_Node.png" alt="选择"></p>
-<p>注：为了软件安装简洁可控，还需要对Nodejs的内容（Cache和global）进行规划，具体可参考<a href="https://juejin.cn/post/7227434605392642104">nodejs的安装及详细环境配置</a>或<a href="https://blog.csdn.net/Ouchieve_111/article/details/70878090">修改项目默认node_modules路径</a>或<a href="https://blog.csdn.net/scorpio_meng/article/details/83314675">node安装后的设置(node_global和node_cache) - windows</a>，或自行搜索。</p>
-<h2><span id="2-git">2. Git</span></h2><p>Git是一个分布式版本控制系统，简单理解为它可以帮助我们管理文件各种版本，博客的更新之类的。</p>
-<p><a href="https://git-scm.com/">下载地址：https://git-scm.com/</a></p>
-<p>下载完成后按正常流程安装，可安装在非系统盘，其他选项可以保持默认。我的Git安装在<code>E:\Git</code>中。</p>
-<h2><span id="3-验证nodejs是否安装成功">3. 验证Nodejs是否安装成功</span></h2><p>在桌面鼠标右键，选择菜单中的Git Bash Here。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E5%8F%B3%E9%94%AE.jpg" alt="右键菜单"></p>
-<p>在弹出的窗口中输入以下指令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>若出现了对应的版本号，则说明安装成功。若不出现版本号，则检查Nodejs的安装过程，或者必应搜索相关帮助。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E9%AA%8C%E8%AF%81.png" alt="验证Nodejs安装"></p>
-<h2><span id="4-cnpm">4. cnpm</span></h2><p>上面的<code>npm -v</code>查看了npm的版本，可以简单理解为npm是一种下载工具。而npm下载一般是通过国外网络下载，速度比较慢。因此需要先通过npm安装cnpm（国内下载），之后就是用cnpm代替npm。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>通过查询版本号验证是否安装成功。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-
-<h1><span id="安装hexo">安装Hexo</span></h1><p>Hexo是一种博客框架，通过它可以将简单的Markdown语言转化为带装饰的网页。</p>
-<p>通过下面命令安装Hexo。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>也可以通过查询版本号确认Hexo是否安装成功。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -V</span><br></pre></td></tr></table></figure>
-
-<p>Hexo的常用命令：<code>hexo -s</code>本地查看博客，<code>hexo g</code>生成博客，<code>hexo clean</code>删除当前博客所有网页页面。</p>
-<h1><span id="开始建造你的博客">开始建造你的博客</span></h1><h2><span id="1-创建一个新的文件夹尽量不再移动">1. 创建一个新的文件夹，尽量不再移动。</span></h2><p>如我在F盘创建了一个文件夹叫<code>15.Blog</code>，就在15.Blog文件夹下右键选择Git Bash。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E5%8D%9A%E5%AE%A21.png"></p>
-<h2><span id="2-初始化博客">2. 初始化博客</span></h2><p>在窗口中输入命令，等待完成。（如果运行至<code>Install dependencies</code>卡住，可以<code>Ctrl + C</code>结束命令）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3-查看博客">3. 查看博客</span></h2><p>在窗口中输入命令，查看博客的初始页面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-给博客下载主题next">4. 给博客下载主题——Next</span></h2><p>点击<a href="https://hexo.io/themes/">此处</a>寻找合适的主题，以Next为例，因为该主题基础、自定义程度高。</p>
-<p>可以用git指令将Github的主题压缩包下载到博客的<code>themes/</code>文件夹中：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 复制的地址 themes/主题名字</span><br></pre></td></tr></table></figure>
-
-<p>上面指令意思是将指定地址的内容克隆到本地<code>themes/</code>文件夹并命名为指定名字。<br>也可以直接下载压缩包粘贴至<code>themes/</code>文件夹中。</p>
-<h2><span id="5-修改配置文件">5. 修改配置文件</span></h2><p>在博客的根目录中有一个名为<code>_config</code>的文本文件，在主题目录也有一个名为<code>_config</code>的文本文件，此处做区分，前者为博客配置文件，后者为主题配置文件。</p>
-<p>打开博客配置文件，可以根据<a href="https://hexo.io/zh-cn/docs/configuration">官方配置介绍</a>进行修改个性化博客。<br>将博客配置文件中<code>themes</code>一行填入刚下载的next主题，即可使用该主题。在博客目录打开Git Bash，输入<code>hexo s</code>可以查看博客。</p>
-<p>注意：有些主题你更换之后是暂时无法预览的，因为有的主题还需要安装它需要的依赖。</p>
-<h1><span id="编写你的第一条博客">编写你的第一条博客</span></h1><p>在博客根目录打开Git Bash，输入下面的指令即可创建文章。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;文章名字&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>每次生成的文章都固定在你的博客根目录下面的<code>source/_posts</code>下，并以Markdown文件形式编写保存。</p>
-<h1><span id="部署你的博客到github">部署你的博客到Github</span></h1><p>首先需要有一个Github账号，并且新建仓库名为<code>用户名+.github.io</code>。</p>
-<p>接着需要进行一系列的密钥绑定：</p>
-<h2><span id="1-在博客根目录打开git-bash输入下面的命令接着会出现你的密钥">1. 在博客根目录打开Git Bash，输入下面的命令，接着会出现你的密钥。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “your_email@youremail.com“</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<h2><span id="2-在github页面点击头像-gtsettings-gtssh-and-gpg-keys-gtnew-ssh-key接着把密钥复制上去">2. 在Github页面点击头像-&gt;Settings-&gt;SSH and GPG keys-&gt;New SSH key，接着把密钥复制上去。</span></h2><h2><span id="3-再在git-bash中执行下面命令">3. 再在Git Bash中执行下面命令。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>接着提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])? </code>，输入yes回车即可。</p>
-<h2><span id="4-点击项目仓库在左上角的clone-or-download中点击use-ssh复制git开头的地址">4. 点击项目仓库，在左上角的Clone or download中点击Use SSH，复制git开头的地址。</span></h2><h2><span id="5-打开博客配置文件找到deploy一行按照下面的指示修改">5. 打开博客配置文件，找到deploy一行，按照下面的指示修改。</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: 复制到的地址</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-
-<h2><span id="6-在博客根目录打开git-bash分别执行下列命令">6. 在博客根目录打开Git Bash，分别执行下列命令。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;youremail&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2><span id="7-安装上传插件">7. 安装上传插件。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h2><span id="8-使用下面指令上传博客">8. 使用下面指令上传博客。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h2><span id="9-打开项目仓库选择上方的settings找到pages在source处选择deploy-from-a-branch-之后就会出现一个网站地址便是博客地址">9. 打开项目仓库，选择上方的Settings，找到Pages，在Source处选择Deploy from a branch。之后就会出现一个网站地址，便是博客地址。</span></h2><h1><span id="注">注</span></h1><p>如有纰漏，可同步参考<a href="https://www.cnblogs.com/huanhao/p/hexobase.html">此篇博客</a>或自行搜索他人教程相互参考。</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个小巧的Markdown编辑工具</title>
-    <url>/%E8%BD%AF%E4%BB%B6/tools1/</url>
-    <content><![CDATA[<p>介绍一个小巧方便的编写Markdown语言工具。</p>
-<ol>
-<li><p>什么是Markdown</p>
-</li>
-<li><p>MarkText</p>
-</li>
-<li><p>进阶使用</p>
-</li>
-</ol>
-<span id="more"></span>
-
-<hr>
-<h1><span id="什么是markdown">什么是Markdown</span></h1><ul>
-<li><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-</li>
-<li><p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-</li>
-<li><p>Markdown可用于编写记录笔记、博客、电子书等电子文档。</p>
-</li>
-</ul>
-<h1><span id="marktext">MarkText</span></h1><ul>
-<li>MarkText是一款开源的Markdown工具，可用于编辑输出Markdown文件。本人推荐的是英文语言软件，如何汉化自行研究。</li>
-</ul>
-<p>软件地址：建议安装到非系统盘（非C盘）</p>
-<p><a href="https://github.com/marktext/marktext/releases">MarkText下载 - 官网</a></p>
-<p><a href="https://www.aliyundrive.com/s/CoADkVDj1Sq">MarkText下载 - 个人网盘（Windows64位）</a></p>
-<ul>
-<li>MarkText具有多个明暗主题选择，软件菜单内容明确，主打轻便，是一款很不错的小工具。</li>
-</ul>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="软件界面（明亮主题）"></p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%B8%BB%E7%95%8C%E9%9D%A22.jpg" alt="软件界面（灰暗主题）"></p>
-<ul>
-<li>使用方法</li>
-</ul>
-<p>输入<code>@</code>选择插入的模块，包括段落、分割线、标题、表格、数学公式、引用块、列表等。如果本身对于Markdown语言有一定基础的话，也可直接建立该模块。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%BD%BF%E7%94%A81.jpg" alt="使用过程"></p>
-<p>在编写完内容后，可以直接保存为Markdown文件（<code>.md</code>后缀），也可以导出为PDF文件和HTML文件。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%BF%9D%E5%AD%98.jpg" alt="选择保存"></p>
-<h1><span id="进阶使用">进阶使用</span></h1><ul>
-<li>有时候对于PDF文件，会有显示目录大纲的需求，但是该软件直接导出并不能设置，此时需要借助另一个工具：wkhtmltopdf。</li>
-</ul>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="带目录的PDF文件"></p>
-<ul>
-<li><strong>wkhtmltopdf</strong></li>
-</ul>
-<p>一款<strong>将HTML文件转化为PDF文件</strong>的小工具，但是其并没有软件UI界面，对小白不友好，但是万能的网络能搜到使用方法，此处针对如何导出带目录的PDF进行介绍。</p>
-<ol>
-<li>下载软件</li>
-</ol>
-<p>下载地址：可能提示有风险，建议安装到非系统盘（非C盘）</p>
-<p><a href="https://wkhtmltopdf.org/downloads.html">wkhtmltopdf下载 - 官网</a></p>
-<p><a href="https://www.aliyundrive.com/s/V4SBUcntBAv">wkhtmltopdf下载 - 个人网盘（Windows64位）</a></p>
-<ol start="2">
-<li>安装并配置</li>
-</ol>
-<p>安装后，需要记住安装的具体位置，比如我是安装在D盘，位置就是<code>D:\wkhtmltopdf</code>，接着进行系统环境变量的配置。在电脑设置中搜索环境变量，打开编辑页面。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="配置环境变量"></p>
-<p>具体步骤：编辑→新建→输入安装的位置里面的bin文件夹即<code>D:\wkhtmltopdf\bin</code>→确定所有系统设置窗口。</p>
-<p>（添加错误的环境变量并不会对电脑造成严重伤害，但不要胡乱删除环境变量）</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%90%8E.jpg" alt="配置环境变量后"></p>
-<p>再接着确认环境变量是否配置成功：按快捷键<code>win+r</code>，输入cmd，打开黑窗口，在窗口内输入<code>wkhtmltopdf -V</code>（查询wkhtmltopdf的版本），如果出现类似于版本号的数字，则说明添加环境变量成功。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_cmd.jpg" alt="配置成功"></p>
-<ol start="3">
-<li>软件使用</li>
-</ol>
-<p>在cmd黑窗口切换到想要HTML文件转换为PDF文件的位置，直接输入<code>F:</code>切换到不同的盘，输入<code>cd xx</code>可以进入不同文件夹。如果不知道自己是什么路径，可以先进入所在盘，再打开文件所在文件夹，在地址栏点击获得路径，然后复制粘贴到黑窗口进入。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9.jpg" alt="进入工作文件夹"></p>
-<p>接着回到MarkText软件，将文件导出为HTML文件，保存在特定文件夹，该文件夹应该跟cmd黑窗口进入的文件夹一样。举例时，我将该文件保存为<code>test.html</code>文件在<code>F:\14.Books</code>文件夹。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E5%AF%BC%E5%87%BAHTML.jpg" alt="导出HTML"></p>
-<p>再回到黑窗口，使用命令<code>wkhtmltopdf 目的文件名字 新文件名字</code>转换，我这里应该是<code>wkhtmltopdf test.html test.pdf</code>。等待转换成功。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8A%9F.jpg" alt="转换成功"></p>
-<p>此时回到文件夹，就可以看到转换完成的带目录的PDF文件。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_test.jpg" alt="转换成功的PDF文件"></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>Markdown工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个便捷的启动小工具</title>
-    <url>/%E8%BD%AF%E4%BB%B6/tools2/</url>
-    <content><![CDATA[<p>介绍一个便捷的启动工具、搜索工具——Flow Launcher</p>
-<span id="more"></span>
-
-<hr>
-<!-- toc -->
-
-<ul>
-<li><a href="#1-flow-launcher">1. Flow Launcher</a></li>
-<li><a href="#2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">2.使用体验</a></li>
-<li><a href="#3%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD">3.软件下载</a></li>
-<li><a href="#4%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE">4.使用建议</a></li>
-</ul>
-<!-- tocstop -->
-
-<h1><span id="1-flow-launcher">1. Flow Launcher</span></h1><p>Flow Launcher是一款快速启动软件或者打开文件的工具。</p>
-<p>其特点有：</p>
-<ul>
-<li>整合了Everything搜索工具</li>
-<li>日期时间显示</li>
-<li>文件拖拽</li>
-<li>支持缩写</li>
-<li>可导入插件</li>
-<li>……</li>
-</ul>
-<h1><span id="2使用体验">2.使用体验</span></h1><p>软件界面简约，可设置多款主题、字体。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%95%B4%E4%BD%93%E9%A2%84%E8%A7%88.jpg" alt="软件界面"></p>
-<p>设置面板条理清晰，支持自定义，配置一个适合自己的工具。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E8%AE%BE%E7%BD%AE%E9%9D%A2%E6%9D%BF.jpg" alt="设置面板"></p>
-<p>搜索过程简单，直接输入马上得到结果，很适合文件太多不想一个个去翻的人。点击即可打开文件或打开应用。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%90%9C%E7%B4%A2%E4%BD%93%E9%AA%8C.jpg" alt="搜索过程"></p>
-<p>支持各种命令，支持缩写。</p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%8C%87%E4%BB%A4.jpg" alt="关机指令"></p>
-<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%8C%87%E4%BB%A42.jpg" alt="关机指令"></p>
-<h1><span id="3软件下载">3.软件下载</span></h1><p><a href="https://www.flowlauncher.com/">官网下载</a><br><a href="https://github.com/Flow-Launcher/Flow.Launcher">Github源码</a></p>
-<h1><span id="4使用建议">4.使用建议</span></h1><ul>
-<li>开机自启，占用率不算很高，很是方便。</li>
-<li>开启便携模式，增加结果显示个数。<br><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E5%BB%BA%E8%AE%AE.jpg" alt="使用建议1"></li>
-<li>设置好默认文件管理器，默认浏览器。</li>
-<li>自定义插件设置（如默认网页搜索引擎等）。<br><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E5%BB%BA%E8%AE%AE2.jpg" alt="使用建议2"></li>
-</ul>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>启动工具</tag>
       </tags>
   </entry>
   <entry>
@@ -1455,6 +1175,29 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>第一个博客</title>
+    <url>/%E6%97%A5%E5%B8%B8/1/</url>
+    <content><![CDATA[<p>博客建成：Hello World</p>
+<span id="more"></span>
+
+<ul>
+<li>前言</li>
+</ul>
+<p>之前常常看博客学习内容，想着自己也可以做一个博客，记录自己的学习内容。所以此博客随之诞生。取名Fingsinz’s space。</p>
+<ul>
+<li>用途</li>
+</ul>
+<p>我想着，这个博客分为几个栏目，可以记录我的学习笔记，可以分享我平常使用体验较好的软件网站，甚至可以分享我毫无营养的日常……看看侧栏，于是分成了主页、日常、比较、好物分享、归档、关于几个模块。我还增加了搜索功能，便于搜索关键词。</p>
+<ul>
+<li>更多</li>
+</ul>
+<p>我并不是主攻前端方向，学习到的知识也较为浅薄，所以该博客还有很大改进空间。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
   </entry>
   <entry>
     <title>计算机网络笔记1</title>
@@ -3038,6 +2781,212 @@
       </tags>
   </entry>
   <entry>
+    <title>一个小巧的Markdown编辑工具</title>
+    <url>/%E8%BD%AF%E4%BB%B6/tools1/</url>
+    <content><![CDATA[<p>介绍一个小巧方便的编写Markdown语言工具。</p>
+<ol>
+<li><p>什么是Markdown</p>
+</li>
+<li><p>MarkText</p>
+</li>
+<li><p>进阶使用</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<hr>
+<h1><span id="什么是markdown">什么是Markdown</span></h1><ul>
+<li><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+</li>
+<li><p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+</li>
+<li><p>Markdown可用于编写记录笔记、博客、电子书等电子文档。</p>
+</li>
+</ul>
+<h1><span id="marktext">MarkText</span></h1><ul>
+<li>MarkText是一款开源的Markdown工具，可用于编辑输出Markdown文件。本人推荐的是英文语言软件，如何汉化自行研究。</li>
+</ul>
+<p>软件地址：建议安装到非系统盘（非C盘）</p>
+<p><a href="https://github.com/marktext/marktext/releases">MarkText下载 - 官网</a></p>
+<p><a href="https://www.aliyundrive.com/s/CoADkVDj1Sq">MarkText下载 - 个人网盘（Windows64位）</a></p>
+<ul>
+<li>MarkText具有多个明暗主题选择，软件菜单内容明确，主打轻便，是一款很不错的小工具。</li>
+</ul>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="软件界面（明亮主题）"></p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%B8%BB%E7%95%8C%E9%9D%A22.jpg" alt="软件界面（灰暗主题）"></p>
+<ul>
+<li>使用方法</li>
+</ul>
+<p>输入<code>@</code>选择插入的模块，包括段落、分割线、标题、表格、数学公式、引用块、列表等。如果本身对于Markdown语言有一定基础的话，也可直接建立该模块。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%BD%BF%E7%94%A81.jpg" alt="使用过程"></p>
+<p>在编写完内容后，可以直接保存为Markdown文件（<code>.md</code>后缀），也可以导出为PDF文件和HTML文件。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E4%BF%9D%E5%AD%98.jpg" alt="选择保存"></p>
+<h1><span id="进阶使用">进阶使用</span></h1><ul>
+<li>有时候对于PDF文件，会有显示目录大纲的需求，但是该软件直接导出并不能设置，此时需要借助另一个工具：wkhtmltopdf。</li>
+</ul>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="带目录的PDF文件"></p>
+<ul>
+<li><strong>wkhtmltopdf</strong></li>
+</ul>
+<p>一款<strong>将HTML文件转化为PDF文件</strong>的小工具，但是其并没有软件UI界面，对小白不友好，但是万能的网络能搜到使用方法，此处针对如何导出带目录的PDF进行介绍。</p>
+<ol>
+<li>下载软件</li>
+</ol>
+<p>下载地址：可能提示有风险，建议安装到非系统盘（非C盘）</p>
+<p><a href="https://wkhtmltopdf.org/downloads.html">wkhtmltopdf下载 - 官网</a></p>
+<p><a href="https://www.aliyundrive.com/s/V4SBUcntBAv">wkhtmltopdf下载 - 个人网盘（Windows64位）</a></p>
+<ol start="2">
+<li>安装并配置</li>
+</ol>
+<p>安装后，需要记住安装的具体位置，比如我是安装在D盘，位置就是<code>D:\wkhtmltopdf</code>，接着进行系统环境变量的配置。在电脑设置中搜索环境变量，打开编辑页面。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="配置环境变量"></p>
+<p>具体步骤：编辑→新建→输入安装的位置里面的bin文件夹即<code>D:\wkhtmltopdf\bin</code>→确定所有系统设置窗口。</p>
+<p>（添加错误的环境变量并不会对电脑造成严重伤害，但不要胡乱删除环境变量）</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%90%8E.jpg" alt="配置环境变量后"></p>
+<p>再接着确认环境变量是否配置成功：按快捷键<code>win+r</code>，输入cmd，打开黑窗口，在窗口内输入<code>wkhtmltopdf -V</code>（查询wkhtmltopdf的版本），如果出现类似于版本号的数字，则说明添加环境变量成功。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_cmd.jpg" alt="配置成功"></p>
+<ol start="3">
+<li>软件使用</li>
+</ol>
+<p>在cmd黑窗口切换到想要HTML文件转换为PDF文件的位置，直接输入<code>F:</code>切换到不同的盘，输入<code>cd xx</code>可以进入不同文件夹。如果不知道自己是什么路径，可以先进入所在盘，再打开文件所在文件夹，在地址栏点击获得路径，然后复制粘贴到黑窗口进入。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9.jpg" alt="进入工作文件夹"></p>
+<p>接着回到MarkText软件，将文件导出为HTML文件，保存在特定文件夹，该文件夹应该跟cmd黑窗口进入的文件夹一样。举例时，我将该文件保存为<code>test.html</code>文件在<code>F:\14.Books</code>文件夹。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E5%AF%BC%E5%87%BAHTML.jpg" alt="导出HTML"></p>
+<p>再回到黑窗口，使用命令<code>wkhtmltopdf 目的文件名字 新文件名字</code>转换，我这里应该是<code>wkhtmltopdf test.html test.pdf</code>。等待转换成功。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8A%9F.jpg" alt="转换成功"></p>
+<p>此时回到文件夹，就可以看到转换完成的带目录的PDF文件。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools1_test.jpg" alt="转换成功的PDF文件"></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>Markdown工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建一个自己的简单博客</title>
+    <url>/%E6%97%A5%E5%B8%B8/4/</url>
+    <content><![CDATA[<p>简单几步，基于Hexo搭建一个属于自己的简单博客</p>
+<span id="more"></span>
+
+<hr>
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87">工具准备</a><ul>
+<li><a href="#1-nodejs">1. Nodejs</a></li>
+<li><a href="#2-git">2. Git</a></li>
+<li><a href="#3-%E9%AA%8C%E8%AF%81nodejs%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F">3. 验证Nodejs是否安装成功</a></li>
+<li><a href="#4-cnpm">4. cnpm</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85hexo">安装Hexo</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E5%BB%BA%E9%80%A0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2">开始建造你的博客</a><ul>
+<li><a href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B0%BD%E9%87%8F%E4%B8%8D%E5%86%8D%E7%A7%BB%E5%8A%A8">1. 创建一个新的文件夹，尽量不再移动。</a></li>
+<li><a href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2">2. 初始化博客</a></li>
+<li><a href="#3-%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2">3. 查看博客</a></li>
+<li><a href="#4-%E7%BB%99%E5%8D%9A%E5%AE%A2%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98next">4. 给博客下载主题——Next</a></li>
+<li><a href="#5-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">5. 修改配置文件</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BC%96%E5%86%99%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%A1%E5%8D%9A%E5%AE%A2">编写你的第一条博客</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%B0github">部署你的博客到Github</a><ul>
+<li><a href="#1-%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80git-bash%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E6%8E%A5%E7%9D%80%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E9%92%A5">1. 在博客根目录打开Git Bash，输入下面的命令，接着会出现你的密钥。</a></li>
+<li><a href="#2-%E5%9C%A8github%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%A4%B4%E5%83%8F-settings-ssh-and-gpg-keys-new-ssh-key%E6%8E%A5%E7%9D%80%E6%8A%8A%E5%AF%86%E9%92%A5%E5%A4%8D%E5%88%B6%E4%B8%8A%E5%8E%BB">2. 在Github页面点击头像-&gt;Settings-&gt;SSH and GPG keys-&gt;New SSH key，接着把密钥复制上去。</a></li>
+<li><a href="#3-%E5%86%8D%E5%9C%A8git-bash%E4%B8%AD%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4">3. 再在Git Bash中执行下面命令。</a></li>
+<li><a href="#4-%E7%82%B9%E5%87%BB%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E5%9C%A8%E5%B7%A6%E4%B8%8A%E8%A7%92%E7%9A%84clone-or-download%E4%B8%AD%E7%82%B9%E5%87%BBuse-ssh%E5%A4%8D%E5%88%B6git%E5%BC%80%E5%A4%B4%E7%9A%84%E5%9C%B0%E5%9D%80">4. 点击项目仓库，在左上角的Clone or download中点击Use SSH，复制git开头的地址。</a></li>
+<li><a href="#5-%E6%89%93%E5%BC%80%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%89%BE%E5%88%B0deploy%E4%B8%80%E8%A1%8C%E6%8C%89%E7%85%A7%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%8C%87%E7%A4%BA%E4%BF%AE%E6%94%B9">5. 打开博客配置文件，找到deploy一行，按照下面的指示修改。</a></li>
+<li><a href="#6-%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80git-bash%E5%88%86%E5%88%AB%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4">6. 在博客根目录打开Git Bash，分别执行下列命令。</a></li>
+<li><a href="#7-%E5%AE%89%E8%A3%85%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6">7. 安装上传插件。</a></li>
+<li><a href="#8-%E4%BD%BF%E7%94%A8%E4%B8%8B%E9%9D%A2%E6%8C%87%E4%BB%A4%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2">8. 使用下面指令上传博客。</a></li>
+<li><a href="#9-%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E9%80%89%E6%8B%A9%E4%B8%8A%E6%96%B9%E7%9A%84settings%E6%89%BE%E5%88%B0pages%E5%9C%A8source%E5%A4%84%E9%80%89%E6%8B%A9deploy-from-a-branch-%E4%B9%8B%E5%90%8E%E5%B0%B1%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80%E4%BE%BF%E6%98%AF%E5%8D%9A%E5%AE%A2%E5%9C%B0%E5%9D%80">9. 打开项目仓库，选择上方的Settings，找到Pages，在Source处选择Deploy from a branch。之后就会出现一个网站地址，便是博客地址。</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8">注</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="工具准备">工具准备</span></h1><h2><span id="1-nodejs">1. Nodejs</span></h2><p>Nodejs简单来说就是运行在服务端的JavaScript，博客交互需要用到Nodejs。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_NodejsDonwload.png" alt="Nodejs下载页面"></p>
+<p>选择合适的软件版本下载，<a href="https://nodejs.cn/download/">下载地址：https://nodejs.cn/download/</a></p>
+<p>下载完成后按正常流程安装，可安装在非系统盘，记得选择“Add to PATH”配置PATH环境变量。我的Nodejs安装在<code>E:\Nodejs</code>中。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_Node.png" alt="选择"></p>
+<p>注：为了软件安装简洁可控，还需要对Nodejs的内容（Cache和global）进行规划，具体可参考<a href="https://juejin.cn/post/7227434605392642104">nodejs的安装及详细环境配置</a>或<a href="https://blog.csdn.net/Ouchieve_111/article/details/70878090">修改项目默认node_modules路径</a>或<a href="https://blog.csdn.net/scorpio_meng/article/details/83314675">node安装后的设置(node_global和node_cache) - windows</a>，或自行搜索。</p>
+<h2><span id="2-git">2. Git</span></h2><p>Git是一个分布式版本控制系统，简单理解为它可以帮助我们管理文件各种版本，博客的更新之类的。</p>
+<p><a href="https://git-scm.com/">下载地址：https://git-scm.com/</a></p>
+<p>下载完成后按正常流程安装，可安装在非系统盘，其他选项可以保持默认。我的Git安装在<code>E:\Git</code>中。</p>
+<h2><span id="3-验证nodejs是否安装成功">3. 验证Nodejs是否安装成功</span></h2><p>在桌面鼠标右键，选择菜单中的Git Bash Here。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E5%8F%B3%E9%94%AE.jpg" alt="右键菜单"></p>
+<p>在弹出的窗口中输入以下指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>若出现了对应的版本号，则说明安装成功。若不出现版本号，则检查Nodejs的安装过程，或者必应搜索相关帮助。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E9%AA%8C%E8%AF%81.png" alt="验证Nodejs安装"></p>
+<h2><span id="4-cnpm">4. cnpm</span></h2><p>上面的<code>npm -v</code>查看了npm的版本，可以简单理解为npm是一种下载工具。而npm下载一般是通过国外网络下载，速度比较慢。因此需要先通过npm安装cnpm（国内下载），之后就是用cnpm代替npm。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>通过查询版本号验证是否安装成功。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<h1><span id="安装hexo">安装Hexo</span></h1><p>Hexo是一种博客框架，通过它可以将简单的Markdown语言转化为带装饰的网页。</p>
+<p>通过下面命令安装Hexo。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>也可以通过查询版本号确认Hexo是否安装成功。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -V</span><br></pre></td></tr></table></figure>
+
+<p>Hexo的常用命令：<code>hexo -s</code>本地查看博客，<code>hexo g</code>生成博客，<code>hexo clean</code>删除当前博客所有网页页面。</p>
+<h1><span id="开始建造你的博客">开始建造你的博客</span></h1><h2><span id="1-创建一个新的文件夹尽量不再移动">1. 创建一个新的文件夹，尽量不再移动。</span></h2><p>如我在F盘创建了一个文件夹叫<code>15.Blog</code>，就在15.Blog文件夹下右键选择Git Bash。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/4_%E5%8D%9A%E5%AE%A21.png"></p>
+<h2><span id="2-初始化博客">2. 初始化博客</span></h2><p>在窗口中输入命令，等待完成。（如果运行至<code>Install dependencies</code>卡住，可以<code>Ctrl + C</code>结束命令）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3-查看博客">3. 查看博客</span></h2><p>在窗口中输入命令，查看博客的初始页面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-给博客下载主题next">4. 给博客下载主题——Next</span></h2><p>点击<a href="https://hexo.io/themes/">此处</a>寻找合适的主题，以Next为例，因为该主题基础、自定义程度高。</p>
+<p>可以用git指令将Github的主题压缩包下载到博客的<code>themes/</code>文件夹中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 复制的地址 themes/主题名字</span><br></pre></td></tr></table></figure>
+
+<p>上面指令意思是将指定地址的内容克隆到本地<code>themes/</code>文件夹并命名为指定名字。<br>也可以直接下载压缩包粘贴至<code>themes/</code>文件夹中。</p>
+<h2><span id="5-修改配置文件">5. 修改配置文件</span></h2><p>在博客的根目录中有一个名为<code>_config</code>的文本文件，在主题目录也有一个名为<code>_config</code>的文本文件，此处做区分，前者为博客配置文件，后者为主题配置文件。</p>
+<p>打开博客配置文件，可以根据<a href="https://hexo.io/zh-cn/docs/configuration">官方配置介绍</a>进行修改个性化博客。<br>将博客配置文件中<code>themes</code>一行填入刚下载的next主题，即可使用该主题。在博客目录打开Git Bash，输入<code>hexo s</code>可以查看博客。</p>
+<p>注意：有些主题你更换之后是暂时无法预览的，因为有的主题还需要安装它需要的依赖。</p>
+<h1><span id="编写你的第一条博客">编写你的第一条博客</span></h1><p>在博客根目录打开Git Bash，输入下面的指令即可创建文章。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;文章名字&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>每次生成的文章都固定在你的博客根目录下面的<code>source/_posts</code>下，并以Markdown文件形式编写保存。</p>
+<h1><span id="部署你的博客到github">部署你的博客到Github</span></h1><p>首先需要有一个Github账号，并且新建仓库名为<code>用户名+.github.io</code>。</p>
+<p>接着需要进行一系列的密钥绑定：</p>
+<h2><span id="1-在博客根目录打开git-bash输入下面的命令接着会出现你的密钥">1. 在博客根目录打开Git Bash，输入下面的命令，接着会出现你的密钥。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “your_email@youremail.com“</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-在github页面点击头像-gtsettings-gtssh-and-gpg-keys-gtnew-ssh-key接着把密钥复制上去">2. 在Github页面点击头像-&gt;Settings-&gt;SSH and GPG keys-&gt;New SSH key，接着把密钥复制上去。</span></h2><h2><span id="3-再在git-bash中执行下面命令">3. 再在Git Bash中执行下面命令。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>接着提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])? </code>，输入yes回车即可。</p>
+<h2><span id="4-点击项目仓库在左上角的clone-or-download中点击use-ssh复制git开头的地址">4. 点击项目仓库，在左上角的Clone or download中点击Use SSH，复制git开头的地址。</span></h2><h2><span id="5-打开博客配置文件找到deploy一行按照下面的指示修改">5. 打开博客配置文件，找到deploy一行，按照下面的指示修改。</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: 复制到的地址</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
+<h2><span id="6-在博客根目录打开git-bash分别执行下列命令">6. 在博客根目录打开Git Bash，分别执行下列命令。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;youremail&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="7-安装上传插件">7. 安装上传插件。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2><span id="8-使用下面指令上传博客">8. 使用下面指令上传博客。</span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h2><span id="9-打开项目仓库选择上方的settings找到pages在source处选择deploy-from-a-branch-之后就会出现一个网站地址便是博客地址">9. 打开项目仓库，选择上方的Settings，找到Pages，在Source处选择Deploy from a branch。之后就会出现一个网站地址，便是博客地址。</span></h2><h1><span id="注">注</span></h1><p>如有纰漏，可同步参考<a href="https://www.cnblogs.com/huanhao/p/hexobase.html">此篇博客</a>或自行搜索他人教程相互参考。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两个用过的导航页</title>
     <url>/%E7%BD%91%E9%A1%B5/%E5%AF%BC%E8%88%AA%E9%A1%B5/</url>
     <content><![CDATA[<p>介绍两个我常用的导航页。导航页就是一个网站的目录，其包含了很多常用其他网站的快捷方式。</p>
@@ -3077,6 +3026,57 @@
       </categories>
       <tags>
         <tag>导航页</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个便捷的启动小工具</title>
+    <url>/%E8%BD%AF%E4%BB%B6/tools2/</url>
+    <content><![CDATA[<p>介绍一个便捷的启动工具、搜索工具——Flow Launcher</p>
+<span id="more"></span>
+
+<hr>
+<!-- toc -->
+
+<ul>
+<li><a href="#1-flow-launcher">1. Flow Launcher</a></li>
+<li><a href="#2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">2.使用体验</a></li>
+<li><a href="#3%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD">3.软件下载</a></li>
+<li><a href="#4%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE">4.使用建议</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="1-flow-launcher">1. Flow Launcher</span></h1><p>Flow Launcher是一款快速启动软件或者打开文件的工具。</p>
+<p>其特点有：</p>
+<ul>
+<li>整合了Everything搜索工具</li>
+<li>日期时间显示</li>
+<li>文件拖拽</li>
+<li>支持缩写</li>
+<li>可导入插件</li>
+<li>……</li>
+</ul>
+<h1><span id="2使用体验">2.使用体验</span></h1><p>软件界面简约，可设置多款主题、字体。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%95%B4%E4%BD%93%E9%A2%84%E8%A7%88.jpg" alt="软件界面"></p>
+<p>设置面板条理清晰，支持自定义，配置一个适合自己的工具。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E8%AE%BE%E7%BD%AE%E9%9D%A2%E6%9D%BF.jpg" alt="设置面板"></p>
+<p>搜索过程简单，直接输入马上得到结果，很适合文件太多不想一个个去翻的人。点击即可打开文件或打开应用。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%90%9C%E7%B4%A2%E4%BD%93%E9%AA%8C.jpg" alt="搜索过程"></p>
+<p>支持各种命令，支持缩写。</p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%8C%87%E4%BB%A4.jpg" alt="关机指令"></p>
+<p><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E6%8C%87%E4%BB%A42.jpg" alt="关机指令"></p>
+<h1><span id="3软件下载">3.软件下载</span></h1><p><a href="https://www.flowlauncher.com/">官网下载</a><br><a href="https://github.com/Flow-Launcher/Flow.Launcher">Github源码</a></p>
+<h1><span id="4使用建议">4.使用建议</span></h1><ul>
+<li>开机自启，占用率不算很高，很是方便。</li>
+<li>开启便携模式，增加结果显示个数。<br><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E5%BB%BA%E8%AE%AE.jpg" alt="使用建议1"></li>
+<li>设置好默认文件管理器，默认浏览器。</li>
+<li>自定义插件设置（如默认网页搜索引擎等）。<br><img src="https://fblog-img.oss-cn-hangzhou.aliyuncs.com/blog/tools2_%E5%BB%BA%E8%AE%AE2.jpg" alt="使用建议2"></li>
+</ul>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>启动工具</tag>
       </tags>
   </entry>
 </search>
