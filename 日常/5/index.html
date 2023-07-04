@@ -22,25 +22,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fingsinz.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="不忘初心，方得始终">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fingsinz&#39;s space">
-<meta property="og:url" content="https://fingsinz.github.io/archives/2023/06/index.html">
+    <meta name="description" content="基于YOLOv5的电瓶车图像识别：安装TensorRT并配置 OS：Windows 10GPU：NVIDIA GeFOrce GTX 1050">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023夏令营项目实训1">
+<meta property="og:url" content="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/index.html">
 <meta property="og:site_name" content="Fingsinz&#39;s space">
-<meta property="og:description" content="不忘初心，方得始终">
+<meta property="og:description" content="基于YOLOv5的电瓶车图像识别：安装TensorRT并配置 OS：Windows 10GPU：NVIDIA GeFOrce GTX 1050">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/CUDA%E7%89%88%E6%9C%AC.jpg">
+<meta property="og:image" content="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/cuDNN.jpg">
+<meta property="og:image" content="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/TensorRT.jpg">
+<meta property="article:published_time" content="2023-07-04T03:07:50.000Z">
+<meta property="article:modified_time" content="2023-07-04T06:16:57.893Z">
 <meta property="article:author" content="Fingsinz">
+<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="TensorRT">
+<meta property="article:tag" content="C++推演">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/CUDA%E7%89%88%E6%9C%AC.jpg">
 
 
-<link rel="canonical" href="https://fingsinz.github.io/archives/2023/06/">
+<link rel="canonical" href="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2023/06/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/","path":"日常/5/","title":"2023夏令营项目实训1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | Fingsinz's space</title>
+<title>2023夏令营项目实训1 | Fingsinz's space</title>
   
 
 
@@ -73,7 +82,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Fingsinz's space</h1>
+      <p class="site-title">Fingsinz's space</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">风信梓的博客</p>
@@ -127,7 +136,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -140,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">下载CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1.确定适配本机显卡驱动的CUDA版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2.下载对应版本的CUDA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3.安装CUDA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">下载cuDNN包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1.选择适配CUDA的版本下载对应的cuDNN包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2.选择合适的位置解压cuDNN压缩包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3.复制文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">下载TensorRT包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1.选择适配CUDA版本的TensorRT包下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2.选择合适的位置解压TensorRT压缩包</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -199,169 +209,155 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/favicon.png">
+      <meta itemprop="name" content="Fingsinz">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fingsinz's space">
+      <meta itemprop="description" content="不忘初心，方得始终">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2023夏令营项目实训1 | Fingsinz's space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2023夏令营项目实训1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="创建时间：2023-07-04 11:07:50 / 修改时间：14:16:57" itemprop="dateCreated datePublished" datetime="2023-07-04T11:07:50+08:00">2023-07-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%A5%E5%B8%B8/" itemprop="url" rel="index"><span itemprop="name">日常</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>771</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>基于YOLOv5的电瓶车图像识别：安装TensorRT并配置</p>
+<p>OS：Windows 10<br>GPU：NVIDIA GeFOrce GTX 1050</p>
+<span id="more"></span>
+
+<hr>
+<!-- toc -->
+
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BDcuda">下载CUDA</a><ul>
+<li><a href="#1%E7%A1%AE%E5%AE%9A%E9%80%82%E9%85%8D%E6%9C%AC%E6%9C%BA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E7%9A%84cuda%E7%89%88%E6%9C%AC">1.确定适配本机显卡驱动的CUDA版本</a></li>
+<li><a href="#2%E4%B8%8B%E8%BD%BD%E5%AF%B9%E5%BA%94%E7%89%88%E6%9C%AC%E7%9A%84cuda">2.下载对应版本的CUDA</a></li>
+<li><a href="#3%E5%AE%89%E8%A3%85cuda">3.安装CUDA</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8B%E8%BD%BDcudnn%E5%8C%85">下载cuDNN包</a><ul>
+<li><a href="#1%E9%80%89%E6%8B%A9%E9%80%82%E9%85%8Dcuda%E7%9A%84%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD%E5%AF%B9%E5%BA%94%E7%9A%84cudnn%E5%8C%85">1.选择适配CUDA的版本下载对应的cuDNN包</a></li>
+<li><a href="#2%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E7%9A%84%E4%BD%8D%E7%BD%AE%E8%A7%A3%E5%8E%8Bcudnn%E5%8E%8B%E7%BC%A9%E5%8C%85">2.选择合适的位置解压cuDNN压缩包</a></li>
+<li><a href="#3%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6">3.复制文件</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8B%E8%BD%BDtensorrt%E5%8C%85">下载TensorRT包</a><ul>
+<li><a href="#1%E9%80%89%E6%8B%A9%E9%80%82%E9%85%8Dcuda%E7%89%88%E6%9C%AC%E7%9A%84tensorrt%E5%8C%85%E4%B8%8B%E8%BD%BD">1.选择适配CUDA版本的TensorRT包下载</a></li>
+<li><a href="#2%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E7%9A%84%E4%BD%8D%E7%BD%AE%E8%A7%A3%E5%8E%8Btensorrt%E5%8E%8B%E7%BC%A9%E5%8C%85">2.选择合适的位置解压TensorRT压缩包</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="下载cuda">下载CUDA</span></h1><h2><span id="1确定适配本机显卡驱动的cuda版本">1.确定适配本机显卡驱动的CUDA版本</span></h2><p>系统搜索打开NVIDIA控制面板，点击帮助，选择系统信息-&gt;组件，找到CUDA字样。此处我的CUDA适配版本为<code>12.0</code>。</p>
+<p><img src="/%E6%97%A5%E5%B8%B8/5/CUDA%E7%89%88%E6%9C%AC.jpg" alt="CUDA版本查看"></p>
+<h2><span id="2下载对应版本的cuda">2.下载对应版本的CUDA</span></h2><p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">下载地址 - NVIDIA官网</a></p>
+<h2><span id="3安装cuda">3.安装CUDA</span></h2><p>点击下载的安装exe文件，可以更改文件安装位置，记住文件安装位置。此处我的安装位置是<code>G:\NVIDIA_GPU_Computing_Toolkit_CUDA_v12.0</code>。</p>
+<h1><span id="下载cudnn包">下载cuDNN包</span></h1><h2><span id="1选择适配cuda的版本下载对应的cudnn包">1.选择适配CUDA的版本下载对应的cuDNN包</span></h2><p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">下载地址 - NVIDIA官网</a></p>
+<h2><span id="2选择合适的位置解压cudnn压缩包">2.选择合适的位置解压cuDNN压缩包</span></h2><p><img src="/%E6%97%A5%E5%B8%B8/5/cuDNN.jpg" alt="解压cuDNN后的文件"></p>
+<h2><span id="3复制文件">3.复制文件</span></h2><p>cuDNN属于是CUDA的一个补丁包，因此无需安装。需要将<code>bin\</code>、<code>include\</code>、<code>lib\</code>文件夹中的相关文件拷贝到CUDA安装位置的<code>bin\</code>、<code>include\</code>、<code>lib\x64\</code>文件夹中。</p>
+<p>我的CUDA安装位置是：<code>G:\NVIDIA_GPU_Computing_Toolkit_CUDA_v12.0</code>。</p>
+<h1><span id="下载tensorrt包">下载TensorRT包</span></h1><h2><span id="1选择适配cuda版本的tensorrt包下载">1.选择适配CUDA版本的TensorRT包下载</span></h2><p>进入<a target="_blank" rel="noopener" href="https://developer.nvidia.com/nvidia-tensorrt-download">官网</a>，选择较新的大版本，再选择适合自己安装的CUDA版本下载。</p>
+<p>我在此处下载Windows的支持CUDA12.0的版本。</p>
+<h2><span id="2选择合适的位置解压tensorrt压缩包">2.选择合适的位置解压TensorRT压缩包</span></h2><p><img src="/%E6%97%A5%E5%B8%B8/5/TensorRT.jpg" alt="解压TensorRT后的文件"></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-24T14:39:41+08:00"
-              content="2023-06-24">
-          06-24
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/%E6%97%A5%E5%B8%B8/3/" itemprop="url">
-            <span itemprop="name">使用阿里云对象存储OSS实现图床</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
+              <a href="/tags/TensorRT/" rel="tag"><i class="fa fa-tag"></i> TensorRT</a>
+              <a href="/tags/C-%E6%8E%A8%E6%BC%94/" rel="tag"><i class="fa fa-tag"></i> C++推演</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E6%97%A5%E5%B8%B8/4/" rel="prev" title="搭建一个自己的简单博客">
+                  <i class="fa fa-chevron-left"></i> 搭建一个自己的简单博客
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-22T20:52:30+08:00"
-              content="2023-06-22">
-          06-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E8%BD%AF%E4%BB%B6/tools2/" itemprop="url">
-            <span itemprop="name">一个便捷的启动小工具</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-22T11:29:14+08:00"
-              content="2023-06-22">
-          06-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E6%97%A5%E5%B8%B8/2/" itemprop="url">
-            <span itemprop="name">记录Keil_C51和Keil_MDK的安装</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-18T20:18:57+08:00"
-              content="2023-06-18">
-          06-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/HTML/HTML/" itemprop="url">
-            <span itemprop="name">HTML语言学习记录</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-18T16:22:45+08:00"
-              content="2023-06-18">
-          06-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E8%BD%AF%E4%BB%B6/tools1/" itemprop="url">
-            <span itemprop="name">一个小巧的Markdown编辑工具</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-16T15:45:32+08:00"
-              content="2023-06-16">
-          06-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E7%BD%91%E9%A1%B5/%E5%AF%BC%E8%88%AA%E9%A1%B5/" itemprop="url">
-            <span itemprop="name">两个用过的导航页</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-07T10:56:46+08:00"
-              content="2023-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cnetwork1/" itemprop="url">
-            <span itemprop="name">计算机网络笔记1</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 </div>
   </main>
@@ -445,7 +441,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":false,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://fingsinz.github.io/archives/2023/06/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://fingsinz.github.io/%E6%97%A5%E5%B8%B8/5/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 
 </body>
