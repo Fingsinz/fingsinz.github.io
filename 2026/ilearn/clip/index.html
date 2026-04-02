@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.0" theme-name="Stellar" theme-version="1.33.0">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,12 +17,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>标签 - Fingsinz's Blog</title>
+  <title>CLIP 模型基础原理 - Fingsinz's Blog</title>
 
   
-  <meta name="description" content="我在想，时下你所需要的，应该是痛痛快快换个心情，干干脆脆享受人生。">
+  <meta name="description" content="关键词：深度学习、模型、多模态">
   
-  
+  <meta name="keywords" content="深度学习,模型,多模态">
 
   <!-- feed -->
   
@@ -36,12 +36,12 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://fingsinz.github.io","author":{"@type":"Person","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg"},"name":"Fingsinz's Blog","description":"我在想，时下你所需要的，应该是痛痛快快换个心情，干干脆脆享受人生。","url":"https://fingsinz.github.io"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-04-02T17:38:00+08:00","dateModified":"2026-04-02T17:54:12+08:00","datePublished":"2026-04-02T17:38:00+08:00","description":"关键词：深度学习、模型、多模态","headline":"CLIP 模型基础原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://fingsinz.github.io/2026/ilearn/clip/"},"publisher":{"@type":"Organization","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fingsinz.github.io/2026/ilearn/clip/","keywords":"深度学习, 模型, 多模态","image":[]}</script>
   
 <link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
 <body>
 
-<div class="l_body index" id="start" layout="tags" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Fingsinz's Blog</div><div class="sub cap">Write everything</div></a></div></header>
@@ -61,178 +61,91 @@
 
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="Github" target="_blank" rel="noopener" href="https://github.com/Fingsinz"><div class="flex"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/><span>Github</span></div></a></div></div></widget>
+
+<widget class="widget-wrapper related post-list"><div class="widget-header dis-select"><span class="name">专栏：我所理解的</span></div><div class="widget-body"><a class="item active" href="/2026/ilearn/clip/"><span class="title">CLIP 模型基础原理</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Fingsinz's Blog</div><div class="sub cap">Write everything</div></a></div></header>
 
 
-  
-  
-  
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签</a><a href="/topic/">专栏</a><a href="/archives/">归档</a></nav></div></div></div>
-  <div class='post-list'>
-    <article class='' id='tags'>
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2026/ilearn/clip/">我所理解的</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-04-02T09:38:00.000Z">2026-04-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-04-02T09:54:12.685Z">2026-04-02</time></span></div></div></div>
+    
+    <div class="bottom only-title">
       
-        <a class='tag' href="/tags/CPP/">
-          <span class='name'>CPP</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-          <span class='name'>深度学习</span>
-        </a>
-      
-        <a class='tag' href="/tags/Qt/">
-          <span class='name'>Qt</span>
-        </a>
-      
-        <a class='tag' href="/tags/Python/">
-          <span class='name'>Python</span>
-        </a>
-      
-        <a class='tag' href="/tags/Linux/">
-          <span class='name'>Linux</span>
-        </a>
-      
-        <a class='tag' href="/tags/YOLOv5/">
-          <span class='name'>YOLOv5</span>
-        </a>
-      
-        <a class='tag' href="/tags/SSH/">
-          <span class='name'>SSH</span>
-        </a>
-      
-        <a class='tag' href="/tags/docker/">
-          <span class='name'>docker</span>
-        </a>
-      
-        <a class='tag' href="/tags/TensorRT/">
-          <span class='name'>TensorRT</span>
-        </a>
-      
-        <a class='tag' href="/tags/OpenCV/">
-          <span class='name'>OpenCV</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E7%BB%8F%E9%AA%8C/">
-          <span class='name'>经验</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E7%BD%91%E7%BB%9C/">
-          <span class='name'>网络</span>
-        </a>
-      
-        <a class='tag' href="/tags/Keil/">
-          <span class='name'>Keil</span>
-        </a>
-      
-        <a class='tag' href="/tags/Android/">
-          <span class='name'>Android</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8OSS/">
-          <span class='name'>对象存储OSS</span>
-        </a>
-      
-        <a class='tag' href="/tags/AI/">
-          <span class='name'>AI</span>
-        </a>
-      
-        <a class='tag' href="/tags/Agent/">
-          <span class='name'>Agent</span>
-        </a>
-      
-        <a class='tag' href="/tags/Windows/">
-          <span class='name'>Windows</span>
-        </a>
-      
-        <a class='tag' href="/tags/Hexo/">
-          <span class='name'>Hexo</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E5%8D%9A%E5%AE%A2/">
-          <span class='name'>博客</span>
-        </a>
-      
-        <a class='tag' href="/tags/onnx/">
-          <span class='name'>onnx</span>
-        </a>
-      
-        <a class='tag' href="/tags/CUDA/">
-          <span class='name'>CUDA</span>
-        </a>
-      
-        <a class='tag' href="/tags/MySQL/">
-          <span class='name'>MySQL</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-          <span class='name'>设计模式</span>
-        </a>
-      
-        <a class='tag' href="/tags/OpenGL/">
-          <span class='name'>OpenGL</span>
-        </a>
-      
-        <a class='tag' href="/tags/C/">
-          <span class='name'>C</span>
-        </a>
-      
-        <a class='tag' href="/tags/gdal/">
-          <span class='name'>gdal</span>
-        </a>
-      
-        <a class='tag' href="/tags/GPU%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-          <span class='name'>GPU服务器</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E7%AE%97%E6%B3%95/">
-          <span class='name'>算法</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-          <span class='name'>数据结构</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E7%AB%9E%E8%B5%9B/">
-          <span class='name'>竞赛</span>
-        </a>
-      
-        <a class='tag' href="/tags/Markdown%E5%B7%A5%E5%85%B7/">
-          <span class='name'>Markdown工具</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E6%A8%A1%E5%9E%8B/">
-          <span class='name'>模型</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/">
-          <span class='name'>多模态</span>
-        </a>
-      
-        <a class='tag' href="/tags/Rust/">
-          <span class='name'>Rust</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E5%AF%BC%E8%88%AA%E9%A1%B5/">
-          <span class='name'>导航页</span>
-        </a>
-      
-        <a class='tag' href="/tags/uv/">
-          <span class='name'>uv</span>
-        </a>
-      
-    </article>
+      <div class="text-area">
+        <h1 class="text title"><span>CLIP 模型基础原理</span></h1>
+        
+      </div>
+    </div>
+    
   </div>
+  </div><article class="md-text content"><p>关键词：深度学习、模型、多模态</p>
+<span id="more"></span>
+<hr>
+<h2 id="什么是-clip-模型">什么是 CLIP 模型</h2>
+<p>CLIP 全称 Contrastive Language–Image Pretraining，是一个多模态视觉语言模型。</p>
+<p>Contrastive Learning 意为对比学习。</p>
+<ul>
+<li>学习的是预测事物是否属于同一类或不属于同一类；</li>
+<li>通过最大化相关样本之间的相似性并最小化不相关样本之间的相似性来学习数据表示。</li>
+</ul>
+<p>CLIP 中学习的是预测图像和文本是否相似（或同类）。 <strong>通过编码器将文本和图像编码成同一 Embedding 空间中的表示，以此对比学习图像和文本之间的相似性。</strong></p>
+<ul>
+<li>文本编码通过文本编码器（Text Encoder）实现；</li>
+<li>图像编码通过图像编码器（Image Encoder）实现。</li>
+</ul>
+<p>能完成什么任务？</p>
+<ol>
+<li>图像分类：计算多个文本描述与图像之间的相似度分数；</li>
+<li>图像搜索：查找与查询文本描述最相似的图像；</li>
+<li>……</li>
+</ol>
+<h2 id="clip-模型组成">CLIP 模型组成</h2>
+<p>CLIP 是一个抽象模型，文本编码器和图像编码器不局限于特定的模型架构。</p>
+<p>常用的文本编码器有 Transformer 架构，常见的图像编码器有 ResNet、ViT 等。</p>
+<p>常用的相似性比较方法有余弦相似性等。</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mo>⋅</mo><mi>B</mi></mrow><mrow><mi mathvariant="normal">∥</mi><mi>A</mi><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∥</mi><mi>B</mi><mi mathvariant="normal">∥</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\theta = \frac{A\cdot B}{\Vert A \Vert \Vert B \Vert}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.29633em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∥</span><span class="mord mathdefault">A</span><span class="mord">∥</span><span class="mord">∥</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">∥</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h2 id="references">References</h2>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/12322629416">经典多模态模型CLIP - 直观且详尽的解释</a></li>
+<li><a target="_blank" rel="noopener" href="https://hugging-face.cn/docs/transformers/model_doc/clip">CLIP - Hugging Face 文档</a></li>
+</ol>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script></article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/27/">OpenClaw：养🦞记录</a></div></section></div>
+
+
+
+
 
 
 <footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:3;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs15">探索发现</span><a href="/explore/software_i_use">我在用或用过的软件</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/me/">关于我</a><a href="/about/site/">关于博客</a></div></div><div class="text"><p>本站由 <a href="/">Fingsinz</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.0">Stellar 1.33.0</a> 主题创建。<br>
 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="true"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-clip-%E6%A8%A1%E5%9E%8B"><span class="toc-text">什么是 CLIP 模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clip-%E6%A8%A1%E5%9E%8B%E7%BB%84%E6%88%90"><span class="toc-text">CLIP 模型组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-text">References</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
