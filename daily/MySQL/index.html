@@ -1,0 +1,1277 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.0" theme-name="Stellar" theme-version="1.33.0">
+  
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>MySQL 数据库学习记录 - Fingsinz's Blog</title>
+
+  
+  <meta name="description" content="关键词：MySQL、C++
+
+一、认识 MySQL
+1.1 什么是 MySQL
+MySQL 是 关系型 数据库。
+
+关系型可以理解为表格的概念。
+
+表格具有表头、行、列、键、值等。
+
+表头：每一列的名称；
+列：具有相同数据类型的集合；
+行：每一行用来描述某个具体信息；
+键：表中用来识别某个特定...">
+  
+  <meta name="keywords" content="MySQL">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.0">
+
+
+  
+    <link rel="shortcut icon" href="/images/avatar.jpg">
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2024-02-26T17:36:56+08:00","dateModified":"2025-09-03T23:07:22+08:00","datePublished":"2024-02-26T17:36:56+08:00","description":"","headline":"MySQL 数据库学习记录","mainEntityOfPage":{"@type":"WebPage","@id":"https://fingsinz.github.io/daily/MySQL/"},"publisher":{"@type":"Organization","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fingsinz.github.io/daily/MySQL/","keywords":"MySQL","image":[]}</script>
+  
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Fingsinz's Blog</div><div class="sub cap">我在想，时下你所需要的，应该是痛痛快快换个心情，干干脆脆享受人生。</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#c7c6b6"><span>博客</span></a><a class="nav-item" title="文档" href="/docs/" style="color:#a72126"><span>文档</span></a><a class="nav-item" title="探索" href="/explore/" style="color:#12264f"><span>探索</span></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+<widget class="widget-wrapper markdown"><div class="widget-body fs14"><p>欢迎来到我的博客！！！</p>
+<p>如果想和我交流或指出错误，欢迎邮件 <a href="mailto:fingsinz@foxmail.com">fingsinz@foxmail.com</a></p>
+<p>食用指南：</p>
+<ul>
+<li>博客📄：一些小文章</li>
+<li>笔记📔：个人学习记录</li>
+<li>文档🗂️：一些项目的文档</li>
+<li>探索💡：一些发现</li>
+</ul>
+
+<div class="linklist left" style="grid-template-columns:repeat(1,1fr);">
+<a class="link" title="Github" target="_blank" rel="noopener" href="https://github.com/Fingsinz"><div class="flex"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/><span>Github</span></div></a>
+<a class="link" title="Email" href="mailto:fingsinz@foxmail.com"><div class="flex"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"/><span>Email</span></div></a></div></div></widget>
+
+
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-26T09:36:56.000Z">2024-02-26</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-09-03T15:07:22.706Z">2025-09-03</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>MySQL 数据库学习记录</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>关键词：MySQL、C++</p>
+<hr>
+<h2 id="一-认识-mysql">一、认识 MySQL</h2>
+<h3 id="1-1-什么是-mysql">1.1 什么是 MySQL</h3>
+<p>MySQL 是 <strong>关系型</strong> 数据库。</p>
+<ul>
+<li>关系型可以理解为表格的概念。
+<ul>
+<li>表格具有表头、行、列、键、值等。
+<ul>
+<li>表头：每一列的名称；</li>
+<li>列：具有相同数据类型的集合；</li>
+<li>行：每一行用来描述某个具体信息；</li>
+<li>键：表中用来识别某个特定对象的方法，键的值在当前列中具有唯一性；</li>
+<li>值：行的具体信息，每个值必须与该列的数据类型相同。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一个关系型数据库由一个或多个表格组成。</li>
+</ul>
+<p>如：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">sex</th>
+<th style="text-align:center">age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">小明</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">小红</td>
+<td style="text-align:center">女</td>
+<td style="text-align:center">17</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">小张</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">19</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">小李</td>
+<td style="text-align:center">女</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>表头为 id、name、sex、age；</li>
+<li>id：作为一个键。</li>
+</ul>
+<h3 id="1-2-windows-下配置-mysql">1.2 Windows 下配置 MySQL</h3>
+<p>此处为免安装版 MySQL-8.0.36，<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.1.html#downloads">下载地址 - ZIP文件</a></p>
+<p>解压到目录：<code>E:\MySQL-8.0.36</code>。</p>
+<p>接着在文件夹中创建配置文件 <code>my.ini</code>，内容如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8</span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"> </span><br><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line"><span class="attr">basedir</span>=E:\\MySQL-<span class="number">8.0</span>.<span class="number">36</span></span><br><span class="line"><span class="comment"># 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错</span></span><br><span class="line"><span class="comment"># datadir=C:\\web\\sqldata</span></span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">20</span></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br></pre></td></tr></table></figure>
+<p>然后配置环境变量：</p>
+<ul>
+<li>打开环境变量设置，新建变量名 <code>MYSQL_HOME</code>，变量值为 <code>E:\MySQL-8.0.36</code>。</li>
+<li>系统变量 <code>PATH</code> 中添加 <code>E:\MySQL-8.0.36\bin</code>。</li>
+</ul>
+<p>最后启动命令提示符（cmd），执行命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld.exe --install MySQL --defaults-file=&quot;E:\MySQL-<span class="number">8</span>.<span class="number">0</span>.<span class="number">36</span>\my.ini&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果安装被拒绝，请使用管理员权限启动cmd。</li>
+</ul>
+<p>提示 <code>Service successfully installed.</code> 表示成功。</p>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_installed.jpg" alt="安装成功"></p>
+<h4 id="1-2-1-mysql-的启动-停止和卸载">1.2.1 MySQL 的启动、停止和卸载</h4>
+<p>MySQL 服务的启动：<code>net start MySQL</code></p>
+<p>MySQL 服务的停止：<code>net stop MySQL</code></p>
+<p>MySQL 服务的卸载：<code>sc delete MySQL</code></p>
+<h3 id="1-3-mysql-脚本的基本组成">1.3 MySQL 脚本的基本组成</h3>
+<p>MySQL 通过执行 SQL 脚本来完成对数据库的操作。</p>
+<ul>
+<li>脚本由一条或多条 MySQL 语句（SQL 语句 + 扩展语句）组成，保存为脚本文件一般为 <code>.sql</code> 文件。</li>
+<li>控制台可以进行单句脚本执行。</li>
+</ul>
+<p>标识符：</p>
+<ul>
+<li>命名对象，如数据库、表、列、变量等。由字母、数字、下划线组成，第一个字符不能为数字。
+<ul>
+<li>大小写是否敏感取决于操作系统，Windows 下是不敏感的，但大多数 Linux 下是敏感的。</li>
+</ul>
+</li>
+</ul>
+<p>关键字：</p>
+<ul>
+<li>关键字有特定的含义，避免作为标识符。（此处不列出，使用中学习）</li>
+</ul>
+<p>语句：</p>
+<ul>
+<li>是组成 MySQL 脚本的最小单位。每条语句可以完成特定操作，由 SQL 语句 + 扩展语句组成。</li>
+</ul>
+<p>函数：</p>
+<ul>
+<li>实现数据库操作的高级功能，大致分为：字符串函数、数学函数、日期时间函数、搜索函数、加密函数、信息函数。</li>
+</ul>
+<h3 id="1-4-mysql-中的数据类型">1.4 MySQL 中的数据类型</h3>
+<p>三大数据类型：数字、日期/时间、字符串。</p>
+<p>数字：</p>
+<ul>
+<li>整型：
+<ul>
+<li><code>tinyint</code>：1个字节，带符号范围 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>128</mn><mo>∼</mo><mn>127</mn></mrow><annotation encoding="application/x-tex">-128\sim127</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">7</span></span></span></span>；</li>
+<li><code>smallint</code>：2个字节，带符号范围 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>32768</mn><mo>∼</mo><mn>32767</mn></mrow><annotation encoding="application/x-tex">-32768\sim32767</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">3</span><span class="mord">2</span><span class="mord">7</span><span class="mord">6</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span><span class="mord">7</span><span class="mord">6</span><span class="mord">7</span></span></span></span>；</li>
+<li><code>mediumint</code>：3个字节，带符号范围 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>8388608</mn><mo>∼</mo><mn>8388607</mn></mrow><annotation encoding="application/x-tex">-8388608\sim8388607</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">8</span><span class="mord">3</span><span class="mord">8</span><span class="mord">8</span><span class="mord">6</span><span class="mord">0</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mord">8</span><span class="mord">8</span><span class="mord">6</span><span class="mord">0</span><span class="mord">7</span></span></span></span>；</li>
+<li><code>int</code>：4个字节，带符号范围 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msup><mn>2</mn><mn>31</mn></msup><mo>∼</mo><msup><mn>2</mn><mn>31</mn></msup><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mo>−</mo><mn>2147483648</mn><mo>∼</mo><mn>2147483647</mn></mrow><annotation encoding="application/x-tex">-2^{31}\sim2^{31}-1,-2147483648\sim2147483647</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">2</span><span class="mord">1</span><span class="mord">4</span><span class="mord">7</span><span class="mord">4</span><span class="mord">8</span><span class="mord">3</span><span class="mord">6</span><span class="mord">4</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">1</span><span class="mord">4</span><span class="mord">7</span><span class="mord">4</span><span class="mord">8</span><span class="mord">3</span><span class="mord">6</span><span class="mord">4</span><span class="mord">7</span></span></span></span>；</li>
+<li><code>bigint</code>：8个字节，带符号范围 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msup><mn>2</mn><mn>63</mn></msup><mo>∼</mo><msup><mn>2</mn><mn>63</mn></msup><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mo>±</mo><mn>9.22</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>18</mn></msup></mrow><annotation encoding="application/x-tex">-2^{63}\sim2^{63}-1,\pm9.22\times10^{18}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">±</span><span class="mord">9</span><span class="mord">.</span><span class="mord">2</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span></span>；</li>
+</ul>
+</li>
+<li>浮点型：
+<ul>
+<li><code>float(m,d)</code>：单精度浮点型，8位精度（4字节），总精度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>，小数位 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>，以实际为准。</li>
+<li><code>double</code>：双精度浮点型，16位精度（8字节），总精度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>，小数位 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>，以实际为准。</li>
+<li><code>real</code></li>
+<li><code>decimal(m,d)</code>：定点数，存放精确的值。如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&gt;</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">m&gt;d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span> 则大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">m+2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 字节，否则为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">d+2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 字节。</li>
+</ul>
+</li>
+</ul>
+<p>日期和时间：</p>
+<ul>
+<li><code>date</code>：格式为 <code>YYYY-MM-DD</code>，大小3字节，范围<code>1000-01-01/9999-12-31</code>。</li>
+<li><code>time</code>：格式为 <code>HH:MM:SS</code>，大小3字节，范围<code>-838:59:59/838:59:59</code>。</li>
+<li><code>year</code>：格式为 <code>YYYY</code>，大小1字节，范围<code>1901/2155</code>。</li>
+<li><code>datetime</code>：格式为 <code>YYYY-MM-DD HH:MM:SS</code>，大小8字节，范围<code>1000-01-01 00:00:00/9999-12-31 23:59:59</code>。</li>
+<li><code>timestamp</code>：格式为 <code>YYYY-MM-DD HH:MM:SS</code>，大小4字节，范围<code>1970-01-01 00:00:00/2038-01-19 03:14:07</code>（结束时间为距离1970-01-01 00:00:00 的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{31}-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 秒，看时区）。
+<ul>
+<li>时间戳的数据会随其他字段修改时自动更新。</li>
+</ul>
+</li>
+</ul>
+<p>字符串类型：</p>
+<ul>
+<li>字符串：
+<ul>
+<li><code>char(n)</code>：定长字符串，0~255字节。</li>
+<li><code>varchar(n)</code>：变长字符串，0~65535字符。</li>
+<li><code>char(n)</code> 与 <code>varchar(n)</code>：两者的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 都表示字符个数，而不是字节个数。前者若存入字符数小于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>，则用空格补在后面，查询时去掉空格；而后者没这个规定。</li>
+</ul>
+</li>
+<li>文本：
+<ul>
+<li><code>tinytext</code>：短文本字符串，0~255字节。</li>
+<li><code>text</code>：长文本数据，0~65535字节。</li>
+<li><code>mediumtext</code>：中等长度文本数据，0~16777215字节。</li>
+<li><code>longtext</code>：极大文本数据，0~4294967295字节。</li>
+</ul>
+</li>
+<li><code>varchar</code> 与 <code>text</code>：
+<ul>
+<li>前者可以指定 <code>n</code>，后者不能指定；</li>
+<li>后者不能有默认值；</li>
+<li>前者可直接创建索引，后者创建索引需要指定前多少个字符。前者查询速度快于后者。</li>
+</ul>
+</li>
+<li>二进制（存储图片、音乐等）：
+<ul>
+<li><code>tinyblob</code>：二进制字符串，0~255字节。</li>
+<li><code>blob</code>：二进制长文本，0~65535字节。</li>
+<li><code>mediumblob</code>：二进制中等长度文本，0~16777215字节。</li>
+<li><code>longblob</code>：二进制极大文本，0~4294967295字节。</li>
+</ul>
+</li>
+<li><code>_blob</code> 与 <code>_text</code>：
+<ul>
+<li>前者以二进制方式存储，英文不区分大小写，后者以文本方式存储，英文区分大小写；</li>
+<li>前者存储的数据只能整体读出；</li>
+<li>前者不用指定字符集，后者可以指定字符集。</li>
+</ul>
+</li>
+</ul>
+<p>数据类型的属性：</p>
+<ul>
+<li><code>NULL</code>：数据列可包含 <code>NULL</code> 值。</li>
+<li><code>NOT NULL</code>：数据列不允许包含 <code>NULL</code> 值。</li>
+<li><code>DEFAULT</code>：数据列的默认值。</li>
+<li><code>PRIMARY KEY</code>：主键。</li>
+<li><code>AUTO_INCREMENT</code>：自动递增。</li>
+<li><code>UNSIGNED</code>：无符号。</li>
+<li><code>CHARACTER SET name</code>：指定字符集。</li>
+</ul>
+<h2 id="二-使用-mysql">二、使用 MySQL</h2>
+<h3 id="2-1-登录到-mysql">2.1 登录到 MySQL</h3>
+<p>先启动 MySQL 服务（管理员权限cmd）：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
+<p>然后使用自带的客户端工具登录，cmd输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 主机名 -u 用户名 -p</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-h</code>：表示登录到的主机名，当前机器可省略。</li>
+<li><code>-u</code>：表示登录的用户名。</li>
+<li><code>-p</code>：表示登录时需要输入密码，密码为空可忽略。</li>
+<li>这里安装的 MySQL 默认 root 账号是无密码的。</li>
+</ul>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_login.jpg" alt="登录"></p>
+<hr>
+<p>我的第一次安装出现了坑：“如何解决本地计算机上的mysql服务启动停止后,某些服务在未由其他服务或程序使用时将自动停止”</p>
+<p>可能是因为之前不懂事弄着玩过，然后出了一堆错误。</p>
+<p>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014555006/article/details/106025355">CSDN - 如何解决本地计算机上的mysql服务启动停止后,某些服务在未由其他服务或程序使用时将自动停止</a></p>
+<hr>
+<h3 id="2-2-创建一个数据库">2.2 创建一个数据库</h3>
+<p>创建命令如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database 数据库名 [options];</span><br></pre></td></tr></table></figure>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_create.jpg" alt="创建数据库"></p>
+<ul>
+<li>MySQL 语句以分号作为结束。</li>
+<li><code>show databases;</code> 可查看创建了的数据库。</li>
+</ul>
+<p>选择操作的数据库（必须先选择数据库，才能进行数据库的操作）。</p>
+<ol>
+<li>登录时指定数据库：</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -D 数据库名 -h 主机名 -u 用户名 -p</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>登陆后使用 <code>use 数据库名;</code> 语句选择数据库。</li>
+</ol>
+<h4 id="2-2-1-创建数据库表">2.2.1 创建数据库表</h4>
+<p>比如创建一张表，存放学号、姓名、性别、年龄、电话号码。</p>
+<p>使用命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create table</span> 表名称;</span><br></pre></td></tr></table></figure>
+<p>有时候表信息比较多，使用 <code>.sql</code> 脚本事先记录，然后执行 <code>.sql</code> 文件。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> tables students</span><br><span class="line">(</span><br><span class="line">    id <span class="type">int</span> unsigned <span class="keyword">not null</span> auto_increment <span class="keyword">primary key</span>,</span><br><span class="line">    name <span class="type">char</span>(<span class="number">8</span>) <span class="keyword">not null</span>,</span><br><span class="line">    sex <span class="type">char</span>(<span class="number">1</span>) <span class="keyword">not null</span>,</span><br><span class="line">    age tinyint unsigned <span class="keyword">not null</span>,</span><br><span class="line">    tel <span class="type">char</span>(<span class="number">13</span>) <span class="keyword">null</span> <span class="keyword">default</span> &quot;-&quot;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>通过命令提示符下的文件重定向执行执行该脚本。打开命令提示符, 输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -D samp_db -u root -p &lt; createtable.sql</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>show tables;</code> 可以查看已创建的表。</li>
+<li>使用 <code>describe 表名;</code> 可以查看已创建表的详细信息。</li>
+</ul>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_showtables.jpg" alt="创建的表"></p>
+<h3 id="2-3-操作-mysql-数据库">2.3 操作 MySQL 数据库</h3>
+<h4 id="2-3-1-向表中插入数据">2.3.1 向表中插入数据</h4>
+<p>使用 <code>insert</code> 语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> [<span class="keyword">into</span>] 表名 [(列名<span class="number">1</span>,列名<span class="number">2</span>,列名<span class="number">3</span>,...)] <span class="keyword">values</span> (值<span class="number">1</span>,值<span class="number">2</span>,值<span class="number">3</span>,...);</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> students <span class="keyword">values</span> (<span class="keyword">NULL</span>,<span class="string">&#x27;ZhangSan&#x27;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">18</span>,<span class="string">&#x27;13800000000&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>也可以不按列的顺序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> students (name,sex,age) <span class="keyword">values</span> (<span class="string">&#x27;LiSi&#x27;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">19</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-2-查询表中的数据">2.3.2 查询表中的数据</h4>
+<p>使用 <code>select</code> 语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 列名称 <span class="keyword">from</span> 表名称 [查询条件];</span><br></pre></td></tr></table></figure>
+<p>如查询表中所有学生的名字和年龄：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, age <span class="keyword">from</span> students;</span><br></pre></td></tr></table></figure>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_added.jpg" alt="查询"></p>
+<p>通配符 <code>*</code>：表示所有内容。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students;</span><br></pre></td></tr></table></figure>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_selectall.jpg" alt="通配符查询"></p>
+<p>如果具有查询条件，使用 <code>where</code> 关键字：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 列名称 <span class="keyword">from</span> 表名称 <span class="keyword">where</span> 条件;</span><br></pre></td></tr></table></figure>
+<p>如查找女性：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students <span class="keyword">where</span> sex <span class="operator">=</span> <span class="string">&#x27;F&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_selectcondition.jpg" alt="带条件查询"></p>
+<ul>
+<li>查询前已添加了 LiSi 的数据。</li>
+</ul>
+<p><code>where</code> 支持 <code>=</code>、<code>!=</code>、<code>&lt;</code>、<code>&lt;=</code>、<code>&gt;</code>、<code>&gt;=</code>、<code>in</code>、<code>not in</code>、<code>is [not] null</code>、<code>like</code> 等运算符，支持与 <code>or</code>、<code>and</code> 的组合。</p>
+<p>如：</p>
+<ul>
+<li>查询名字中带有 “Wang” 字的所有人信息：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students <span class="keyword">where</span> name <span class="keyword">like</span> &quot;%Wang%&quot;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查询 <code>id</code> 小于5且年龄大于20的所有人信息：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students <span class="keyword">where</span> id<span class="operator">&lt;</span><span class="number">5</span> <span class="keyword">and</span> age<span class="operator">&gt;</span><span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-3-更新表中的数据">2.3.3 更新表中的数据</h4>
+<p>使用 <code>update</code> 语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> 表名称 <span class="keyword">set</span> 列名称<span class="operator">=</span>新值 <span class="keyword">where</span> 更新条件;</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<ul>
+<li>将 <code>id</code> 为5的手机号改为默认的&quot;-&quot;：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> tel<span class="operator">=</span><span class="keyword">default</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将所有人的年龄增加1：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> age<span class="operator">=</span>age<span class="operator">+</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-4-删除表中的数据">2.3.4 删除表中的数据</h4>
+<p>使用 <code>delete</code> 语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表名称 <span class="keyword">where</span> 删除条件;</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<ul>
+<li>删除所有年龄小于21岁的数据：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> students <span class="keyword">where</span> age<span class="operator">&lt;</span><span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除表中的所有数据：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> students;</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-5-创建后表的修改">2.3.5 创建后表的修改</h4>
+<p>使用 <code>alter table</code> 语句：</p>
+<h5 id="添加列">添加列</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 <span class="keyword">add</span> 列名 列数据类型 [after 插入位置];</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<ul>
+<li>在表后添加列 <code>address</code>：<code>alter table students add address char(20);</code></li>
+<li>在 <code>age</code> 列后插入 <code>birthday</code>：<code>alter table students add birthday date after age;</code></li>
+</ul>
+<h5 id="修改列">修改列</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 change 列名 新列名 新列数据类型;</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<ul>
+<li>修改列 <code>age</code> 的数据类型：<code>alter table students change age age tinyint unsigned null;</code></li>
+</ul>
+<h5 id="删除列">删除列</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 <span class="keyword">drop</span> 列名;</span><br></pre></td></tr></table></figure>
+<p>如：</p>
+<ul>
+<li>删除列 <code>birthday</code>：<code>alter table students drop birthday;</code></li>
+</ul>
+<h5 id="修改表名">修改表名</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 rename 新表名;</span><br></pre></td></tr></table></figure>
+<h5 id="删除整张表">删除整张表</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> 表名;</span><br></pre></td></tr></table></figure>
+<h5 id="删除整个数据库">删除整个数据库</h5>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> database 数据库名;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-修改-root-用户密码">2.4 修改 root 用户密码</h3>
+<p>其中一种方法：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root -p password 新密码</span><br></pre></td></tr></table></figure>
+<h2 id="三-在c-工程上使用mysql">三、在C++工程上使用MySQL</h2>
+<h3 id="3-1-使用mysql-h">3.1 使用mysql.h</h3>
+<p><em>IDE：Visual Studio 2022</em></p>
+<h4 id="3-1-1-vs中配置mysql">3.1.1 VS中配置MySQL</h4>
+<p>添加包含目录：<code>VC++目录</code> 中的 <code>包含目录</code> 添加上 MySQL 文件夹中的 <code>include</code> 目录。</p>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_addinclude.jpg" alt="添加包含目录"></p>
+<p>添加库目录：<code>VC++目录</code> 中的 <code>库目录</code> 添加上 MySQL 文件夹中的 <code>lib</code> 目录。</p>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_addlib.jpg" alt="添加库目录"></p>
+<p>添加附加依赖项：<code>链接器</code> 中的 <code>输入</code> → <code>附加依赖项</code> 添加上 <code>libmysql.lib</code>。</p>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_adddepend.jpg" alt="添加附加依赖项"></p>
+<p>复制动态库：将 <code>lib</code> 文件夹下的 <code>libmysql.dll</code> 复制到工程文件夹下。</p>
+<h4 id="3-1-2-相关函数代码">3.1.2 相关函数代码</h4>
+<p>头文件：<code>mysql.h</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 连接数据库：</span></span><br><span class="line"><span class="function">MYSQL *<span class="title">mysql_real_connect</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    MYSQL *mysql, <span class="type">const</span> <span class="type">char</span> *host,</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">const</span> <span class="type">char</span> *user, <span class="type">const</span> <span class="type">char</span> *passwd,</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">const</span> <span class="type">char</span> *db, <span class="type">unsigned</span> <span class="type">int</span> port,</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">const</span> <span class="type">char</span> *unix_socket,</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">unsigned</span> <span class="type">long</span> clientflag)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行MySQL语句:</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">mysql_query</span><span class="params">(MYSQL *mysql, <span class="type">const</span> <span class="type">char</span> *q)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取上一条MySQL语句执行结果：</span></span><br><span class="line"><span class="function">MYSQL_RES *<span class="title">mysql_store_result</span><span class="params">(MYSQL *mysql)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取上一条MySQL语句执行结果行数：</span></span><br><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">mysql_affected_rows</span><span class="params">(MYSQL *mysql)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>用类实现一个基础连接数据库，可以执行数据库语句、输出查询结果等功能。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DataBase.h</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mysql.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;winsock.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DataBase</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">bool</span> _state;					<span class="comment">// 连接状态</span></span><br><span class="line">	MYSQL *_conn;					<span class="comment">// 数据库连接</span></span><br><span class="line">	std::vector&lt;MYSQL_FIELD *&gt; fd;	<span class="comment">// 字段列数组</span></span><br><span class="line">	std::vector&lt;std::string&gt; _field;<span class="comment">// 字段名</span></span><br><span class="line">	MYSQL_RES *_res;				<span class="comment">// 返回行的查询结果集</span></span><br><span class="line">	MYSQL_ROW _column;				<span class="comment">// 一个行数据的类型安全的表示</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* @brief 构造函数，初始化参数</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="built_in">DataBase</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* @brief 连接数据库</span></span><br><span class="line"><span class="comment">	* @param ip IP地址</span></span><br><span class="line"><span class="comment">	* @param name 用户名</span></span><br><span class="line"><span class="comment">	* @param pass 密码</span></span><br><span class="line"><span class="comment">	* @param dataBaseName 数据库名</span></span><br><span class="line"><span class="comment">	* @param port 端口</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">connect</span><span class="params">(std::string <span class="type">const</span> &amp;ip, std::string <span class="type">const</span> &amp;name, std::string <span class="type">const</span> &amp;pass, std::string <span class="type">const</span> &amp;dataBaseName, <span class="type">int</span> <span class="type">const</span> port)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* @brief 获取表字段数</span></span><br><span class="line"><span class="comment">	* @param tableName 表名</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">getTableField</span><span class="params">(std::string <span class="type">const</span> &amp;tableName)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* @brief 查询表</span></span><br><span class="line"><span class="comment">	* @param tableName 表名</span></span><br><span class="line"><span class="comment">	* @return 查询结果</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="function">std::string <span class="title">query</span><span class="params">(std::string <span class="type">const</span> &amp;tableName)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* @brief 执行 sql 指令</span></span><br><span class="line"><span class="comment">	* @param sentence sql 命令</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">implement</span><span class="params">(std::string <span class="type">const</span> &amp;sentence)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataBase.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;DataBase.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">DataBase::<span class="built_in">DataBase</span>() : _state(<span class="literal">false</span>), _res(<span class="literal">nullptr</span>), _column(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">	_conn = <span class="keyword">new</span> MYSQL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">DataBase::connect</span><span class="params">(std::string <span class="type">const</span> &amp;ip, std::string <span class="type">const</span> &amp;name, std::string <span class="type">const</span> &amp;pass, std::string <span class="type">const</span> &amp;dataBaseName, <span class="type">int</span> <span class="type">const</span> port)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (_state)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 初始化数据库</span></span><br><span class="line">	<span class="built_in">mysql_init</span>(_conn);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 连接数据库</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">mysql_real_connect</span>(_conn, ip.<span class="built_in">c_str</span>(), name.<span class="built_in">c_str</span>(), pass.<span class="built_in">c_str</span>(), dataBaseName.<span class="built_in">c_str</span>(), port, <span class="literal">NULL</span>, <span class="number">0</span>))</span><br><span class="line">	&#123;</span><br><span class="line">		_state = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">DataBase::getTableField</span><span class="params">(std::string <span class="type">const</span> &amp;tableName)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!_state)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 将字符串格式化为查询数组</span></span><br><span class="line">	<span class="type">char</span> query[<span class="number">150</span>];</span><br><span class="line">	<span class="built_in">sprintf_s</span>(query, <span class="string">&quot;show columns from %s&quot;</span>, tableName.<span class="built_in">c_str</span>());</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 执行查询</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">mysql_query</span>(_conn, query))</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取查询结果</span></span><br><span class="line">	_res = <span class="built_in">mysql_store_result</span>(_conn);</span><br><span class="line">	<span class="keyword">if</span> (_res == <span class="literal">nullptr</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">mysql_affected_rows</span>(_conn);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::string <span class="title">DataBase::query</span><span class="params">(std::string <span class="type">const</span> &amp;tableName)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!_state)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取列数</span></span><br><span class="line">	<span class="type">int</span> field = <span class="built_in">getTableField</span>(tableName);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 将字符串格式化为查询数组</span></span><br><span class="line">	<span class="type">char</span> query[<span class="number">150</span>];</span><br><span class="line">	<span class="built_in">sprintf_s</span>(query, <span class="string">&quot;select * from %s&quot;</span>, tableName.<span class="built_in">c_str</span>());</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 执行查询</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">mysql_query</span>(_conn, query))</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取查询结果</span></span><br><span class="line">	_res = <span class="built_in">mysql_store_result</span>(_conn);</span><br><span class="line">	<span class="keyword">if</span> (_res == <span class="literal">nullptr</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 将查询结果转化为字符串输出</span></span><br><span class="line">	fd.<span class="built_in">reserve</span>(field);</span><br><span class="line">	fd.<span class="built_in">resize</span>(field);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; field; i ++)</span><br><span class="line">		fd[i] = <span class="built_in">mysql_fetch_field</span>(_res);</span><br><span class="line"></span><br><span class="line">	std::string res = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">while</span> (_column = <span class="built_in">mysql_fetch_row</span>(_res))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; field; i ++)</span><br><span class="line">			res += _column[i], res += <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">		res += <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">DataBase::implement</span><span class="params">(std::string <span class="type">const</span> &amp;sentence)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!_state)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 字符串格式化</span></span><br><span class="line">	<span class="type">char</span> query[<span class="number">150</span>];</span><br><span class="line">	<span class="built_in">sprintf_s</span>(query, <span class="string">&quot;%s&quot;</span>, sentence.<span class="built_in">c_str</span>());</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 执行命令</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">mysql_query</span>(_conn, query))</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完整代码见仓库：<a target="_blank" rel="noopener" href="https://gitee.com/fingsinz/my-sql-cpp/tree/master/">Gitee - MySQL - C++</a></p>
+<p>更多可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/cpp_learner/article/details/116171955">https://blog.csdn.net/cpp_learner/article/details/116171955</a></p>
+<h3 id="3-2-使用qtsql">3.2 使用QtSQL</h3>
+<p><em>Qt6.6.1_msvc2019_64</em></p>
+<h4 id="3-2-1-qt的sql模块">3.2.1 Qt的SQL模块</h4>
+<p>VS 中勾选上 SQL 模块：</p>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_qtsqlmodule.jpg" alt="勾选SQL"></p>
+<h4 id="3-2-2-数据库驱动">3.2.2 数据库驱动</h4>
+<p>QtSQL 是 Qt 提供的一个访问数据库的接口。但需要数据库驱动才能使用不同类型的数据库。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">对应数据库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>QDB2</code></td>
+<td style="text-align:center">IBM DB2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QIBASE</code></td>
+<td style="text-align:center">Borland Interbase</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QMYSQL</code></td>
+<td style="text-align:center">MySQL</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QOCI</code></td>
+<td style="text-align:center">Oracle Call Interface Driver</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QODBC</code></td>
+<td style="text-align:center">ODBC（包括MS SQL Server）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QPSQL</code></td>
+<td style="text-align:center">PostgreSQL</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QSQLITE</code></td>
+<td style="text-align:center">SQLite v3</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>QSQLITE2</code></td>
+<td style="text-align:center">SQLite v2</td>
+</tr>
+</tbody>
+</table>
+<p>很不幸，MySQL 需要额外下载驱动，可前往 <a target="_blank" rel="noopener" href="https://github.com/thecodemonkey86/qt_mysql_driver/releases">Github - thecodemonkey86/qt_mysql_driver</a> 下载对应版本的编译后的文件。</p>
+<ul>
+<li>将下载到的压缩包解压后，把 <code>sqldrives</code> 文件夹中的文件复制到 Qt 目录下的 <code>sqldrives</code> 文件夹中。如此处我是： <code>..\Qt\6.6.1\msvc2019_64\plugins\sqldrivers</code></li>
+</ul>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_adddrive.jpg" alt="添加驱动"></p>
+<h4 id="3-2-3-连接数据库">3.2.3 连接数据库</h4>
+<p>通过 <code>QSqlDatabase</code> 类，可以操作数据库。</p>
+<p>连接数据库的代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// QtSql 连接数据库</span></span><br><span class="line">QSqlDatabase db;</span><br><span class="line">db = QSqlDatabase::<span class="built_in">addDatabase</span>(<span class="string">&quot;QMYSQL&quot;</span>, <span class="string">&quot;connection&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置主机名</span></span><br><span class="line">db.<span class="built_in">setHostName</span>(<span class="string">&quot;localhost&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置数据库名</span></span><br><span class="line">db.<span class="built_in">setDatabaseName</span>(<span class="string">&quot;students&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置用户名和密码</span></span><br><span class="line">db.<span class="built_in">setUserName</span>(<span class="string">&quot;root&quot;</span>);</span><br><span class="line">db.<span class="built_in">setPassword</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置端口</span></span><br><span class="line">db.<span class="built_in">setPort</span>(<span class="number">3306</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开数据库</span></span><br><span class="line">db.<span class="built_in">open</span>();</span><br></pre></td></tr></table></figure>
+<p>其中函数：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QSqlDatabase <span class="title">addDatabase</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">const</span> QString&amp; type,</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">const</span> QString&amp; connectionName = QLatin1StringView(defaultConnection))</span></span>;</span><br></pre></td></tr></table></figure>
+<p>创建一个数据库连接，第一个参数指定数据库驱动，第二个参数指定连接名称，多线程访问数据库中每个线程都需要使用不同的连接名称。</p>
+<h4 id="3-2-4-访问数据库">3.2.4 访问数据库</h4>
+<p>通过 <code>QSqlQuery</code> 类，可以访问数据库。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建查询对象</span></span><br><span class="line"><span class="function">QSqlQuery <span class="title">query</span><span class="params">(db)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行查询语句</span></span><br><span class="line">query.<span class="built_in">exec</span>(<span class="string">&quot;...&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>可以通过 <code>QSqlQuery::prepare()</code> 和 <code>QSqlQuery::bindValue()</code> 函数进行数据库语句的构造。</p>
+<p>如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">updateUser</span><span class="params">(QSqlDatabase db,<span class="type">const</span> <span class="type">int</span> &amp;id,<span class="type">const</span> QString &amp;username)</span> </span>&#123;</span><br><span class="line">    <span class="function">QSqlQuery <span class="title">query</span><span class="params">(db)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造查询语句</span></span><br><span class="line">    query.<span class="built_in">prepare</span>(<span class="string">&quot;update newUser set username=:username WHERE id=:id&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 绑定参数</span></span><br><span class="line">    query.<span class="built_in">bindValue</span>(<span class="string">&quot;:id&quot;</span>, id);</span><br><span class="line">    query.<span class="built_in">bindValue</span>(<span class="string">&quot;:username&quot;</span>, username);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行语句</span></span><br><span class="line">    query.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-学生管理系统demo">3.3 学生管理系统demo</h3>
+<p><img src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/MySQL_showinfo.jpg" alt="demo"></p>
+<p>完整代码见仓库：<a target="_blank" rel="noopener" href="https://gitee.com/fingsinz/my-sql-cpp/">Gitee - MySQL - C++</a></p>
+<p>分支：</p>
+<ul>
+<li>master：mysql.h方式</li>
+<li>QSQL：QtSql方式</li>
+</ul>
+<hr>
+<p><strong>Reference：</strong></p>
+<blockquote>
+<p>21分钟 MySQL 入门教程 - <a target="_blank" rel="noopener" href="https://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html">https://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html</a><br>
+C/C++ vs2017连接MySQL数据库 - 增删改查(详细步骤) - <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45698148/article/details/117136407">https://blog.csdn.net/qq_45698148/article/details/117136407</a><br>
+MySQL 教程 - RUNOOB：<a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-tutorial.html">https://www.runoob.com/mysql/mysql-tutorial.html</a><br>
+Qt零基础系列10：使用Qt如何操作数据库：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/348174965">https://zhuanlan.zhihu.com/p/348174965</a></p>
+</blockquote>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script></article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/daily/rustbasic/">Rust 语言学习记录</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/daily/16/">Qt for Android配置记录</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:3;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs15">探索发现</span><a href="/explore/software_i_use">我在用或用过的软件</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/me/">关于我</a><a href="/about/site/">关于博客</a></div></div><div class="text"><p>本站由 <a href="/">Fingsinz</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.0">Stellar 1.33.0</a> 主题创建。<br>
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="true"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%AE%A4%E8%AF%86-mysql"><span class="toc-text">一、认识 MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF-mysql"><span class="toc-text">1.1 什么是 MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-windows-%E4%B8%8B%E9%85%8D%E7%BD%AE-mysql"><span class="toc-text">1.2 Windows 下配置 MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-mysql-%E7%9A%84%E5%90%AF%E5%8A%A8-%E5%81%9C%E6%AD%A2%E5%92%8C%E5%8D%B8%E8%BD%BD"><span class="toc-text">1.2.1 MySQL 的启动、停止和卸载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-mysql-%E8%84%9A%E6%9C%AC%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="toc-text">1.3 MySQL 脚本的基本组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-mysql-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.4 MySQL 中的数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E4%BD%BF%E7%94%A8-mysql"><span class="toc-text">二、使用 MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%99%BB%E5%BD%95%E5%88%B0-mysql"><span class="toc-text">2.1 登录到 MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">2.2 创建一个数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8"><span class="toc-text">2.2.1 创建数据库表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%93%8D%E4%BD%9C-mysql-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">2.3 操作 MySQL 数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%90%91%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">2.3.1 向表中插入数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E6%9F%A5%E8%AF%A2%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">2.3.2 查询表中的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-%E6%9B%B4%E6%96%B0%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">2.3.3 更新表中的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-%E5%88%A0%E9%99%A4%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">2.3.4 删除表中的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-5-%E5%88%9B%E5%BB%BA%E5%90%8E%E8%A1%A8%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="toc-text">2.3.5 创建后表的修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%97"><span class="toc-text">添加列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%88%97"><span class="toc-text">修改列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%97"><span class="toc-text">删除列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%90%8D"><span class="toc-text">修改表名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B4%E5%BC%A0%E8%A1%A8"><span class="toc-text">删除整张表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B4%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">删除整个数据库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E4%BF%AE%E6%94%B9-root-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-text">2.4 修改 root 用户密码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E5%9C%A8c-%E5%B7%A5%E7%A8%8B%E4%B8%8A%E4%BD%BF%E7%94%A8mysql"><span class="toc-text">三、在C++工程上使用MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BD%BF%E7%94%A8mysql-h"><span class="toc-text">3.1 使用mysql.h</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-vs%E4%B8%AD%E9%85%8D%E7%BD%AEmysql"><span class="toc-text">3.1.1 VS中配置MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BB%A3%E7%A0%81"><span class="toc-text">3.1.2 相关函数代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BD%BF%E7%94%A8qtsql"><span class="toc-text">3.2 使用QtSQL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-qt%E7%9A%84sql%E6%A8%A1%E5%9D%97"><span class="toc-text">3.2.1 Qt的SQL模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E9%A9%B1%E5%8A%A8"><span class="toc-text">3.2.2 数据库驱动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">3.2.3 连接数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-4-%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">3.2.4 访问数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fdemo"><span class="toc-text">3.3 学生管理系统demo</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
