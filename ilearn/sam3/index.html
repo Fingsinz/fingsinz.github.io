@@ -20,7 +20,7 @@
   <title>简单认识 SAM3 模型 - Fingsinz's Blog</title>
 
   
-  <meta name="description" content="关键词：深度学习、模型、模型、多模态">
+  <meta name="description" content="关键词：深度学习、模型、多模态">
   
   <meta name="keywords" content="深度学习,模型,多模态">
 
@@ -36,7 +36,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-04-28T13:51:00+08:00","dateModified":"2026-04-28T18:12:26+08:00","datePublished":"2026-04-28T13:51:00+08:00","description":"关键词：深度学习、模型、模型、多模态","headline":"简单认识 SAM3 模型","mainEntityOfPage":{"@type":"WebPage","@id":"https://fingsinz.github.io/ilearn/sam3/"},"publisher":{"@type":"Organization","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fingsinz.github.io/ilearn/sam3/","keywords":"深度学习, 模型, 多模态","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-05-20T18:07:00+08:00","dateModified":"2026-05-20T18:09:02+08:00","datePublished":"2026-05-20T18:07:00+08:00","description":"关键词：深度学习、模型、多模态","headline":"简单认识 SAM3 模型","mainEntityOfPage":{"@type":"WebPage","@id":"https://fingsinz.github.io/ilearn/sam3/"},"publisher":{"@type":"Organization","name":"Fingsinz","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fingsinz.github.io/ilearn/sam3/","keywords":"深度学习, 模型, 多模态","image":[]}</script>
   
 <link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
 <body>
@@ -80,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/ilearn/sam3/">我所理解的</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-04-28T05:51:00.000Z">2026-04-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-04-28T10:12:26.359Z">2026-04-28</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-05-20T10:07:00.000Z">2026-05-20</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-05-20T10:09:02.202Z">2026-05-20</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -91,7 +91,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>关键词：<a class="tag-plugin colorful hashtag" color="red" href="/tags/深度学习/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>深度学习</span></a>、<a class="tag-plugin colorful hashtag" color="orange" href="/tags/模型/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>模型</span></a>、<a class="tag-plugin colorful hashtag" color="yellow" href="/tags/多模态/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>模型</span></a>、<a class="tag-plugin colorful hashtag" color="green" href="/tags/多模态/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>多模态</span></a></p>
+  </div><article class="md-text content"><p>关键词：<a class="tag-plugin colorful hashtag" color="green" href="/tags/深度学习/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>深度学习</span></a>、<a class="tag-plugin colorful hashtag" color="cyan" href="/tags/模型/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>模型</span></a>、<a class="tag-plugin colorful hashtag" color="blue" href="/tags/多模态/"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>多模态</span></a></p>
 <span id="more"></span>
 <hr>
 <h2 id="引言">引言</h2>
@@ -111,32 +111,65 @@
 <h2 id="sam3-模型架构">SAM3 模型架构</h2>
 <div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1323/380;width:500px;"><img class="lazy" src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-arch.jpg" data-src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-arch.jpg" alt="图1 SAM3 模型架构" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div><div class="image-meta"><span class="image-caption center">图1 SAM3 模型架构</span></div></div>
 <p>SAM3 架构基于 SAM 系列和 DETR 架构，是一个双编码器-解码器 Transformer 系统。它主要由两部分组成：检测器与跟踪器，二者共用同一视觉编码器。</p>
+<p>核心组件如下：</p>
 <ul>
-<li>从文本或视觉提示词中定位目标的基于 DETR 的 <strong>检测器</strong>。
-<ul>
-<li>针对开放词汇概念检测的难点，模型增设独立的存在头结构，实现识别与定位任务的解耦。该设计在引入高难度负样本短语开展训练时，效果提升尤为显著。</li>
-</ul>
-</li>
-<li>将检测结果传播到各视频帧的基于记忆的 <strong>跟踪器</strong>。
-<ul>
-<li>实现视频场景下不同目标实例的身份区分与持续跟踪。</li>
-</ul>
-</li>
+<li><strong>感知编码器</strong>（Perception Encoder, PE）</li>
+<li>基于 DETR 的 <strong>检测器</strong>：从文本或视觉提示词中定位目标。</li>
+<li>基于记忆的 <strong>跟踪器</strong>：将检测结果传播到各视频帧。</li>
+<li><strong>存在性头</strong>（Presence Head）：SAM 3 的关键创新之一，将“物体是否存在”的全局判断与“物体在哪里”的局部定位解耦，显著提升检测准确率。</li>
 </ul>
 <div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:1325/622;width:500px;"><img class="lazy" src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-architecture.jpg" data-src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-architecture.jpg" alt="图2 SAM3 模型详细架构" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div><div class="image-meta"><span class="image-caption center">图2 SAM3 模型详细架构</span></div></div>
 <p>SAM3 有 ~850M 个参数，~450M 和 ~300M 用于视觉和文本编码器，以及 ~100M 用于检测器和跟踪器组件。</p>
-<h3 id="vl-骨干网络">VL 骨干网络</h3>
-<h3 id="检测器架构">检测器架构</h3>
-<p>检测器的架构遵循通用的 DETR 架构。</p>
+<div class="tag-plugin image"><div class="image-bg" style="aspect-ratio:4209/2461;width:500px;"><img class="lazy" src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-sys.png" data-src="https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/ilearn/sam3-sys.png" alt="图3 SAM3 系统划分" data-fancybox="true"onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E&quot;"/><div class="lazy-icon" style="background-image:url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd);"></div></div><div class="image-meta"><span class="image-caption center">图3 SAM3 系统划分</span></div></div>
+<h3 id="图像实现细节">图像实现细节</h3>
+<p>检测器在推理时产生一个包含以下主要键的字典：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">输出键</th>
+<th style="text-align:center">形状</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">pred_logits</td>
+<td style="text-align:center"><code>(batch, num_queries, 1)</code></td>
+<td style="text-align:center">每个查询的检测置信度</td>
+</tr>
+<tr>
+<td style="text-align:center">pred_boxes</td>
+<td style="text-align:center"><code>(batch, num_queries, 4)</code></td>
+<td style="text-align:center">归一化的 (cx, cy, w, h) 框</td>
+</tr>
+<tr>
+<td style="text-align:center">pred_boxes_xyxy</td>
+<td style="text-align:center"><code>(batch, num_queries, 4)</code></td>
+<td style="text-align:center">转换后的 (x1, y1, x2, y2) 框</td>
+</tr>
+<tr>
+<td style="text-align:center">pred_masks</td>
+<td style="text-align:center"><code>(batch, num_queries, H, W)</code></td>
+<td style="text-align:center">二进制分割掩码</td>
+</tr>
+<tr>
+<td style="text-align:center">presence_logit_dec</td>
+<td style="text-align:center"><code>(num_layers, batch, 1)</code></td>
+<td style="text-align:center">每层存在性分数</td>
+</tr>
+<tr>
+<td style="text-align:center">queries</td>
+<td style="text-align:center"><code>(batch, num_queries, d_model)</code></td>
+<td style="text-align:center">最终解码器隐藏状态</td>
+</tr>
+</tbody>
+</table>
+<h4 id="image-and-text-encoders">Image and Text Encoders</h4>
+<p>图像和文本编码器是 Transformer 模型，使用 5.4 亿个图像‑文本对，遵循感知编码器（Perception Encoder, PE）进行对比视觉语言训练。</p>
 <ul>
-<li>感知编码器（Perception Encoder, PE）：编码图像和文本 Prompt；</li>
-<li>几何/示例编码器：编码几何/图像示例。</li>
-</ul>
-<p>将图像示例标记和文本标记共同称为“Prompt Tokens 提示标记”。融合编码器接受图像编码器的不受条件约束的 embeddings，并通过交叉注意力于提示标记来对其进行条件化。融合后，采用类似 DETR 的解码器，其中学习到的对象查询交叉注意力于融合编码器条件化的图像 embeddings。</p>
-<h4 id="prompt-tokens-存在标记">Prompt Tokens 存在标记</h4>
-<p>存在标记：一个学习到的全局标记，用于预测目标概念是否存在于图像/帧中，通过将识别与定位分离来改进检测。</p>
-<ul>
-<li>通过引入一个学习得到的全局存在标记来将识别和定位步骤解耦。这个标记仅负责预测符合名词短语（NP）概念的目标是否存在于图像/帧中。每个查询 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">q_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 只需要解决定位问题。每个查询的最终得分是其自身得分与存在得分的乘积。</li>
+<li>与 SAM2 类似，视觉编码器使用窗口注意力，并在极少数层（32层中的4层）使用全局注意力，其中 1008×1008 像素的图像被划分为 3×3 个非重叠的 336 像素窗口。</li>
+<li>视觉编码器每层都使用 RoPE，并使用窗口化绝对位置嵌入。</li>
+<li>文本编码器最大上下文长度为 32。</li>
 </ul>
 <h4 id="geometry-and-exemplar-encoder">Geometry and Exemplar Encoder</h4>
 <p>几何与示例编码器主要用于对 PCS 任务中的图像示例（如果存在）进行编码。</p>
@@ -149,16 +182,31 @@
 <li>Geometry tokens 和 Exemplar tokens 通过自注意力机制相互关注，同时也交叉关注图像编码器对应（无条件）帧的 frame-embedding。</li>
 </ul>
 <h4 id="融合编码器">融合编码器</h4>
-<p>文本和几何/示例标记共同构成 prompt tokens（提示标记）。融合编码器接受未条件化的 frame-embedding，并使用一个包含 6 个 transformer 块的堆栈对 prompt tokens 进行条件处理，随后搭配多层感知机（MLP）完成特征映射。融合编码器的输出是条件化的 frame-embedding。</p>
+<p>文本和几何/示例标记共同构成 prompt tokens（提示标记）。融合编码器接受未条件化的 frame-embedding，并使用一个包含 6 个 transformer 块的堆栈对 prompt tokens 进行条件处理，随后搭配多层感知机（MLP）完成特征映射，输出条件化的 frame-embedding。</p>
 <ul>
 <li>transformer 块带有自注意力和交叉注意力（针对 prompt tokens）层，且自注意力层是普通的自注意力操作。</li>
 </ul>
-<h4 id="image-and-text-encoders">Image and Text Encoders</h4>
-<p>图像和文本编码器是 Transformer 模型，使用 5.4 亿个图像‑文本对，遵循感知编码器（Perception Encoder, PE）进行对比视觉语言训练。</p>
+<h4 id="解码器">解码器</h4>
+<p>SAM3 系统采用两个独立的解码器栈，根据推理任务的不同进行调用。</p>
 <ul>
-<li>与 SAM2 类似，视觉编码器使用窗口注意力，并在极少数层（32层中的4层）使用全局注意力，其中 1008×1008 像素的图像被划分为 3×3 个非重叠的 336 像素窗口。</li>
-<li>视觉编码器每层都使用 RoPE，并使用窗口化绝对位置嵌入。</li>
-<li>文本编码器最大上下文长度为 32。</li>
+<li>DETR 风格解码器负责“理解场景”（检测 + 语义 + 实例），接受文本、框、或文本 + 框组合，输出是“场景中有哪些物体、在哪里、掩码是什么”，面向开放世界理解。</li>
+<li>SAM 风格掩码解码器负责“精细抠图”（交互式分割），接受点、框、掩码提示，输出是“根据用户指出的位置，精细抠出这个物体”，面向交互式修正。</li>
+</ul>
+<p>DETR 风格解码器也是一个包含 6 个 transformer 块的堆栈。Q 学习的对象查询（Object Queries）在内部进行自注意力交互，并与提示标记以及条件帧嵌入进行交叉注意力交互，随后经过一个 MLP 进行预测检测框和分数。在关注条件帧嵌入的交叉注意力层中，使用了框到像素的相对位置偏差。</p>
+<ul>
+<li>DETR 风格解码器的 <code>d_model</code> 为 256，即每个查询的隐藏维度为 256。</li>
+</ul>
+<h4 id="segmentation-head">Segmentation Head</h4>
+<p>语义分割和实例分割共享同一个分割头。</p>
+<p>融合编码器产生的条件特征用于生成语义分割掩码，而实例分割额外使用解码器的输出 Object Queries。</p>
+<p>视觉编码器是一个单尺度 ViT，所以多尺度特征通过 SimpleFPN 提供给分割头。</p>
+<ul>
+<li>SimpleFPN 产生多尺度列表 → Encoder 编码 → PixelDecoder 做经典的 FPN 自顶向下融合 → 生成统一分辨率的像素嵌入供 mask 预测</li>
+</ul>
+<h4 id="presence-head-presence-token">Presence Head &amp; Presence Token</h4>
+<p>存在标记：一个学习到的全局标记，用于预测目标概念是否存在于图像/帧中，通过将识别与定位分离来改进检测。</p>
+<ul>
+<li>通过引入一个学习得到的全局存在标记来将识别和定位步骤解耦。这个标记仅负责预测符合名词短语（NP）概念的目标是否存在于图像/帧中。每个查询 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">q_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 只需要解决定位问题。每个查询的最终得分是其自身得分与存在得分的乘积。</li>
 </ul>
 <h3 id="跟踪器架构">跟踪器架构</h3>
 <p><em>不关注视频处理，略</em></p>
@@ -197,7 +245,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="true"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%8F%90%E7%A4%BA%E6%A6%82%E5%BF%B5%E5%88%86%E5%89%B2-pcs"><span class="toc-text">可提示概念分割（PCS）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sam3-%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="toc-text">SAM3 模型架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vl-%E9%AA%A8%E5%B9%B2%E7%BD%91%E7%BB%9C"><span class="toc-text">VL 骨干网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-text">检测器架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#prompt-tokens-%E5%AD%98%E5%9C%A8%E6%A0%87%E8%AE%B0"><span class="toc-text">Prompt Tokens 存在标记</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#geometry-and-exemplar-encoder"><span class="toc-text">Geometry and Exemplar Encoder</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%9E%8D%E5%90%88%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-text">融合编码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#image-and-text-encoders"><span class="toc-text">Image and Text Encoders</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-text">跟踪器架构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sam3-%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93"><span class="toc-text">SAM3 代码仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-text">References</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
+<widget class="widget-wrapper toc" id="data-toc" collapse="true"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%8F%90%E7%A4%BA%E6%A6%82%E5%BF%B5%E5%88%86%E5%89%B2-pcs"><span class="toc-text">可提示概念分割（PCS）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sam3-%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="toc-text">SAM3 模型架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82"><span class="toc-text">图像实现细节</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#image-and-text-encoders"><span class="toc-text">Image and Text Encoders</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#geometry-and-exemplar-encoder"><span class="toc-text">Geometry and Exemplar Encoder</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%9E%8D%E5%90%88%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-text">融合编码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%A0%81%E5%99%A8"><span class="toc-text">解码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#segmentation-head"><span class="toc-text">Segmentation Head</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#presence-head-presence-token"><span class="toc-text">Presence Head &amp; Presence Token</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-text">跟踪器架构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sam3-%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93"><span class="toc-text">SAM3 代码仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-text">References</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
